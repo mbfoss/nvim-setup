@@ -1,0 +1,10 @@
+.DS_Store
+.ropeproject/autoimport.db
+/pack/plugins/start/mason.nvim
+/parser/*.so
+pack/plugins/opt/nvim-brd
+lua/LuaPanda.lua
+.nvimloop
+.luacheckrc
+
+/pack/plugins/start/osv.nvim
