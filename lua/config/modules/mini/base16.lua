@@ -41,3 +41,5 @@ vim.api.nvim_set_hl(0, "cStorageClass",            { fg = "#f1c6f0", bg = "NONE"
 vim.api.nvim_set_hl(0, "Type",                     { fg = "#cdeccf", bg = "NONE" }) -- minty green
 vim.api.nvim_set_hl(0, "@lsp.type.parameter.cpp",  { fg = "#ffe0b8", bg = "NONE" }) -- pale apricot
 vim.api.nvim_set_hl(0, "lsp.type.enumMember.cpp",  { fg = "#f8d5b8", bg = "NONE" }) -- warm beige/orange
+
+vim.api.nvim_set_hl(0, "TelescopeBorder",       { fg = "#a4b8d4" })
