@@ -1,4 +1,5 @@
 vim.o.pumheight = 15        -- max height of completion menu
+vim.o.complete = ".,w,b,u"
 
 -- Helper: Convert keys to termcodes (for expr = true mappings)
 local function feedkeys(key)

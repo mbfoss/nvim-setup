@@ -3,7 +3,7 @@ local modules = {
 
 	{ pack = "telescope.nvim",      module = "telescope",		    with_config = true },
 	-- {pack = "snacks.nvim",      module = "snacks",		    with_config = false },
-	{ pack = "mini.nvim",           module = "mini.completion",     with_config = false },
+	{ pack = "mini.nvim",           module = "mini.completion",     with_config = true },
 	{ pack = "mini.nvim",           module = "mini.base16",         with_config = true },
 	{ pack = "mini.nvim",           module = "mini.sessions",       with_config = true },
 	{ pack = "mini.nvim",           module = "mini.notify",	        with_config = true },
