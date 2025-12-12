@@ -131,10 +131,3 @@ end, { noremap = true, desc = "OSV listen" })
 
 
 
-vim.keymap.set("n", "<leader>dm",  ":Loop debug_mode<CR>", {desc = "Toggle debug mode"})
-vim.keymap.set("n", "<leader>db",  ":Loop breakpoint<CR>", {desc = "Toggle breakpoint"})
-vim.keymap.set("n", "<leader>dc",  ":Loop debug continue<CR>", {desc = "Debug continue", silent = true})
-vim.keymap.set("n", "<leader>dT",  ":Loop debug terminate<CR>", {desc = "Debug terminate session", silent = true})
-vim.keymap.set("n", "<leader>ts", ":Loop task<CR>", {desc = "Run task", silent = true})
-vim.keymap.set("n", "<leader>tr", ":Loop task repeat<CR>", {desc = "Repeat last task", silent = true})
-
