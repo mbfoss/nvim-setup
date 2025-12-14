@@ -1,19 +1,20 @@
 -- List of modules
 local modules = {
 
-	{ pack = "telescope.nvim",      module = "telescope",		    with_config = true },
+	{ pack = "telescope.nvim",  module = "telescope",       with_config = true },
 	-- {pack = "snacks.nvim",      module = "snacks",		    with_config = false },
-	{ pack = "mini.nvim",           module = "mini.completion",     with_config = true },
-	{ pack = "mini.nvim",           module = "mini.base16",         with_config = true },
-	{ pack = "mini.nvim",           module = "mini.sessions",       with_config = true },
-	{ pack = "mini.nvim",           module = "mini.notify",	        with_config = true },
-	{ pack = "mini.nvim",           module = "mini.animate",        with_config = true },
-	{ pack = "mini.nvim",           module = "mini.files",        	with_config = true },
-	{ pack = "lualine.nvim",        module = "lualine",             with_config = true },
-	{ pack = "gitsigns.nvim",       module = "gitsigns",            with_config = false },
-	{ pack = "which-key.nvim",      module = "which-key",           with_config = true },
-	{ pack = "mason.nvim",          module = "mason",               with_config = false },
-	{ pack = "loop.nvim",           module = "loop",                with_config = false },
+	{ pack = "mini.nvim",       module = "mini.completion", with_config = true },
+	{ pack = "mini.nvim",       module = "mini.base16",     with_config = true },
+	{ pack = "mini.nvim",       module = "mini.sessions",   with_config = true },
+	{ pack = "mini.nvim",       module = "mini.notify",     with_config = true },
+	{ pack = "mini.nvim",       module = "mini.animate",    with_config = true },
+	{ pack = "mini.nvim",       module = "mini.files",      with_config = true },
+	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
+	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
+	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
+	{ pack = "mason.nvim",      module = "mason",           with_config = false },
+	{ pack = "loop.nvim",       module = "loop",            with_config = false },
+	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 }
 
 local pack_loaded = {}
