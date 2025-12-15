@@ -9,6 +9,8 @@ local modules = {
 	{ pack = "mini.nvim",       module = "mini.notify",     with_config = true },
 	{ pack = "mini.nvim",       module = "mini.animate",    with_config = true },
 	{ pack = "mini.nvim",       module = "mini.files",      with_config = true },
+	{ pack = "mini.nvim",       module = "mini.cursorword", with_config = false },
+	{ pack = "mini.nvim",       module = "mini.ai",	        with_config = false },
 	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },

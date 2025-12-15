@@ -34,3 +34,6 @@
 [submodule "pack/plugins/opt/mason.nvim"]
 	path = pack/plugins/opt/mason.nvim
 	url = https://github.com/mason-org/mason.nvim.git
+[submodule "pack/plugins/opt/loop-cmake.nvim"]
+	path = pack/plugins/opt/loop-cmake.nvim
+	url = https://github.com/mbfoss/loop-cmake.nvim.git
