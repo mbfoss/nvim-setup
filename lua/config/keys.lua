@@ -130,4 +130,8 @@ vim.keymap.set('n', '<leader>dL', function()
 end, { noremap = true, desc = "OSV listen" })
 
 
-
+map("n", "<leader>dv", function()
+	vim.cmd("vsplit")
+	vim.cmd("vertical resize " .. math.floor(vim.o.columns / 3))
+	vim.cmd("Loop open_page Variables")
+end)
