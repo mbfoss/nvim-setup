@@ -37,3 +37,6 @@
 [submodule "pack/plugins/opt/loop-cmake.nvim"]
 	path = pack/plugins/opt/loop-cmake.nvim
 	url = https://github.com/mbfoss/loop-cmake.nvim.git
+[submodule "pack/plugins/opt/loop-debug.nvim"]
+	path = pack/plugins/opt/loop-debug.nvim
+	url = git@github.com:mbfoss/loop-debug.git

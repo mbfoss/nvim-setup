@@ -17,6 +17,7 @@ local modules = {
 	{ pack = "mason.nvim",      module = "mason",           with_config = false },
 	{ pack = "loop.nvim",       module = "loop",            with_config = false },
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
+	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
 }
 
 local pack_loaded = {}
@@ -24,7 +25,7 @@ local pack_loaded = {}
 for _, entry in ipairs(modules) do
 	if pack_loaded[entry.pack] == nil then
 		pack_loaded[entry.pack] = true
-		vim.cmd('packadd ' .. entry.pack)
+		vim.cmd('packadd! ' .. entry.pack)
 	end
 end
 

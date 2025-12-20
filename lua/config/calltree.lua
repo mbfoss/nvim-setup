@@ -184,7 +184,9 @@ vim.api.nvim_create_user_command(
 			require("loop").setup()
 			page_manager = require('loop.window').create_page_manager()
 			page = CallersTreePage:new("Callers")
-			page_manager.upsert_page_group('ct', "Call Tree").add_page('ct', page)
+			local group = page_manager.get_page_group('ct')
+			if not group then group = page_manager.add_page_group('ct', 'Call Tree') end
+			group.add_page('ct', page)
 		end
 		page:load()
 		require('loop.window').show_window()
