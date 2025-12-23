@@ -123,14 +123,14 @@ map("n", "<leader>n", "<cmd>lua MiniNotify.show_history()<cr>", { desc = "Notifi
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 vim.keymap.set("n", "<leader>s", [[:%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
 
-vim.keymap.set('n', '<leader>dl', function()
+vim.keymap.set('n', '<leader>dL', function()
 	vim.notify("starting luapanda listen")
 	local LuaPanda = require("LuaPanda")
 	LuaPanda.start("127.0.0.1", 8818)
 end, { noremap = true, desc = "LuaPanda listen" })
 
 
-vim.keymap.set('n', '<leader>dL', function()
+vim.keymap.set('n', '<leader>dO', function()
 	vim.notify("starting OSV listen")
 	local osv = require("osv")
 	osv.launch({ port = 8086 })
