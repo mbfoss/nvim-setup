@@ -1,5 +1,5 @@
 local function loop_project()
-	return require('loop.projinfo').status_line_comp()
+	return require('loop.wsinfo').status_line_comp()
 end
 
 require('lualine').setup {
