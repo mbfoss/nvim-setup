@@ -1,14 +1,5 @@
-local run_commands = nil
-
-local function run_commands_status()
-	if run_commands == nil then
-		run_commands = require("mbo.tasks-term")
-	end
-	if run_commands.is_running() then
-		return "  " .. run_commands.running_job_name()
-	else
-		return " "
-	end
+local function loop_project()
+	return require('loop.projinfo').status_line_comp()
 end
 
 require('lualine').setup {
@@ -18,7 +9,7 @@ require('lualine').setup {
 	sections = {
 		lualine_a = { 'mode' },
 		lualine_b = { 'branch', 'diff', 'diagnostics' },
-		lualine_c = { 'filename', run_commands_status },
+		lualine_c = { loop_project, 'filename' },
 		lualine_x = { 'lsp_status', 'encoding', 'fileformat', 'filetype' },
 		lualine_y = { 'progress' },
 		lualine_z = { 'location' }
