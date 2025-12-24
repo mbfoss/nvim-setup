@@ -142,3 +142,12 @@ map("n", "<leader>dv", function()
 	vim.cmd("vertical resize " .. math.floor(vim.o.columns / 3))
 	vim.cmd("Loop open_page Variables")
 end)
+
+vim.keymap.set("n", "<leader>ll", ":Loop<CR>", { desc = "Select command", silent = true })
+vim.keymap.set("n", "<leader>lt", ":Loop toggle<CR>", { desc = "Toggle tasks window", silent = true })
+vim.keymap.set("n", "<leader>lp", ":Loop page switch<CR>", { desc = "Switch main page", silent = true })
+vim.keymap.set("n", "<leader>lP", ":Loop page open<CR>", { desc = "Open page", silent = true })
+vim.keymap.set("n", "<leader>lr", ":Loop task<CR>", { desc = "Run task", silent = true })
+vim.keymap.set("n", "<leader>lR", ":Loop task repeat<CR>", { desc = "Repeat task", silent = true })
+
+
