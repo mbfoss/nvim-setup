@@ -8,7 +8,7 @@ vim.o.shortmess = vim.o.shortmess .. "Ic"
 
 vim.o.termguicolors = true -- enable rgb colors
 
--- vim.o.cursorline = true     -- enable cursor line
+vim.o.cursorline = true     -- enable cursor line
 
 vim.o.number = true         -- enable line number
 vim.o.relativenumber = true -- and relative line number
