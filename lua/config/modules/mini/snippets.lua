@@ -10,4 +10,3 @@ require('mini.snippets').setup({
   },
 })
 
-require('mini.snippets').start_lsp_server()
