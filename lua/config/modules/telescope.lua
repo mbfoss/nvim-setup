@@ -88,37 +88,59 @@ require("telescope").setup({
 	},
 })
 
-
 -- Completely override vim.ui.select
 vim.ui.select = function(items, opts, on_choice)
-	local conf = require("telescope.config").values
-	opts       = opts or {}
+	local conf         = require("telescope.config").values
+	local pickers      = require("telescope.pickers")
+	local finders      = require("telescope.finders")
+	local actions      = require("telescope.actions")
+	local action_state = require("telescope.actions.state")
+	local previewers   = require("telescope.previewers")
+
+	opts               = opts or {}
+
 	pickers.new({}, {
 		prompt_title = opts.prompt or "Select",
-		finder = finders.new_table {
+
+		finder = finders.new_table({
 			results = items,
 			entry_maker = function(item)
+				local display = opts.format_item and opts.format_item(item) or tostring(item)
 				return {
 					value   = item,
-					display = opts.format_item and opts.format_item(item) or tostring(item),
-					ordinal = tostring(item),
+					display = display,
+					ordinal = display,
 				}
 			end,
-		},
+		}),
 
 		sorter = conf.generic_sorter({}),
 
-		-- *** 50% of the screen height ***
+		-- Layout
 		layout_strategy = "vertical",
 		layout_config = {
-			height = 0.5, -- 50%
+			height = 0.5,
 			prompt_position = "top",
 		},
 
-		-- Disable Telescope's default picker caching
+		-- ✅ PREVIEWER (THIS IS THE KEY PART)
+		previewer = previewers.new_buffer_previewer({
+			define_preview = function(self, entry)
+				local lines
+
+				if type(entry.value) == "table" then
+					lines = vim.split(vim.inspect(entry.value), "\n")
+				else
+					lines = vim.split(tostring(entry.value), "\n")
+				end
+
+				vim.api.nvim_buf_set_lines(self.state.bufnr, 0, -1, false, lines)
+			end,
+		}),
+
 		cache_picker = false,
 
-		attach_mappings = function(prompt_bufnr, map)
+		attach_mappings = function(prompt_bufnr)
 			actions.select_default:replace(function()
 				local selection = action_state.get_selected_entry()
 				actions.close(prompt_bufnr)
@@ -128,6 +150,7 @@ vim.ui.select = function(items, opts, on_choice)
 		end,
 	}):find()
 end
+
 
 -- === Helper to find project/search root ===
 local function find_search_root()
@@ -278,7 +301,7 @@ vim.keymap.set("n", "<leader>fj", builtin.jumplist, { desc = "Jumps" })
 vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Marks" })
 vim.keymap.set("n", "<leader>fq", builtin.quickfix, { desc = "Quickfix List" })
 vim.keymap.set("n", "<leader>fe", show_qf_errors, { desc = "Quickfix Errors" })
-vim.keymap.set("n", "<leader>fd", function() builtin.diagnostics({bufnr = 0}) end, { desc = "Diagnostics" })
+vim.keymap.set("n", "<leader>fd", function() builtin.diagnostics({ bufnr = 0 }) end, { desc = "Diagnostics" })
 vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Workspace Diagnostics (cwd)" })
 vim.keymap.set("n", "<leader>fB", builtin.live_grep, { desc = "Grep Open Buffers" })
 vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "LSP references" })

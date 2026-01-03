@@ -24,7 +24,9 @@ vim.keymap.set("n", "<leader>fb", function() pick.builtin.buffers() end, { desc 
 
 -- Config files
 vim.keymap.set("n", "<leader>fc", function()
-  pick.builtin.files({ cwd = vim.fn.stdpath("config") })
+	pick.builtin.files(nil, {
+		source = { cwd = vim.fn.stdpath("config") }
+	})
 end, { desc = "Find config files" })
 
 -- Recent files: Verified in mini.extra
@@ -55,12 +57,15 @@ vim.keymap.set("n", "<leader>fs", function() extra.pickers.spellsuggest() end, {
 -- =========================================================
 
 -- Diagnostics: The function is 'diag', not 'diagnostic'
-vim.keymap.set("n", "<leader>fd", function() extra.pickers.diagnostic({ scope = "current" }) end, { desc = "Buffer diagnostics" })
-vim.keymap.set("n", "<leader>fD", function() extra.pickers.diagnostic({ scope = "all" }) end, { desc = "Workspace diagnostics" })
+vim.keymap.set("n", "<leader>fd", function() extra.pickers.diagnostic({ scope = "current" }) end,
+	{ desc = "Buffer diagnostics" })
+vim.keymap.set("n", "<leader>fD", function() extra.pickers.diagnostic({ scope = "all" }) end,
+	{ desc = "Workspace diagnostics" })
 
 -- LSP: Unified function for references and symbols
 vim.keymap.set("n", "<leader>fr", function() extra.pickers.lsp({ scope = "references" }) end, { desc = "LSP references" })
-vim.keymap.set("n", "<leader>fS", function() extra.pickers.lsp({ scope = "document_symbol" }) end, { desc = "Document symbols" })
+vim.keymap.set("n", "<leader>fS", function() extra.pickers.lsp({ scope = "document_symbol" }) end,
+	{ desc = "Document symbols" })
 
 -- =========================================================
 -- GIT
@@ -76,4 +81,5 @@ vim.keymap.set("n", "<leader>gl", function() extra.pickers.git_commits() end, { 
 vim.keymap.set("n", "<leader>gf", function() extra.pickers.git_files() end, { desc = "Git files" })
 
 -- Status/Diff: Verified via git_hunks
-vim.keymap.set("n", "<leader>gd", function() extra.pickers.git_hunks({ scope = "worktree" }) end, { desc = "Git status (diff)" })
+vim.keymap.set("n", "<leader>gd", function() extra.pickers.git_hunks({ scope = "worktree" }) end,
+	{ desc = "Git status (diff)" })
