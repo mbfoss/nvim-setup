@@ -1,16 +1,7 @@
-local miniclue = require('mini.clue')
+ local miniclue = require('mini.clue')
 miniclue.setup({
-	window = {
-		-- Floating window config
-		config = {},
-
-		-- Delay before showing clue window
-		delay = 300,
-
-		-- Keys to scroll inside the clue window
-		scroll_down = '<C-d>',
-		scroll_up = '<C-u>',
-	},
+	-- Delay before showing clue window
+	delay = 300,
 	triggers = {
 		-- Leader triggers
 		{ mode = 'n', keys = '<Leader>' },
@@ -44,7 +35,23 @@ miniclue.setup({
 	},
 
 	clues = {
-		-- Enhance this by adding descriptions for <Leader> mapping groups
+		-- Your Custom Leader Groups
+		{ mode = 'n', keys = '<Leader>w',  desc = '+Window' },
+		{ mode = 'n', keys = '<Leader>B',  desc = '+Buffer' },
+		{ mode = 'n', keys = '<Leader>c',  desc = '+Code' },
+		{ mode = 'v', keys = '<Leader>c',  desc = '+Code' },
+		{ mode = 'n', keys = '<Leader>f',  desc = '+Find' },
+		{ mode = 'n', keys = '<Leader>g',  desc = '+Git' },
+		{ mode = 'n', keys = '<Leader>d',  desc = '+Debug' },
+		{ mode = 'n', keys = '<Leader>dr', desc = '+Run in Debug' },
+		{ mode = 'n', keys = '<Leader>o',  desc = '+Others' },
+		{ mode = 'n', keys = '<Leader>S',  desc = '+Sessions' },
+		{ mode = 'n', keys = '<Leader>p',  desc = '+Project' },
+		{ mode = 'n', keys = '<Leader>pb', desc = '+Build' },
+		{ mode = 'n', keys = '<Leader>pr', desc = '+Run' },
+		{ mode = 'n', keys = '<Leader>l',  desc = '+Loop' },
+
+		-- Built-in clue generators
 		miniclue.gen_clues.builtin_completion(),
 		miniclue.gen_clues.g(),
 		miniclue.gen_clues.marks(),
