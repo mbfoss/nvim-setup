@@ -19,7 +19,7 @@ local modules = {
 	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
 --	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 	{ pack = "mason.nvim",      module = "mason",           with_config = false },
-	{ pack = "loop.nvim",       module = "loop",            with_config = false },
+	{ pack = "loop.nvim",       module = "loop",            with_config = true },
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
 }
