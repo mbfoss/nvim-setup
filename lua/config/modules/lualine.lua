@@ -1,7 +1,3 @@
-local function loop_project()
-	return require('loop.wsinfo').status_line_comp()
-end
-
 require('lualine').setup {
 	options = {
 		theme = 'nord',
@@ -9,7 +5,7 @@ require('lualine').setup {
 	sections = {
 		lualine_a = { 'mode' },
 		lualine_b = { 'branch', 'diff', 'diagnostics' },
-		lualine_c = { loop_project, 'filename' },
+		lualine_c = { function() return require('loop.wsinfo').status_line_comp() end, 'filename' },
 		lualine_x = { 'lsp_status', 'encoding', 'fileformat', 'filetype' },
 		lualine_y = { 'progress' },
 		lualine_z = { 'location' }
