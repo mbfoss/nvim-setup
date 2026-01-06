@@ -8,5 +8,12 @@ require('mini.snippets').setup({
     -- "snippets/" subdirectories from 'runtimepath' directories.
     gen_loader.from_lang(),
   },
+  -- Key mappings internal to mini.snippets
+  mappings = {
+    -- 1. Jump forward (Tab)
+    -- 2. Jump backward (S-Tab)
+    -- 3. STOP session (Esc) - This is what you were missing!
+    stop = '<Esc>',     -- Immediately kills the snippet session on Esc
+  },
 })
 
