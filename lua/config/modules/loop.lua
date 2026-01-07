@@ -6,4 +6,8 @@ require("loop").setup({
 			return tostring(n1 + n2)
 		end
 	},
+	isolation = {
+		shada = true,
+		undo = true,
+	}
 })
