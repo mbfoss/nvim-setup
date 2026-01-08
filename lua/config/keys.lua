@@ -159,6 +159,7 @@ vim.keymap.set("n", "<leader>ds", ":LoopDebug session<CR>", { desc = "Select deb
 vim.keymap.set("n", "<leader>dt", ":LoopDebug thread<CR>", { desc = "Select thread", silent = true })
 vim.keymap.set("n", "<leader>df", ":LoopDebug frame<CR>", { desc = "Select stack frame", silent = true })
 vim.keymap.set("n", "<leader>di", ":LoopDebug inspect<CR>", { desc = "Inspect value", silent = true })
+vim.keymap.set("v", "<leader>di", ":LoopDebug inspect<CR>", { desc = "Inspect value", silent = true })
 vim.keymap.set("n", "<leader>dp", ":LoopDebug pause<CR>", { desc = "Pause execution", silent = true })
 vim.keymap.set("n", "<leader>dl", ":LoopDebug step_in<CR>", { desc = "Step into", silent = true })
 vim.keymap.set("n", "<leader>dh", ":LoopDebug step_out<CR>", { desc = "Step out", silent = true })
