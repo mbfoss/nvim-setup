@@ -121,7 +121,7 @@ map("n", "<leader>oq", toggle_qflist, { desc = "Toggle quickfix list" })
 map("n", "<leader>n", "<cmd>lua MiniNotify.show_history()<cr>", { desc = "Notification History" })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
-vim.keymap.set("n", "<leader>s", [[:%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
+vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
 
 vim.keymap.set('n', '<leader>dL', function()
 	vim.notify("starting luapanda listen")
