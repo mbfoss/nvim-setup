@@ -62,6 +62,16 @@ require("telescope").setup({
 		},
 		sorting_strategy = "ascending",
 		path_display = { "truncate" },
+		mappings = {
+			i = {
+				["<C-p>"] = actions.cycle_history_prev,
+				["<C-n>"] = actions.cycle_history_next,
+			},
+			n = {
+				["<C-p>"] = actions.cycle_history_prev,
+				["<C-n>"] = actions.cycle_history_next,
+			},
+		},
 	},
 	pickers = {
 		git_commits = {
@@ -221,11 +231,11 @@ local function show_grep_picker(opts)
 	if opts.use_regex == false then
 		additional_args = { "--fixed-strings" }
 	end
-	local cword = vim.fn.expand("<cword>")
+	--local cword = vim.fn.expand("<cword>")
 	builtin.live_grep({
 		cwd = dir,
 		additional_args = additional_args,
-		default_text = cword,
+		--default_text = cword,
 	})
 end
 
