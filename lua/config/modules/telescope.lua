@@ -64,12 +64,12 @@ require("telescope").setup({
 		path_display = { "truncate" },
 		mappings = {
 			i = {
-				["<C-p>"] = actions.cycle_history_prev,
-				["<C-n>"] = actions.cycle_history_next,
+				["<C-k>"] = actions.cycle_history_prev,
+				["<C-j>"] = actions.cycle_history_next,
 			},
 			n = {
-				["<C-p>"] = actions.cycle_history_prev,
-				["<C-n>"] = actions.cycle_history_next,
+				["<C-k>"] = actions.cycle_history_prev,
+				["<C-j>"] = actions.cycle_history_next,
 			},
 		},
 	},
