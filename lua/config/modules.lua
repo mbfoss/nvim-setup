@@ -1,7 +1,7 @@
 -- List of modules
 local modules = {
 
-	{ pack = "telescope.nvim",  module = "telescope",       with_config = true },
+	-- { pack = "telescope.nvim",  module = "telescope",       with_config = true },
 	-- {pack = "snacks.nvim",      module = "snacks",		    with_config = false },
 	{ pack = "mini.nvim",       module = "mini.snippets",   with_config = true },
 	{ pack = "mini.nvim",       module = "mini.completion", with_config = true },
@@ -11,8 +11,8 @@ local modules = {
 	{ pack = "mini.nvim",       module = "mini.animate",    with_config = true },
 	{ pack = "mini.nvim",       module = "mini.files",      with_config = true },
 	{ pack = "mini.nvim",       module = "mini.cursorword", with_config = false },
-	--{ pack = "mini.nvim",       module = "mini.pick",       with_config = true },
-	--{ pack = "mini.nvim",       module = "mini.extra",      with_config = true },
+	{ pack = "mini.nvim",       module = "mini.pick",       with_config = true },
+	{ pack = "mini.nvim",       module = "mini.extra",      with_config = true },
 	{ pack = "mini.nvim",       module = "mini.ai",         with_config = false },
 	{ pack = "mini.nvim",       module = "mini.clue",         with_config = true },
 	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
