@@ -7,7 +7,6 @@ require("mini.files").setup({
 		preview = true,
 	},
 	mappings = {
-		close = '<Esc>',
 		go_in_plus = '<CR>',
 	}
 })
