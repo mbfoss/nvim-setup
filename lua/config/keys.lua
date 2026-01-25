@@ -112,9 +112,7 @@ map("n", "<leader>wR", "<cmd>wincmd R<cr>", { desc = "Rotate windows opposite", 
 map("n", "<leader>wx", "<cmd>wincmd x<cr>", { desc = "Swap current and next window", noremap = true, silent = true })
 map("n", "<leader>wt", function() require('mbo.term').toggle_window() end,
 	{ desc = "Toggle terminal window", noremap = true, silent = true })
-map("n", "<leader>we", function() require('mbo.tasks-term').toggle_window() end,
-	{ desc = "Toggle tasks window", noremap = true, silent = true })
-
+map("n", "<leader>we", function() require('mbo.tasks-term').toggle_window() end, { desc = "Toggle tasks window", noremap = true, silent = true })
 --  others
 map("n", "<leader>ol", toggle_loclist, { desc = "Toggle location list" })
 map("n", "<leader>oq", toggle_qflist, { desc = "Toggle quickfix list" })
@@ -125,6 +123,8 @@ vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], {
 
 vim.keymap.set('n', '<leader>dL', function()
 	vim.notify("starting luapanda listen")
+	package.path = package.path .. ";" .. vim.env.HOME .. "/.luarocks/share/lua/5.4/?.lua"
+	package.cpath = package.cpath .. ";" .. vim.env.HOME .. "/.luarocks/lib/lua/5.1/socket/core.so"
 	local LuaPanda = require("LuaPanda")
 	LuaPanda.start("127.0.0.1", 8818)
 end, { noremap = true, desc = "LuaPanda listen" })
