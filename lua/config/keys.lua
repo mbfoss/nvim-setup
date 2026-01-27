@@ -153,8 +153,11 @@ vim.keymap.set("n", "<leader>lR", ":Loop task repeat<CR>", { desc = "Repeat task
 vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu§", silent = true })         -- to avoid deleting text by accident
 vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
 vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })
-vim.keymap.set("n", "<leader>db", ":Loop debug breakpoint<CR>", { desc = "Toggle breakpoint", silent = true })
-vim.keymap.set("n", "<leader>dB", ":Loop debug breakpoint list<CR>", { desc = "List breakpoints", silent = true })
+vim.keymap.set("n", "<leader>dbb", ":Loop debug breakpoint<CR>", { desc = "Toggle breakpoint", silent = true })
+vim.keymap.set("n", "<leader>dbl", ":Loop debug breakpoint list<CR>", { desc = "List breakpoints", silent = true })
+vim.keymap.set("n", "<leader>dbt", ":Loop debug breakpoint toggle_enabled<CR>", { desc = "Enable/disable breakpoint", silent = true })
+vim.keymap.set("n", "<leader>dbE", ":Loop debug breakpoint enable_all<CR>", { desc = "Enable all breakpoints", silent = true })
+vim.keymap.set("n", "<leader>dbD", ":Loop debug breakpoint disable_all<CR>", { desc = "Disable all breakpoints", silent = true })
 vim.keymap.set("n", "<leader>ds", ":Loop debug session<CR>", { desc = "Select debug session", silent = true })
 vim.keymap.set("n", "<leader>dt", ":Loop debug thread<CR>", { desc = "Select thread", silent = true })
 vim.keymap.set("n", "<leader>df", ":Loop debug frame<CR>", { desc = "Select stack frame", silent = true })
@@ -173,3 +176,4 @@ vim.keymap.set("n", "<A-l>", ":Loop debug step_in<CR>", { desc = "Step into", si
 vim.keymap.set("n", "<A-h>", ":Loop debug step_out<CR>", { desc = "Step out", silent = true })
 vim.keymap.set("n", "<A-j>", ":Loop debug step_over<CR>", { desc = "Step over", silent = true })
 vim.keymap.set("n", "<A-k>", ":Loop debug step_back<CR>", { desc = "Step back", silent = true })
+vim.keymap.set("n", "<A-;>", ":Loop debug continue_all<CR>", { desc = "Step back", silent = true })

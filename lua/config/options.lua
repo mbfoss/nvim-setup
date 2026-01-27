@@ -13,7 +13,8 @@ vim.o.cursorline = true     -- enable cursor line
 vim.o.number = true         -- enable line number
 vim.o.relativenumber = true -- and relative line number
 
-vim.o.signcolumn = "yes"    -- always show sign column
+vim.o.signcolumn = "yes:2"    -- always show sign column
+vim.o.scrolloff = 5
 
 vim.o.list = true           -- use special characters to represent things like tabs or trailing spaces
 
