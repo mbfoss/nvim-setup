@@ -150,6 +150,9 @@ vim.keymap.set("n", "<leader>lP", ":Loop page open<CR>", { desc = "Open page", s
 vim.keymap.set("n", "<leader>lr", ":Loop task<CR>", { desc = "Run task", silent = true })
 vim.keymap.set("n", "<leader>lR", ":Loop task repeat<CR>", { desc = "Repeat task", silent = true })
 
+vim.keymap.set("n", "<leader>mm", ":Loop mark toggle<CR>", { desc = "Toggle bookmark", silent = true })
+vim.keymap.set("n", "<leader>mn", ":Loop mark note<CR>", { desc = "Set note bookmark", silent = true })
+vim.keymap.set("n", "<leader>ml", ":Loop mark list <CR>", { desc = "Bookmarks list", silent = true })
 vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu§", silent = true })         -- to avoid deleting text by accident
 vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
 vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })

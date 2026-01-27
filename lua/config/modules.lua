@@ -14,14 +14,15 @@ local modules = {
 	--{ pack = "mini.nvim",       module = "mini.pick",       with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.extra",      with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.ai",         with_config = false },
-	{ pack = "mini.nvim",       module = "mini.clue",         with_config = true },
+	--{ pack = "mini.nvim",       module = "mini.clue",         with_config = true },
 	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 	{ pack = "mason.nvim",      module = "mason",           with_config = false },
 	{ pack = "loop.nvim",       module = "loop",            with_config = true },
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
-	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
+	--{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
+	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },
 }
 
 local pack_loaded = {}
