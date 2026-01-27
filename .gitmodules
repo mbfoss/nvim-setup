@@ -40,3 +40,6 @@
 [submodule "pack/plugins/opt/loop-debug.nvim"]
 	path = pack/plugins/opt/loop-debug.nvim
 	url = https://github.com/mbfoss/loop-debug.nvim.git
+[submodule "pack/plugins/opt/loop-marks.nvim"]
+	path = pack/plugins/opt/loop-marks.nvim
+	url = git@github.com:mbfoss/loop-marks.nvim.git
