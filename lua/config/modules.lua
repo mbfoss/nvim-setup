@@ -23,6 +23,7 @@ local modules = {
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
 	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },
+	{ pack = "nvim-treesitter", module = "nvim-treesitter",      with_config = false },
 }
 
 local pack_loaded = {}
