@@ -155,7 +155,7 @@ vim.keymap.set("n", "<leader>mn", ":Loop mark name<CR>", { desc = "Set named boo
 vim.keymap.set("n", "<leader>md", ":Loop mark delete<CR>", { desc = "Delete bookmark", silent = true })
 vim.keymap.set("n", "<leader>ml", ":Loop mark list <CR>", { desc = "Bookmarks list", silent = true })
 vim.keymap.set("n", "<leader>nn", ":Loop note set<CR>", { desc = "Set note", silent = true })
-vim.keymap.set("n", "<leader>nr", ":Loop note delete<CR>", { desc = "Delete note", silent = true })
+vim.keymap.set("n", "<leader>nd", ":Loop note delete<CR>", { desc = "Delete note", silent = true })
 vim.keymap.set("n", "<leader>nl", ":Loop note list <CR>", { desc = "Notes list", silent = true })
 vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu", silent = true }) -- to avoid deleting text by accident
 vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
