@@ -20,6 +20,7 @@ local modules = {
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 	{ pack = "mason.nvim",      module = "mason",           with_config = false },
 	{ pack = "loop.nvim",       module = "loop",            with_config = true },
+	{ pack = "loop-build.nvim", module = "loop-build",      with_config = false },
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
 	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },

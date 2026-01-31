@@ -152,12 +152,12 @@ vim.keymap.set("n", "<leader>lR", ":Loop task repeat<CR>", { desc = "Repeat task
 
 vim.keymap.set("n", "<leader>mm", ":Loop mark set<CR>", { desc = "Set bookmark", silent = true })
 vim.keymap.set("n", "<leader>mn", ":Loop mark name<CR>", { desc = "Set named bookmark", silent = true })
-vim.keymap.set("n", "<leader>mr", ":Loop mark remove<CR>", { desc = "Remove bookmark", silent = true })
+vim.keymap.set("n", "<leader>md", ":Loop mark delete<CR>", { desc = "Delete bookmark", silent = true })
 vim.keymap.set("n", "<leader>ml", ":Loop mark list <CR>", { desc = "Bookmarks list", silent = true })
 vim.keymap.set("n", "<leader>nn", ":Loop note set<CR>", { desc = "Set note", silent = true })
-vim.keymap.set("n", "<leader>nr", ":Loop note remove<CR>", { desc = "Remove note", silent = true })
+vim.keymap.set("n", "<leader>nr", ":Loop note delete<CR>", { desc = "Delete note", silent = true })
 vim.keymap.set("n", "<leader>nl", ":Loop note list <CR>", { desc = "Notes list", silent = true })
-vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu§", silent = true })         -- to avoid deleting text by accident
+vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu", silent = true }) -- to avoid deleting text by accident
 vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
 vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })
 vim.keymap.set("n", "<leader>dbb", ":Loop debug breakpoint<CR>", { desc = "Set breakpoints", silent = true })
@@ -182,9 +182,11 @@ vim.keymap.set("n", "<leader>dc", ":Loop debug continue<CR>", { desc = "Continue
 vim.keymap.set("n", "<leader>dC", ":Loop debug continue_all<CR>", { desc = "Continue debug", silent = true })
 vim.keymap.set("n", "<leader>dk", ":Loop debug terminate<CR>", { desc = "Terminate debug", silent = true })
 vim.keymap.set("n", "<leader>dK", ":Loop debug terminate_all<CR>", { desc = "Terminate debug", silent = true })
+
 vim.keymap.set("n", "<A-l>", ":Loop debug step_in<CR>", { desc = "Step into", silent = true })
 vim.keymap.set("n", "<A-h>", ":Loop debug step_out<CR>", { desc = "Step out", silent = true })
 vim.keymap.set("n", "<A-j>", ":Loop debug step_over<CR>", { desc = "Step over", silent = true })
 vim.keymap.set("n", "<A-k>", ":Loop debug step_back<CR>", { desc = "Step back", silent = true })
 vim.keymap.set("n", "<A-;>", ":Loop debug continue_all<CR>", { desc = "Step back", silent = true })
 vim.keymap.set("n", "<A-b>", ":Loop debug breakpoint toggle<CR>", { desc = "Toggle breakpoint", silent = true })
+
