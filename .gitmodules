@@ -31,9 +31,6 @@
 [submodule "pack/plugins/opt/mason.nvim"]
 	path = pack/plugins/opt/mason.nvim
 	url = https://github.com/mason-org/mason.nvim.git
-[submodule "pack/plugins/opt/loop.nvim"]
-	path = pack/plugins/opt/loop.nvim
-	url = https://github.com/mbfoss/loop.nvim.git
 [submodule "pack/plugins/opt/loop-build.nvim"]
 	path = pack/plugins/opt/loop-build.nvim
 	url = https://github.com/mbfoss/loop-build.nvim.git
@@ -46,3 +43,6 @@
 [submodule "pack/plugins/opt/loop-marks.nvim"]
 	path = pack/plugins/opt/loop-marks.nvim
 	url = git@github.com:mbfoss/loop-marks.nvim.git
+[submodule "pack/plugins/opt/loop.nvim"]
+	path = pack/plugins/opt/loop.nvim
+	url = https://github.com/mbfoss/loop-build.nvim.git
