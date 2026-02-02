@@ -111,37 +111,31 @@ end
 
 local function show_qf_errors()
 	local qf = vim.fn.getqflist()
-	local errors = vim.tbl_filter(function(i)
-		return i.type == "E"
-			or (i.severity == vim.diagnostic.severity.ERROR)
-	end, qf)
+	local errors = {}
+
+	for _, entry in ipairs(qf) do
+		if entry.valid == 1 and (entry.type == "E" or entry.severity == vim.diagnostic.severity.ERROR) then
+			table.insert(errors, entry)
+		end
+	end
 
 	if #errors == 0 then
-		vim.notify("No errors in quickfix")
+		vim.notify("No errors in quickfix", vim.log.levels.INFO)
 		return
 	end
 
-	Snacks.picker.new({
-		title = "Quickfix Errors",
-		items = errors,
-		preview = true,
-		format = function(e)
+	vim.ui.select(errors, {
+		prompt = "Quickfix Errors:",
+		format_item = function(e)
 			local fname = vim.fn.bufname(e.bufnr)
-			return ("%s:%d:%d: %s"):format(
-				fname,
-				e.lnum,
-				e.col,
-				vim.trim(e.text or "")
-			)
+			return ("%s:%d:%d  %s"):format(fname, e.lnum, e.col, vim.trim(e.text))
 		end,
-		confirm = function(picker, e)
-			picker:close()
-			vim.cmd.edit(vim.fn.fnameescape(vim.fn.bufname(e.bufnr)))
-			vim.api.nvim_win_set_cursor(0, { e.lnum, e.col - 1 })
-		end,
-	})
+	}, function(choice)
+		if not choice then return end
+		vim.cmd.edit(vim.fn.fnameescape(vim.fn.bufname(choice.bufnr)))
+		vim.api.nvim_win_set_cursor(0, { choice.lnum, choice.col - 1 })
+	end)
 end
-
 ----------------------------------------------------------------------
 -- vim.ui.select override (with preview)
 ----------------------------------------------------------------------
@@ -174,9 +168,11 @@ end
 ----------------------------------------------------------------------
 
 vim.keymap.set("n", "<leader>e", function() Snacks.explorer() end, { desc = "Explorer" })
+vim.keymap.set("n", "<leader>N", function() Snacks.notifier.show_history() end, { desc = "Notification History" })
 
 -- === Find ===
 vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
+vim.keymap.set("n", "<leader>fo", function() Snacks.picker.pickers() end, { desc = "All pickers" })
 vim.keymap.set("n", "<leader>ff", function() show_file_picker(true) end, { desc = "Find Files (fuzzy)" })
 vim.keymap.set("n", "<leader>fF", function() show_file_picker(false) end, { desc = "Find Files (non-fuzzy)" })
 

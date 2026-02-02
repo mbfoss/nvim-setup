@@ -1,4 +1,5 @@
 require("loop").setup({
+	selector = "snacks",
 	macros = {
 		add = function(ctx, value1, value2)
 			local n1 = tonumber(value1) or 0

@@ -116,7 +116,6 @@ map("n", "<leader>we", function() require('mbo.tasks-term').toggle_window() end,
 --  others
 map("n", "<leader>ol", toggle_loclist, { desc = "Toggle location list" })
 map("n", "<leader>oq", toggle_qflist, { desc = "Toggle quickfix list" })
-map("n", "<leader>N", "<cmd>lua MiniNotify.show_history()<cr>", { desc = "Notification History" })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
