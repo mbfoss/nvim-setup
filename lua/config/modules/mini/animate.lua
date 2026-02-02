@@ -18,7 +18,7 @@ animate.setup({
 		enable = true,
 		timing = animate.gen_timing.cubic({
 			unit = 'total',
-			duration = 200, -- scrolling feels nicer slightly slower
+			duration = 100, -- scrolling feels nicer slightly slower
 			easing = "in-out",
 		}),
 		subscroll = animate.gen_subscroll.equal({

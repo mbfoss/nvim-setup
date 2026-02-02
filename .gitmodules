@@ -46,6 +46,3 @@
 [submodule "pack/plugins/opt/loop-marks.nvim"]
 	path = pack/plugins/opt/loop-marks.nvim
 	url = git@github.com:mbfoss/loop-marks.nvim.git
-[submodule "pack/plugins/opt/snacks.nvim"]
-	path = pack/plugins/opt/snacks.nvim
-	url = https://github.com/folke/snacks.nvim.git
