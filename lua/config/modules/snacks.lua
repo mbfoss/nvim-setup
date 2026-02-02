@@ -4,7 +4,27 @@ require("snacks").setup({
 	explorer = { enabled = true },
 	indent = { enabled = true },
 	input = { enabled = true },
-	picker = { enabled = true },
+	picker = {
+		enabled = true,
+		win = {
+			-- input window
+			input = {
+				keys = {
+					-- to close the picker on ESC instead of going to normal mode,
+					-- add the following keymap to your config
+					-- ["<Esc>"] = { "close", mode = { "n", "i" } },
+					["/"] = "toggle_focus",
+					["<C-j>"] = { "history_forward", mode = { "i", "n" } },
+					["<C-k>"] = { "history_back", mode = { "i", "n" } },
+				}
+			}
+		},
+		layout = {
+			layout = {
+				backdrop = false, -- disable dimming
+			},
+		},
+	},
 	notifier = { enabled = true },
 	quickfile = { enabled = true },
 	scope = { enabled = true },
