@@ -9,7 +9,7 @@ require("snacks").setup({
 	quickfile = { enabled = true },
 	scope = { enabled = true },
 	scroll = { enabled = true },
-	statuscolumn = { enabled = true },
+	statuscolumn = { enabled = false },
 	words = { enabled = true },
 })
 
