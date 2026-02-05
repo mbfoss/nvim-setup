@@ -22,3 +22,10 @@ vim.keymap.set("n", "<leader>e", function()
 	end
 	mf.reveal_cwd() -- center around that location
 end, { silent = true, desc = "Open mini.files at current file" })
+
+
+vim.keymap.set("n", "<leader>E", function()
+	local mf = require("mini.files")
+	mf.open('~')
+	mf.reveal_cwd() -- center around that location
+end, { silent = true, desc = "Open mini.files at the home directory" })
