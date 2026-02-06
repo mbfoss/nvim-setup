@@ -1,20 +1,5 @@
 local map = vim.keymap.set
 
-
-local function toggle_loclist()
-	local loclist_open = false
-	for _, win in ipairs(vim.fn.getwininfo()) do
-		if win.loclist == 1 then
-			loclist_open = true
-			vim.cmd("lclose")
-			break
-		end
-	end
-	if not loclist_open then
-		vim.cmd("lopen")
-	end
-end
-
 local function toggle_qflist()
 	local qflist_open = false
 	for _, win in ipairs(vim.fn.getwininfo()) do
@@ -94,6 +79,12 @@ map("n", "<leader>bv", "<cmd>vsplit<cr>", { desc = "Split Buffer Vertically" })
 map("n", "<leader>bf", "<cmd>file<cr>", { desc = "Show Buffer File Info" })
 map("n", "<leader>bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight" })
 
+vim.keymap.set("n", "<leader>b+", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  print("Copied path: " .. path)
+end, { desc = "Copy current buffer path to clipboard" })
+
 -- windows
 
 map("n", "<leader>wh", "<cmd>wincmd h<cr>", { desc = "Move to left window", noremap = true, silent = true })
@@ -110,12 +101,7 @@ map("n", "<leader>w|", "<cmd>wincmd |<cr>", { desc = "Maximize window width", no
 map("n", "<leader>wr", "<cmd>wincmd r<cr>", { desc = "Rotate windows", noremap = true, silent = true })
 map("n", "<leader>wR", "<cmd>wincmd R<cr>", { desc = "Rotate windows opposite", noremap = true, silent = true })
 map("n", "<leader>wx", "<cmd>wincmd x<cr>", { desc = "Swap current and next window", noremap = true, silent = true })
-map("n", "<leader>wt", function() require('mbo.term').toggle_window() end,
-	{ desc = "Toggle terminal window", noremap = true, silent = true })
-map("n", "<leader>we", function() require('mbo.tasks-term').toggle_window() end, { desc = "Toggle tasks window", noremap = true, silent = true })
---  others
-map("n", "<leader>ol", toggle_loclist, { desc = "Toggle location list" })
-map("n", "<leader>oq", toggle_qflist, { desc = "Toggle quickfix list" })
+map("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list" })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
