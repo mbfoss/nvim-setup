@@ -1,6 +1,7 @@
 -- List of modules
 local modules = {
 
+	{ pack = "osv",             module = "osv",             with_config = false },
 	{ pack = "mini.nvim",       module = "mini.base16",     with_config = true },
 	{ pack = "mini.nvim",       module = "mini.completion", with_config = true },
 	{ pack = "mini.nvim",       module = "mini.notify",     with_config = true },
