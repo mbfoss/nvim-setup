@@ -1,6 +1,7 @@
 -- List of modules
 local modules = {
 
+	{ pack = "osv",             module = "osv",             with_config = false },
 	{ pack = "mini.nvim",       module = "mini.base16",     with_config = true },
 	{ pack = "mini.nvim",       module = "mini.completion", with_config = true },
 	{ pack = "mini.nvim",       module = "mini.notify",     with_config = true },
@@ -16,7 +17,7 @@ local modules = {
 	--{ pack = "mini.nvim",       module = "mini.ai",         with_config = false },
 	--{ pack = "mini.nvim",       module = "mini.clue",       with_config = true },
 	{ pack = "mason.nvim",      module = "mason",           with_config = false },
-	--{ pack = "nvim-treesitter", module = "nvim-treesitter", with_config = false },
+	{ pack = "nvim-treesitter", module = "nvim-treesitter", with_config = false },
 	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },

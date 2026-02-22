@@ -47,3 +47,6 @@
 	path = pack/plugins/opt/loop-marks.nvim
 	url = https://github.com/mbfoss/loop-marks.nvim.git
 
+[submodule "pack/plugins/opt/osv"]
+	path = pack/plugins/opt/osv
+	url = https://github.com/jbyuki/one-small-step-for-vimkind.git

@@ -1,9 +1,5 @@
 -- general options
 
-local termfeatures = vim.g.termfeatures or {}
-termfeatures.osc52 = false
-vim.g.termfeatures = termfeatures
-
 vim.o.shortmess = vim.o.shortmess .. "Ic"
 
 vim.o.termguicolors = true -- enable rgb colors
