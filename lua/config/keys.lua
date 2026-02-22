@@ -146,7 +146,7 @@ vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu", silent = true }) -- 
 vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
 vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })
 vim.keymap.set("n", "<leader>bb", ":Loop debug breakpoint<CR>", { desc = "Set breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bs", ":Loop debug breakpoint toggle<CR>", { desc = "Toggle breakpoint", silent = true })
+vim.keymap.set("n", "<leader>bd", ":Loop debug breakpoint delete<CR>", { desc = "Delete breakpoints", silent = true })
 vim.keymap.set("n", "<leader>bc", ":Loop debug breakpoint conditional<CR>", { desc = "Set conditional breakpoint", silent = true })
 vim.keymap.set("n", "<leader>bl", ":Loop debug breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
 vim.keymap.set("n", "<leader>bt", ":Loop debug breakpoint toggle_enabled<CR>", { desc = "Enable/disable breakpoint", silent = true })
