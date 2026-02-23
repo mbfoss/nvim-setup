@@ -20,13 +20,14 @@ local modules = {
 	{ pack = "nvim-treesitter", module = "nvim-treesitter", with_config = false },
 	{ pack = "lualine.nvim",    module = "lualine",         with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",        with_config = false },
-	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 	{ pack = "telescope.nvim",  module = "telescope",       with_config = true },
 	{ pack = "loop.nvim",       module = "loop",            with_config = true },
 	{ pack = "loop-build.nvim", module = "loop-build",      with_config = false },
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = false },
 	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },
+	-- keep which-key last for better loading speed
+	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 }
 
 local pack_loaded = {}
