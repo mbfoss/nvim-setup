@@ -47,7 +47,7 @@ vim.api.nvim_set_hl(0, "TelescopeBorder",       { fg = "#a4b8d4" })
 -- Pastel Garden terminal colors
 vim.opt.termguicolors = true
 vim.g.terminal_color_0  = "#2E2A38"
-vim.g.terminal_color_1  = "#F28FAD"
+vim.g.terminal_color_1  = "#C78284"
 vim.g.terminal_color_2  = "#A8E6CF"
 vim.g.terminal_color_3  = "#FFF2B2"
 vim.g.terminal_color_4  = "#A0C4FF"
@@ -56,7 +56,7 @@ vim.g.terminal_color_6  = "#B2F2E6"
 vim.g.terminal_color_7  = "#ECEFF4"
 
 vim.g.terminal_color_8  = "#6D6A75"
-vim.g.terminal_color_9  = "#F7B7C9"
+vim.g.terminal_color_9  = "#C78284"
 vim.g.terminal_color_10 = "#B7EFC5"
 vim.g.terminal_color_11 = "#FFF7C4"
 vim.g.terminal_color_12 = "#B8D8FF"
