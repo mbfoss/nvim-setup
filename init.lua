@@ -5,6 +5,6 @@ require("config.keys")
 require("config.autocomplete")
 require("config.keyhelp")
 require("config.modules")
- -- do last for lua lsp to find loaded packages 
+-- do last for lua lsp to find loaded packages
 require("config.lsp")
 require("config.calltree")
