@@ -143,7 +143,6 @@ vim.keymap.set("n", "<leader>nn", ":Loop note set<CR>", { desc = "Set note", sil
 vim.keymap.set("n", "<leader>nd", ":Loop note delete<CR>", { desc = "Delete note", silent = true })
 vim.keymap.set("n", "<leader>nl", ":Loop note list <CR>", { desc = "Notes list", silent = true })
 vim.keymap.set("v", "<leader>d", "", { desc = "Debug menu", silent = true }) -- to avoid deleting text by accident
-vim.keymap.set("n", "<leader>dd", ":Loop debug <CR>", { desc = "Select LoopDebug command", silent = true })
 vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })
 vim.keymap.set("n", "<leader>bb", ":Loop debug breakpoint<CR>", { desc = "Set breakpoints", silent = true })
 vim.keymap.set("n", "<leader>bd", ":Loop debug breakpoint delete<CR>", { desc = "Delete breakpoints", silent = true })
@@ -157,7 +156,6 @@ vim.keymap.set("n", "<leader>ds", ":Loop debug session<CR>", { desc = "Select de
 vim.keymap.set("n", "<leader>dt", ":Loop debug thread<CR>", { desc = "Select thread", silent = true })
 vim.keymap.set("n", "<leader>df", ":Loop debug frame<CR>", { desc = "Select stack frame", silent = true })
 vim.keymap.set("n", "<leader>di", ":Loop debug inspect<CR>", { desc = "Inspect value", silent = true })
-vim.keymap.set("v", "<leader>di", ":Loop debug inspect<CR>", { desc = "Inspect value", silent = true })
 vim.keymap.set("n", "<leader>dp", ":Loop debug pause<CR>", { desc = "Pause execution", silent = true })
 vim.keymap.set("n", "<leader>dl", ":Loop debug step_in<CR>", { desc = "Step into", silent = true })
 vim.keymap.set("n", "<leader>dh", ":Loop debug step_out<CR>", { desc = "Step out", silent = true })
