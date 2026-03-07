@@ -1,5 +1,4 @@
 require("loop").setup({
-	workspace_data_dir = ".nvimloop",
 	macros = {
 		add = function(_, value1, value2)
 			local n1 = tonumber(value1) or 0
