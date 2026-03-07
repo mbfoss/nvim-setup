@@ -33,20 +33,19 @@
 	url = https://github.com/mason-org/mason.nvim.git
 [submodule "pack/plugins/opt/loop.nvim"]
 	path = pack/plugins/opt/loop.nvim
-	url = https://github.com/mbfoss/loop.nvim.git
+	url = https://github.com/loop-nvim/loop.nvim.git
 [submodule "pack/plugins/opt/loop-build.nvim"]
 	path = pack/plugins/opt/loop-build.nvim
-	url = https://github.com/mbfoss/loop-build.nvim.git
+	url = https://github.com/loop-nvim/loop-build.nvim.git
 [submodule "pack/plugins/opt/loop-cmake.nvim"]
 	path = pack/plugins/opt/loop-cmake.nvim
-	url = https://github.com/mbfoss/loop-cmake.nvim.git
+	url = https://github.com/loop-nvim/loop-cmake.nvim.git
 [submodule "pack/plugins/opt/loop-debug.nvim"]
 	path = pack/plugins/opt/loop-debug.nvim
-	url = https://github.com/mbfoss/loop-debug.nvim.git
+	url = https://github.com/loop-nvim/loop-debug.nvim.git
 [submodule "pack/plugins/opt/loop-marks.nvim"]
 	path = pack/plugins/opt/loop-marks.nvim
-	url = https://github.com/mbfoss/loop-marks.nvim.git
-
+	url =https://github.com/loop-nvim/loop-marks.nvim.git 
 [submodule "pack/plugins/opt/osv"]
 	path = pack/plugins/opt/osv
 	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
