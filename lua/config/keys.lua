@@ -129,6 +129,7 @@ map("n", "<leader>dv", function()
 end)
 
 vim.keymap.set("n", "<leader>ll", ":Loop<CR>", { desc = "Select command", silent = true })
+vim.keymap.set("n", "<leader>lf", ":Loop workspace find_files<CR>", { desc = "Find files", silent = true })
 vim.keymap.set("n", "<leader>lt", ":Loop toggle<CR>", { desc = "Toggle tasks window", silent = true })
 vim.keymap.set("n", "<leader>lp", ":Loop page switch<CR>", { desc = "Switch main page", silent = true })
 vim.keymap.set("n", "<leader>lP", ":Loop page open<CR>", { desc = "Open page", silent = true })
