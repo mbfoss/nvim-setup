@@ -8,3 +8,4 @@ require("config.modules")
 -- do last for lua lsp to find loaded packages
 require("config.lsp")
 require("config.calltree")
+require("config.tools")
