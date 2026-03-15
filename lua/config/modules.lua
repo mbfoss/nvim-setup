@@ -29,6 +29,7 @@ local modules = {
 	-- keep which-key last for better loading speed
 	{ pack = "keystone.nvim",   module = "keystone",        with_config = false },
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
+	{ pack = "nvim-web-devicons",  module = "nvim-web-devicons",       with_config = false },
 }
 
 local pack_loaded = {}

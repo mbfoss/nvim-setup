@@ -55,3 +55,6 @@
 [submodule "pack/plugins/opt/keystone.nvim"]
 	path = pack/plugins/opt/keystone.nvim
 	url = https://github.com/mbfoss/keystone.nvim.git
+[submodule "pack/plugins/opt/nvim-web-devicons"]
+	path = pack/plugins/opt/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons.git
