@@ -27,6 +27,7 @@ local modules = {
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = true },
 	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },
 	-- keep which-key last for better loading speed
+	{ pack = "keystone.nvim",   module = "keystone",        with_config = false },
 	{ pack = "which-key.nvim",  module = "which-key",       with_config = true },
 }
 
