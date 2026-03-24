@@ -41,8 +41,6 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
-map("n", "<C-d>", "<C-d>zz", { noremap = true })
-map("n", "<C-u>", "<C-u>zz", { noremap = true })
 map('i', '<C-Space>', '<C-x><C-o>', { noremap = true })
 map('n', '<C-Space>', 'a<C-x><C-o>', { noremap = true })
 

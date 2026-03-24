@@ -49,12 +49,12 @@
 [submodule "pack/plugins/opt/osv"]
 	path = pack/plugins/opt/osv
 	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
-[submodule "pack/plugins/opt/beam.nvim"]
-	path = pack/plugins/opt/beam.nvim
-	url = https://github.com/mbfoss/beam.nvim.git
 [submodule "pack/plugins/opt/keystone.nvim"]
 	path = pack/plugins/opt/keystone.nvim
 	url = https://github.com/mbfoss/keystone.nvim.git
 [submodule "pack/plugins/opt/nvim-web-devicons"]
 	path = pack/plugins/opt/nvim-web-devicons
 	url = https://github.com/nvim-tree/nvim-web-devicons.git
+[submodule "pack/plugins/opt/flash.nvim"]
+	path = pack/plugins/opt/flash.nvim
+	url = https://github.com/folke/flash.nvim.git
