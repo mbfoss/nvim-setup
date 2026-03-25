@@ -26,7 +26,7 @@ local modules = {
 	{ pack = "loop-cmake.nvim", module = "loop-cmake",      with_config = false },
 	{ pack = "loop-debug.nvim", module = "loop-debug",      with_config = true },
 	{ pack = "loop-marks.nvim", module = "loop-marks",      with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone",        with_config = false },
+	-- { pack = "keystone.nvim",   module = "keystone",        with_config = false },
 	{ pack = "flash.nvim",      module = "flash",           with_config = true },
 	{ pack = "nvim-web-devicons",  module = "nvim-web-devicons",       with_config = false },
 

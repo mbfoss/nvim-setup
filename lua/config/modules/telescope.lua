@@ -55,7 +55,7 @@ end
 -- Telescope setup
 require("telescope").setup({
 	defaults = {
-		layout_strategy = "vertical",
+		layout_strategy = "horizontal",
 		layout_config = {
 			horizontal = { prompt_position = "top" },
 			vertical = { mirror = true, prompt_position = "top", preview_height = 0.45 },

@@ -102,7 +102,9 @@ map("n", "<leader>wx", "<cmd>wincmd x<cr>", { desc = "Swap current and next wind
 map("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list" })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
+
 vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
+vim.keymap.set("v", "<leader>s", [[y:%s/\V<C-r>"//gc<Left><Left><Left>]], { desc = "Substitute selection" })
 
 vim.keymap.set('n', '<leader>dL', function()
 	vim.notify("starting luapanda listen")
@@ -144,19 +146,14 @@ vim.keymap.set("n", "<leader>nd", ":Loop note delete<CR>", { desc = "Delete note
 vim.keymap.set("n", "<leader>nl", ":Loop note list <CR>", { desc = "Notes list", silent = true })
 
 vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true }) -- to avoid deleting text by accident
-vim.keymap.set("n", "<leader>du", ":Loop debug ui<CR>", { desc = "Toggle UI", silent = true })
-vim.keymap.set("n", "<leader>bb", ":Loop debug breakpoint toggle<CR>", { desc = "Toggle breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bd", ":Loop debug breakpoint delete<CR>", { desc = "Delete breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bc", ":Loop debug breakpoint conditional<CR>",
-	{ desc = "Set conditional breakpoint", silent = true })
-vim.keymap.set("n", "<leader>bl", ":Loop debug breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
-vim.keymap.set("n", "<leader>bt", ":Loop debug breakpoint toggle_enabled<CR>",
-	{ desc = "Enable/disable breakpoint", silent = true })
-vim.keymap.set("n", "<leader>bl", ":Loop debug breakpoint list<CR>", { desc = "List breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bE", ":Loop debug breakpoint enable_all<CR>",
-	{ desc = "Enable all breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bD", ":Loop debug breakpoint disable_all<CR>",
-	{ desc = "Disable all breakpoints", silent = true })
+vim.keymap.set("n", "<leader>bl", ":Loop breakpoint list<CR>", { desc = "List breakpoints", silent = true })
+vim.keymap.set("n", "<leader>bb", ":Loop breakpoint toggle<CR>", { desc = "Toggle breakpoints", silent = true })
+vim.keymap.set("n", "<leader>bd", ":Loop breakpoint delete<CR>", { desc = "Delete breakpoints", silent = true })
+vim.keymap.set("n", "<leader>bc", ":Loop breakpoint conditional<CR>", { desc = "Set conditional breakpoint", silent = true })
+vim.keymap.set("n", "<leader>bL", ":Loop breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
+vim.keymap.set("n", "<leader>bt", ":Loop breakpoint toggle_enabled<CR>", { desc = "Enable/disable breakpoint", silent = true })
+vim.keymap.set("n", "<leader>bE", ":Loop breakpoint enable_all<CR>", { desc = "Enable all breakpoints", silent = true })
+vim.keymap.set("n", "<leader>bD", ":Loop breakpoint disable_all<CR>", { desc = "Disable all breakpoints", silent = true })
 vim.keymap.set("n", "<leader>ds", ":Loop debug session<CR>", { desc = "Select debug session", silent = true })
 vim.keymap.set("n", "<leader>dt", ":Loop debug thread<CR>", { desc = "Select thread", silent = true })
 vim.keymap.set("n", "<leader>df", ":Loop debug frame<CR>", { desc = "Select stack frame", silent = true })
