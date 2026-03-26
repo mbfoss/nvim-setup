@@ -5,7 +5,7 @@ local modules = {
 	{ pack = "mini.nvim",       module = "mini.base16",     with_config = true },
 	{ pack = "mini.nvim",       module = "mini.completion", with_config = true },
 	{ pack = "mini.nvim",       module = "mini.notify",     with_config = true },
-	{ pack = "mini.nvim",       module = "mini.animate",    with_config = true },
+	-- { pack = "mini.nvim",       module = "mini.animate",    with_config = true },
 	{ pack = "mini.nvim",       module = "mini.files",      with_config = true },
 	--{ pack = "snacks.nvim",     module = "snacks",          with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.pairs",      with_config = false },
