@@ -73,3 +73,5 @@ vim.opt.diffopt:append("linematch:60") -- second stage diff to align lines
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
+
+vim.o.equalalways = false
