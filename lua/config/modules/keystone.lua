@@ -4,12 +4,13 @@ keystone.setup()
 vim.keymap.set("n", "<leader>ff", "<cmd>Keystone pick files<cr>", { desc = "Find Files"} )
 vim.keymap.set("n", "<leader>fp", "<cmd>Keystone pick recent_files<cr>", { desc = "Recent Files"} )
 vim.keymap.set("n", "<leader>fg", "<cmd>Keystone pick live_grep<cr>", { desc = "Recent Files"} )
+vim.keymap.set("n", "<leader>fc", "<cmd>Keystone pick config_files<cr>", { desc = "Config Files"} )
+vim.keymap.set("n", "<leader>fb", "<cmd>Keystone pick buffers<cr>", { desc = "Buffers"} )
 
 -- vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
 -- vim.keymap.set("n", "<leader>fa", builtin.resume, { desc = "Resume last search" })
 -- vim.keymap.set("n", "<leader>fo", builtin.builtin, { desc = "Show all pickers" })
 -- vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
--- vim.keymap.set("n", "<leader>fc", function() builtin.find_files({ cwd = vim.fn.stdpath("config") }) end,
 -- 	{ desc = "Find Config File" })
 --
 -- vim.keymap.set("n", "<leader>ff", function() show_file_picker(true) end, { desc = "Find Files (fuzzy)" })
