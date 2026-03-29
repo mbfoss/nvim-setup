@@ -1,0 +1,42 @@
+local keystone = require("keystone")
+keystone.setup()
+
+vim.keymap.set("n", "<leader>ff", "<cmd>Keystone pick files<cr>", { desc = "Find Files"} )
+vim.keymap.set("n", "<leader>fp", "<cmd>Keystone pick recent_files<cr>", { desc = "Recent Files"} )
+vim.keymap.set("n", "<leader>fg", "<cmd>Keystone pick live_grep<cr>", { desc = "Recent Files"} )
+
+-- vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
+-- vim.keymap.set("n", "<leader>fa", builtin.resume, { desc = "Resume last search" })
+-- vim.keymap.set("n", "<leader>fo", builtin.builtin, { desc = "Show all pickers" })
+-- vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
+-- vim.keymap.set("n", "<leader>fc", function() builtin.find_files({ cwd = vim.fn.stdpath("config") }) end,
+-- 	{ desc = "Find Config File" })
+--
+-- vim.keymap.set("n", "<leader>ff", function() show_file_picker(true) end, { desc = "Find Files (fuzzy)" })
+-- vim.keymap.set("n", "<leader>fF", function() show_file_picker(false) end, { desc = "Find Files (non-fuzzy)" })
+--
+-- vim.keymap.set("n", "<leader>fg", function() show_grep_picker({ use_regex = false }) end, { desc = "Grep (smart case)" })
+-- vim.keymap.set("n", "<leader>fG", function() show_grep_picker({ use_regex = true }) end, { desc = "Grep text (regex)" })
+--
+-- vim.keymap.set("n", "<leader>fp", builtin.oldfiles, { desc = "Previous files" })
+-- vim.keymap.set("n", '<leader>f"', builtin.registers, { desc = "Registers" })
+-- vim.keymap.set("n", '<leader>f/', builtin.search_history, { desc = "Search History" })
+-- vim.keymap.set("n", "<leader>ft", builtin.current_buffer_fuzzy_find, { desc = "Buffer Lines" })
+-- vim.keymap.set("n", "<leader>fh", builtin.command_history, { desc = "Command History" })
+-- vim.keymap.set("n", "<leader>fj", builtin.jumplist, { desc = "Jumps" })
+-- vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Marks" })
+-- vim.keymap.set("n", "<leader>fq", builtin.quickfix, { desc = "Quickfix List" })
+-- vim.keymap.set("n", "<leader>fe", show_qf_errors, { desc = "Quickfix Errors" })
+-- vim.keymap.set("n", "<leader>fd", function() builtin.diagnostics({ bufnr = 0 }) end, { desc = "Diagnostics" })
+-- vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Workspace Diagnostics (cwd)" })
+-- vim.keymap.set("n", "<leader>fB", builtin.live_grep, { desc = "Grep Open Buffers" })
+-- vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "LSP references" })
+-- vim.keymap.set("n", "<leader>fS", find_document_symbols, { desc = "LSP references" })
+-- vim.keymap.set("n", "<leader>fs", builtin.spell_suggest, { desc = "Spell suggestions" })
+-- -- === Git ===
+-- vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Git Branches" })
+-- vim.keymap.set("n", "<leader>gl", builtin.git_commits, { desc = "Git Log" })
+-- vim.keymap.set("n", "<leader>gL", builtin.git_bcommits, { desc = "Git Log Line" })
+-- vim.keymap.set("n", "<leader>gd", builtin.git_status, { desc = "Git diff" })
+-- vim.keymap.set("n", "<leader>gS", builtin.git_stash, { desc = "Git stash list" })
+-- vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Find Git Files" })
