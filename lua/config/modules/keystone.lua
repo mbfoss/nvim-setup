@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>fp", "<cmd>Keystone pick recent_files<cr>", { desc 
 vim.keymap.set("n", "<leader>fg", "<cmd>Keystone pick live_grep<cr>", { desc = "Recent Files"} )
 vim.keymap.set("n", "<leader>fc", "<cmd>Keystone pick config_files<cr>", { desc = "Config Files"} )
 vim.keymap.set("n", "<leader>fb", "<cmd>Keystone pick buffers<cr>", { desc = "Buffers"} )
+vim.keymap.set("n", "<leader>fq", "<cmd>Keystone pick quickfix<cr>", { desc = "Quickfix List" })
+vim.keymap.set("n", "<leader>fe", function () require("keystone.pickers.quickfix").open({filter = "errors"}) end, { desc = "Quickfix Errors" })
 
 -- vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
 -- vim.keymap.set("n", "<leader>fa", builtin.resume, { desc = "Resume last search" })
