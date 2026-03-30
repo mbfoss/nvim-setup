@@ -170,7 +170,7 @@ vim.keymap.set("n", "<leader>dK", ":Loop debug terminate_all<CR>", { desc = "Ter
 vim.keymap.set("n", "<A-l>", ":Loop debug step_in<CR>", { desc = "Step into", silent = true })
 vim.keymap.set("n", "<A-h>", ":Loop debug step_out<CR>", { desc = "Step out", silent = true })
 vim.keymap.set("n", "<A-j>", ":Loop debug step_over<CR>", { desc = "Step over", silent = true })
-vim.keymap.set("n", "<A-c>", ":Loop debug continue_all<CR>", { desc = "Step back", silent = true })
+vim.keymap.set("n", "<A-;>", ":Loop debug continue<CR>", { desc = "Step back", silent = true })
 vim.keymap.set("n", "<A-b>", ":Loop debug breakpoint toggle<CR>", { desc = "Toggle breakpoints", silent = true })
 
 ShowBufInfo = function()
