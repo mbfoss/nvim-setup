@@ -1,9 +1,6 @@
 [submodule "pack/plugins/opt/lualine.nvim"]
 	path = pack/plugins/opt/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
-[submodule "pack/plugins/start/nvim-nio"]
-	path = pack/plugins/start/nvim-nio
-	url = https://github.com/nvim-neotest/nvim-nio.git
 [submodule "pack/plugins/opt/nvim-treesitter"]
 	path = pack/plugins/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
@@ -13,18 +10,9 @@
 [submodule "pack/plugins/opt/which-key.nvim"]
 	path = pack/plugins/opt/which-key.nvim
 	url = https://github.com/folke/which-key.nvim.git
-[submodule "pack/plugins/start/plenary.nvim"]
-	path = pack/plugins/start/plenary.nvim
-	url = https://github.com/nvim-lua/plenary.nvim.git
 [submodule "pack/plugins/opt/gitsigns.nvim"]
 	path = pack/plugins/opt/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim.git
-[submodule "pack/plugins/opt/nvim-dap-virtual-text"]
-	path = pack/plugins/opt/nvim-dap-virtual-text
-	url = https://github.com/theHamsta/nvim-dap-virtual-text.git
-[submodule "pack/plugins/opt/telescope.nvim"]
-	path = pack/plugins/opt/telescope.nvim
-	url = https://github.com/nvim-telescope/telescope.nvim.git
 [submodule "pack/plugins/opt/osv.nvim"]
 	path = pack/plugins/opt/osv.nvim
 	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
@@ -46,9 +34,6 @@
 [submodule "pack/plugins/opt/loop-marks.nvim"]
 	path = pack/plugins/opt/loop-marks.nvim
 	url =https://codeberg.org/loop-nvim/loop-marks.nvim.git 
-[submodule "pack/plugins/opt/osv"]
-	path = pack/plugins/opt/osv
-	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
 [submodule "pack/plugins/opt/keystone.nvim"]
 	path = pack/plugins/opt/keystone.nvim
 	url = https://github.com/mbfoss/keystone.nvim.git
