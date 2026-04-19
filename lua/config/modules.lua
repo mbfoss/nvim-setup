@@ -13,7 +13,7 @@ local modules = {
 	--{ pack = "mini.nvim",       module = "mini.snippets",   with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.sessions",   with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.cursorword", with_config = false },
-	{ pack = "mini.nvim",         module = "mini.pick",         with_config = true },
+	--{ pack = "mini.nvim",         module = "mini.pick",         with_config = false },
 	--{ pack = "mini.nvim",       module = "mini.extra",      with_config = true },
 	--{ pack = "mini.nvim",       module = "mini.ai",         with_config = false },
 	--{ pack = "mini.nvim",       module = "mini.clue",       with_config = true },
