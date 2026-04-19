@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix L
 vim.keymap.set("n", "<leader>fe", function () require("keystone.pickers.quickfix").open({filter = "errors"}) end, { desc = "Quickfix Errors" })
 
 vim.keymap.set("n", "<leader>fd", "<cmd>Pick document_diagnostics<cr>", { desc = "Document diagnostics"} )
+vim.keymap.set("n", "<leader>fD", "<cmd>Pick workspace_diagnostics<cr>", { desc = "Workspace diagnostics"} )
 vim.keymap.set("n", "<leader>gd", "<cmd>Pick git_diff<cr>", { desc = "Git diff" })
 vim.keymap.set("n", "<leader>gh", "<cmd>Pick git_hunks<cr>", { desc = "Git hunks" })
 
