@@ -43,3 +43,6 @@
 [submodule "pack/plugins/opt/osv.nvim"]
 	path = pack/plugins/opt/osv.nvim
 	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
+[submodule "pack/plugins/opt/oil.nvim"]
+	path = pack/plugins/opt/oil.nvim
+	url = https://github.com/stevearc/oil.nvim.git

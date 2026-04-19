@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP 
 vim.keymap.set("n", "<leader>fF", "<cmd>Pick document_functions<cr>", { desc = "Document functions"} )
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix List" })
-vim.keymap.set("n", "<leader>fe", function () require("keystone.pickers.quickfix").open({filter = "errors"}) end, { desc = "Quickfix Errors" })
+vim.keymap.set("n", "<leader>fe", function () require("keystone.pick.pickers.quickfix").open({filter = "errors"}) end, { desc = "Quickfix Errors" })
 
 vim.keymap.set("n", "<leader>fd", "<cmd>Pick document_diagnostics<cr>", { desc = "Document diagnostics"} )
 vim.keymap.set("n", "<leader>fD", "<cmd>Pick workspace_diagnostics<cr>", { desc = "Workspace diagnostics"} )
