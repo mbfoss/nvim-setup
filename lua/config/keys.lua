@@ -60,6 +60,7 @@ map("n", "]c", "]c", { desc = "Next diff", })
 
 -- git signs
 map("n", "<leader>gB", "<cmd>Gitsigns blame<cr>", { desc = "Git blame" })
+map("n", "<leader>e", "<cmd>Filetree<cr>", { desc = "File tree" })
 
 -- Buffer
 
