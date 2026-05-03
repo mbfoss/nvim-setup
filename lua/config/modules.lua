@@ -17,6 +17,7 @@ local modules = {
 	{ pack = "loop-marks.nvim",   module = "loop-marks",        with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.pick",     with_config = true },
 	{ pack = "keystone.nvim",     module = "keystone.filetree", with_config = false },
+	{ pack = "keystone.nvim",     module = "keystone.explore",  with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.lspwords", with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.animate",  with_config = false },
 	{ pack = "flash.nvim",        module = "flash",             with_config = true },
