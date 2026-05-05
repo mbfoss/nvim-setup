@@ -20,6 +20,7 @@ local modules = {
 	{ pack = "keystone.nvim",     module = "keystone.explore",  with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.lspwords", with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.animate",  with_config = false },
+	{ pack = "keystone.nvim",     module = "keystone.objects",  with_config = false },
 	{ pack = "flash.nvim",        module = "flash",             with_config = true },
 	{ pack = "nvim-web-devicons", module = "nvim-web-devicons", with_config = false },
 
