@@ -19,7 +19,7 @@ local modules = {
 	{ pack = "keystone.nvim",     module = "keystone.filetree",    with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.explore",     with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.lspwords",    with_config = false },
-	{ pack = "keystone.nvim",     module = "keystone.notifications", with_config = false },
+	{ pack = "keystone.nvim",     module = "keystone.notify",      with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.animate",     with_config = false },
 	{ pack = "keystone.nvim",     module = "keystone.objects",     with_config = false },
 	{ pack = "flash.nvim",        module = "flash",                with_config = true },
