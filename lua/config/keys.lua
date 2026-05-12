@@ -59,8 +59,9 @@ map("n", "[c", "[c", { desc = "Previous diff" })
 map("n", "]c", "]c", { desc = "Next diff", })
 
 -- git signs
-map("n", "<leader>gB", "<cmd>Gitsigns blame<cr>", { desc = "Git blame" })
-map("n", "<leader>e", "<cmd>Filetree<cr>", { desc = "File tree" })
+map("n", "<leader>gB", "<cmd>Gitsigns blame<cr>", { desc = "Git Blame" })
+map("n", "<leader>e", "<cmd>FileSelector<cr>", { desc = "File Selector" })
+map("n", "<leader>E", "<cmd>FileTree<cr>", { desc = "File Tree" })
 
 -- Buffer
 
