@@ -1,9 +1,6 @@
 [submodule "pack/plugins/opt/lualine.nvim"]
 	path = pack/plugins/opt/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
-[submodule "pack/plugins/opt/nvim-treesitter"]
-	path = pack/plugins/opt/nvim-treesitter
-	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 [submodule "pack/plugins/opt/mini.nvim"]
 	path = pack/plugins/opt/mini.nvim
 	url = https://github.com/nvim-mini/mini.nvim.git
@@ -34,9 +31,6 @@
 [submodule "pack/plugins/opt/keystone.nvim"]
 	path = pack/plugins/opt/keystone.nvim
 	url = https://github.com/mbfoss/keystone.nvim.git
-[submodule "pack/plugins/opt/nvim-web-devicons"]
-	path = pack/plugins/opt/nvim-web-devicons
-	url = https://github.com/nvim-tree/nvim-web-devicons.git
 [submodule "pack/plugins/opt/flash.nvim"]
 	path = pack/plugins/opt/flash.nvim
 	url = https://github.com/folke/flash.nvim.git
