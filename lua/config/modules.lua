@@ -2,12 +2,8 @@
 local modules = {
 
 	{ pack = "osv.nvim",        module = "osv",               with_config = false },
-	-- { pack = "mini.nvim",       module = "mini.base16",       with_config = true },
 	{ pack = "mini.nvim",       module = "mini.completion",   with_config = true },
-	-- { pack = "mini.nvim",         module = "mini.notify",          with_config = true },
-	-- { pack = "mini.nvim",         module = "mini.files",        with_config = true },
 	{ pack = "mason.nvim",      module = "mason",             with_config = false },
-	{ pack = "nvim-treesitter", module = "nvim-treesitter",   with_config = false },
 	{ pack = "lualine.nvim",    module = "lualine",           with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",          with_config = false },
 	{ pack = "loop.nvim",       module = "loop",              with_config = true },
@@ -25,7 +21,6 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.base16",   with_config = true },
 	{ pack = "easytasks.nvim",  module = "easytasks",         with_config = false },
 	{ pack = "flash.nvim",      module = "flash",             with_config = true },
-	-- { pack = "nvim-web-devicons", module = "nvim-web-devicons",    with_config = false },
 
 	-- keep which-key last for better loading speed
 	{ pack = "which-key.nvim",  module = "which-key",         with_config = true },
