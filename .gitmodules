@@ -40,3 +40,6 @@
 [submodule "pack/plugins/opt/oil.nvim"]
 	path = pack/plugins/opt/oil.nvim
 	url = https://github.com/stevearc/oil.nvim.git
+[submodule "pack/plugins/opt/easytasks.nvim"]
+	path = pack/plugins/opt/easytasks.nvim
+	url = https://github.com/mbfoss/easytasks.nvim.git
