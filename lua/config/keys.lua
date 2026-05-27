@@ -120,7 +120,7 @@ end, { noremap = true, desc = "LuaPanda listen" })
 vim.keymap.set('n', '<leader>dO', function()
 	vim.notify("starting OSV listen")
 	local osv = require("osv")
-	osv.launch({ port = 8086 })
+	osv.launch({ host = "127.0.0.1", port = 8086 })
 end, { noremap = true, desc = "OSV listen" })
 
 

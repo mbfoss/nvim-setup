@@ -22,26 +22,46 @@ local function find_git_root(path)
     return nil
 end
 
--- Determine root: git root or current file folder
+-- Determine root: .git, .vscode, .loop, or current file folder
+local function find_project_root(path)
+    local markers = { ".git", ".vscode", ".loop" }
+
+    local found = vim.fs.find(markers, {
+        upward = true,
+        path = vim.fn.fnamemodify(path, ":p:h"),
+    })[1]
+
+    if found then
+        return vim.fs.dirname(found)
+    end
+
+    return nil
+end
+
 local function get_project_root()
     local file = vim.api.nvim_buf_get_name(0)
-    local git_root = find_git_root(file)
-    if git_root then
-        return git_root
+    local root = find_project_root(file)
+
+    if root then
+        return root
     else
         return vim.fn.fnamemodify(file, ":p:h")
     end
 end
 
 
+local project_root = get_project_root();
+
 local workspace_library = {
+	[project_root .. '/lua'] = true,
 	[vim.fn.expand('$VIMRUNTIME/lua')] = true,
 	[vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
 }
 
+
 return {
 	cmd = { "lua-language-server" },
-	rootUri = path_to_uri(get_project_root()),
+	rootUri = path_to_uri(project_root),
 	filetypes = { "lua" },
 	settings = {
 		Lua = {
