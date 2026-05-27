@@ -2,7 +2,7 @@
 local modules = {
 
 	{ pack = "osv.nvim",        module = "osv",               with_config = false },
-	{ pack = "mini.nvim",       module = "mini.completion",   with_config = true },
+	{ pack = "mini.nvim",       module = "mini.completion",     with_config = false },
 	{ pack = "mason.nvim",      module = "mason",             with_config = false },
 	{ pack = "lualine.nvim",    module = "lualine",           with_config = true },
 	{ pack = "gitsigns.nvim",   module = "gitsigns",          with_config = false },
@@ -20,6 +20,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.objects",  with_config = false },
 	{ pack = "keystone.nvim",   module = "keystone.colors",   with_config = false },
 	{ pack = "keystone.nvim",   module = "keystone.focus",    with_config = false },
+	-- { pack = "keystone.nvim",   module = "keystone.complete", with_config = false },
 	{ pack = "easytasks.nvim",  module = "easytasks",         with_config = false },
 	{ pack = "flash.nvim",      module = "flash",             with_config = true },
 

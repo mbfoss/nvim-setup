@@ -1,6 +1,6 @@
 vim.o.pumheight = 15
 vim.o.complete = ".,w,b,u"
-vim.o.completeopt = "menu,menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect,fuzzy"
 vim.o.updatetime = 200
 
 -- Helper: Convert keys to termcodes
