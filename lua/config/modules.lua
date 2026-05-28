@@ -1,7 +1,7 @@
 local modules = {
+--  { pack = "lualine.nvim",    module = "lualine" },
 	{ pack = "osv.nvim",        module = "osv" },
 	{ pack = "mason.nvim",      module = "mason" },
-	{ pack = "lualine.nvim",    module = "lualine" },
 	{ pack = "gitsigns.nvim",   module = "gitsigns" },
 	{ pack = "loop.nvim",       module = "loop" },
 	{ pack = "loop-build.nvim", module = "loop-build" },
@@ -18,7 +18,8 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.colors" },
 	{ pack = "keystone.nvim",   module = "keystone.focus" },
 	{ pack = "keystone.nvim",   module = "keystone.complete" },
-	{ pack = "keystone.nvim",   module = "keystone.winbar" },
+	{ pack = "keystone.nvim",   module = "keystone.breadcrumbs" },
+	{ pack = "keystone.nvim",   module = "keystone.statusline" },
 	{ pack = "easytasks.nvim",  module = "easytasks" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "which-key.nvim",  module = "which-key" },
