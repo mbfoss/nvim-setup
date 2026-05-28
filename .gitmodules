@@ -43,3 +43,6 @@
 [submodule "pack/plugins/opt/easytasks.nvim"]
 	path = pack/plugins/opt/easytasks.nvim
 	url = https://github.com/mbfoss/easytasks.nvim.git
+[submodule "pack/plugins/opt/easytasks-build.nvim"]
+	path = pack/plugins/opt/easytasks-build.nvim
+	url = https://github.com/mbfoss/easytasks-build.nvim.git
