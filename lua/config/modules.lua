@@ -1,35 +1,29 @@
--- List of modules
 local modules = {
-
-	{ pack = "osv.nvim",        module = "osv",               with_config = false },
-	{ pack = "mini.nvim",       module = "mini.completion",     with_config = false },
-	{ pack = "mason.nvim",      module = "mason",             with_config = false },
-	{ pack = "lualine.nvim",    module = "lualine",           with_config = true },
-	{ pack = "gitsigns.nvim",   module = "gitsigns",          with_config = false },
-	{ pack = "loop.nvim",       module = "loop",              with_config = true },
-	{ pack = "loop-build.nvim", module = "loop-build",        with_config = false },
-	{ pack = "loop-cmake.nvim", module = "loop-cmake",        with_config = false },
-	{ pack = "loop-debug.nvim", module = "loop-debug",        with_config = true },
-	{ pack = "loop-marks.nvim", module = "loop-marks",        with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.pick",     with_config = true },
-	{ pack = "keystone.nvim",   module = "keystone.filetree", with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.explore",  with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.lspwords", with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.notify",   with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.animate",  with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.objects",  with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.colors",   with_config = false },
-	{ pack = "keystone.nvim",   module = "keystone.focus",    with_config = false },
-	-- { pack = "keystone.nvim",   module = "keystone.complete", with_config = false },
-	{ pack = "easytasks.nvim",  module = "easytasks",         with_config = false },
-	{ pack = "flash.nvim",      module = "flash",             with_config = true },
-
-	-- keep which-key last for better loading speed
-	{ pack = "which-key.nvim",  module = "which-key",         with_config = true },
+	{ pack = "osv.nvim",        module = "osv" },
+	{ pack = "mason.nvim",      module = "mason" },
+	{ pack = "lualine.nvim",    module = "lualine" },
+	{ pack = "gitsigns.nvim",   module = "gitsigns" },
+	{ pack = "loop.nvim",       module = "loop" },
+	{ pack = "loop-build.nvim", module = "loop-build" },
+	{ pack = "loop-cmake.nvim", module = "loop-cmake" },
+	{ pack = "loop-debug.nvim", module = "loop-debug" },
+	{ pack = "loop-marks.nvim", module = "loop-marks" },
+	{ pack = "keystone.nvim",   module = "keystone.pick" },
+	{ pack = "keystone.nvim",   module = "keystone.filetree" },
+	{ pack = "keystone.nvim",   module = "keystone.explore" },
+	{ pack = "keystone.nvim",   module = "keystone.lspwords" },
+	{ pack = "keystone.nvim",   module = "keystone.notify" },
+	{ pack = "keystone.nvim",   module = "keystone.animate" },
+	{ pack = "keystone.nvim",   module = "keystone.objects" },
+	{ pack = "keystone.nvim",   module = "keystone.colors" },
+	{ pack = "keystone.nvim",   module = "keystone.focus" },
+	{ pack = "keystone.nvim",   module = "keystone.complete" },
+	{ pack = "keystone.nvim",   module = "keystone.winbar" },
+	{ pack = "easytasks.nvim",  module = "easytasks" },
+	{ pack = "flash.nvim",      module = "flash" },
+	{ pack = "which-key.nvim",  module = "which-key" },
 }
-
 local pack_loaded = {}
-
 for _, entry in ipairs(modules) do
 	if pack_loaded[entry.pack] == nil then
 		pack_loaded[entry.pack] = true
@@ -38,10 +32,9 @@ for _, entry in ipairs(modules) do
 end
 
 for _, entry in ipairs(modules) do
-	if entry.with_config then
-		local config_path = 'config.modules.' .. entry.module
-		require(config_path)
-	else
+	local config_path = 'plugins.' .. entry.module
+	local ok, _ = pcall(require, config_path)
+	if not ok then
 		local mod = require(entry.module)
 		if type(mod.setup) == 'function' then
 			mod.setup({})
