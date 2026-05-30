@@ -49,3 +49,6 @@
 [submodule "pack/plugins/opt/easytasks-debug.nvim"]
 	path = pack/plugins/opt/easytasks-debug.nvim
 	url = https://github.com/mbfoss/easytasks-debug.nvim.git
+[submodule "pack/plugins/opt/nvtoolkit.nvim"]
+	path = pack/plugins/opt/nvtoolkit.nvim
+	url = https://github.com/mbfoss/nvtoolkit.nvim.git

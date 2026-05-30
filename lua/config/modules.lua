@@ -8,6 +8,7 @@ local modules = {
 	{ pack = "loop-cmake.nvim",      module = "loop-cmake" },
 	{ pack = "loop-debug.nvim",      module = "loop-debug" },
 	{ pack = "loop-marks.nvim",      module = "loop-marks" },
+	{ pack = "nvtoolkit.nvim",       module = "nvtoolkit" },
 	{ pack = "keystone.nvim",        module = "keystone.pick" },
 	{ pack = "keystone.nvim",        module = "keystone.filetree" },
 	{ pack = "keystone.nvim",        module = "keystone.explore" },
@@ -22,6 +23,7 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.statusline" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
 	{ pack = "easytasks-build.nvim", module = "easytasks-build" },
+	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
 	{ pack = "flash.nvim",           module = "flash" },
 	{ pack = "which-key.nvim",       module = "which-key" },
 }
