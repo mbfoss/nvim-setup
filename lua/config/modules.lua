@@ -22,8 +22,7 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.breadcrumbs" },
 	{ pack = "keystone.nvim",        module = "keystone.statusline" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
-	{ pack = "easytasks-build.nvim", module = "easytasks-build" },
-	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
+	{ pack = "easytasks-Debug.nvim", module = "easytasks-debug" },
 	{ pack = "flash.nvim",           module = "flash" },
 	{ pack = "which-key.nvim",       module = "which-key" },
 }
