@@ -1,4 +1,5 @@
 local modules = {
+	-- { pack = "nvtoolkit.nvim",       module = "nvtoolkit" },
 	--  { pack = "lualine.nvim",    module = "lualine" },
 	{ pack = "osv.nvim",             module = "osv" },
 	{ pack = "mason.nvim",           module = "mason" },
@@ -6,11 +7,10 @@ local modules = {
 	{ pack = "loop.nvim",            module = "loop" },
 	{ pack = "loop-build.nvim",      module = "loop-build" },
 	{ pack = "loop-cmake.nvim",      module = "loop-cmake" },
-	{ pack = "loop-debug.nvim",      module = "loop-debug" },
+	-- { pack = "loop-debug.nvim",      module = "loop-debug" },
 	{ pack = "loop-marks.nvim",      module = "loop-marks" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
 	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
-	{ pack = "nvtoolkit.nvim",       module = "nvtoolkit" },
 	{ pack = "keystone.nvim",        module = "keystone.pick" },
 	{ pack = "keystone.nvim",        module = "keystone.filetree" },
 	{ pack = "keystone.nvim",        module = "keystone.explore" },
