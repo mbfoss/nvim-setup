@@ -52,3 +52,6 @@
 [submodule "pack/plugins/opt/nvtoolkit.nvim"]
 	path = pack/plugins/opt/nvtoolkit.nvim
 	url = https://github.com/mbfoss/nvtoolkit.nvim.git
+[submodule "pack/plugins/opt/plenary.nvim"]
+	path = pack/plugins/opt/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
