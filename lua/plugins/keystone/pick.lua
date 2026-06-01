@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP References" })
 vim.keymap.set("n", "<leader>fF",
 	function()
-		require("keystone.pick.pickers.lsp").document_symbols { kinds = { "Function", "Constructor", "Method" } }
+		require("keystone.pick.pickers.lsp").document_symbols { kinds = { "Class", "Struct", "Function", "Constructor", "Method" } }
 	end,
 	{ desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
