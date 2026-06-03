@@ -19,3 +19,5 @@ end, { desc = "Treesitter Search" })
 vim.keymap.set("c", "<C-s>", function()
 	require("flash").toggle()
 end, { desc = "Toggle Flash Search" })
+
+vim.api.nvim_set_hl(0, 'FlashLabel', {link = 'NvimInternalError'})
