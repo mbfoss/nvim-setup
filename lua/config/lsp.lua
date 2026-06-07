@@ -17,6 +17,8 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
+vim.lsp.log.set_level("DEBUG")
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		local client = vim.lsp.get_client_by_id(ev.data.client_id)

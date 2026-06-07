@@ -8,11 +8,7 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Pick live_grep<cr>", { desc = "Recent Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Pick config_files<cr>", { desc = "Config Files" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP References" })
-vim.keymap.set("n", "<leader>fF",
-	function()
-		require("keystone.pick.pickers.lsp").document_symbols { kinds = { "Class", "Struct", "Function", "Constructor", "Method" } }
-	end,
-	{ desc = "Document functions" })
+vim.keymap.set("n", "<leader>fF", "<cmd>Pick document_symbols kind:Function,Constructor,Method<cr>", { desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix" })
 vim.keymap.set("n", "<leader>fj", "<cmd>Pick jumplist<cr>", { desc = "Jumplist" })
@@ -22,7 +18,6 @@ vim.keymap.set("n", "<leader>fe", function() require("keystone.pick.pickers.quic
 vim.keymap.set("n", "<leader>fd", "<cmd>Pick document_diagnostics<cr>", { desc = "Document diagnostics" })
 vim.keymap.set("n", "<leader>fD", "<cmd>Pick workspace_diagnostics<cr>", { desc = "Workspace diagnostics" })
 vim.keymap.set("n", "<leader>gd", "<cmd>Pick git_diff<cr>", { desc = "Git diff" })
-vim.keymap.set("n", "<leader>gh", "<cmd>Pick git_hunks<cr>", { desc = "Git hunks" })
 
 
 -- vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
