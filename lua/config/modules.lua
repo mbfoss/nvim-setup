@@ -22,6 +22,7 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.statusline" },
 	{ pack = "keystone.nvim",        module = "keystone.bookmarks" },
 	{ pack = "flash.nvim",           module = "flash" },
+	{ pack = "tomltools.nvim",       module = "tomltools" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
 	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
 	{ pack = "which-key.nvim",       module = "which-key" },
