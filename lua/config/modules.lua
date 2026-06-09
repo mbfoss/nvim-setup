@@ -40,12 +40,16 @@ for _, entry in ipairs(modules) do
 		vim.cmd('packadd! ' .. entry.pack)
 	end
 end
+
 for _, entry in ipairs(modules) do
-		local mod = require(entry.module)
-		local has_config = pcall(require, "plugins." .. entry.module)
-		if not has_config then
-		if type(mod.setup) == "function" then
-			mod.setup({})
-		end
+	local mod = require(entry.module)
+	local config_file = vim.fn.stdpath("config")
+		.. "/lua/plugins/"
+		.. entry.module:gsub("%.", "/")
+		.. ".lua"
+	if vim.uv.fs_stat(config_file) then
+		require("plugins." .. entry.module)
+	elseif type(mod.setup) == "function" then
+		mod.setup({})
 	end
 end

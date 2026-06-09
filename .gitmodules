@@ -52,9 +52,9 @@
 [submodule "pack/plugins/opt/nvtoolkit.nvim"]
 	path = pack/plugins/opt/nvtoolkit.nvim
 	url = https://github.com/mbfoss/nvtoolkit.nvim.git
-[submodule "pack/plugins/opt/plenary.nvim"]
-	path = pack/plugins/opt/plenary.nvim
-	url = https://github.com/nvim-lua/plenary.nvim.git
 [submodule "pack/plugins/opt/tomltools.nvim"]
 	path = pack/plugins/opt/tomltools.nvim
 	url = https://github.com/mbfoss/tomltools.nvim.git
+[submodule "pack/plugins/opt/snacks.nvim"]
+	path = pack/plugins/opt/snacks.nvim
+	url = https://github.com/mbfoss/snacks.nvim.git
