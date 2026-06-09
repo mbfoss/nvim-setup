@@ -58,6 +58,3 @@
 [submodule "pack/plugins/opt/tomltools.nvim"]
 	path = pack/plugins/opt/tomltools.nvim
 	url = https://github.com/mbfoss/tomltools.nvim.git
-[submodule "pack/plugins/opt/easydap.nvim"]
-	path = pack/plugins/opt/easydap.nvim
-	url = https://github.com/mbfoss/easydap.nvim.git
