@@ -2,6 +2,7 @@ local modules = {
 
 	-- { pack = "nvtoolkit.nvim",       module = "nvtoolkit" },
 	--  { pack = "lualine.nvim",    module = "lualine" },
+	-- { pack = "snacks.nvim",           module = "snacks" },
 
 	{ pack = "osv.nvim",             module = "osv" },
 	{ pack = "mason.nvim",           module = "mason" },
@@ -22,7 +23,7 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.explore" },
 	{ pack = "keystone.nvim",        module = "keystone.lspwords" },
 	{ pack = "keystone.nvim",        module = "keystone.notify" },
-	{ pack = "keystone.nvim",        module = "keystone.animate" },
+	-- { pack = "keystone.nvim",        module = "keystone.animate" },
 	{ pack = "keystone.nvim",        module = "keystone.objects" },
 	{ pack = "keystone.nvim",        module = "keystone.colors" },
 	{ pack = "keystone.nvim",        module = "keystone.focus" },
