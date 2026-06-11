@@ -14,6 +14,7 @@ local modules = {
 	-- { pack = "loop-debug.nvim",      module = "loop-debug" },
 	-- { pack = "loop-marks.nvim",      module = "loop-marks" },
 
+	-- { pack = "pastelstone.nvim",     module = "pastelstone" },
 	{ pack = "tomltools.nvim",       module = "tomltools" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
 	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
@@ -25,7 +26,6 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.notify" },
 	{ pack = "keystone.nvim",        module = "keystone.animate" },
 	{ pack = "keystone.nvim",        module = "keystone.objects" },
-	{ pack = "keystone.nvim",        module = "keystone.colors" },
 	{ pack = "keystone.nvim",        module = "keystone.focus" },
 	{ pack = "keystone.nvim",        module = "keystone.complete" },
 	{ pack = "keystone.nvim",        module = "keystone.statusline" },

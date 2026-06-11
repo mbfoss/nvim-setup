@@ -97,3 +97,5 @@ end
 -- Create Neovim commands
 vim.api.nvim_create_user_command("ProfileStart", Profiler.start, {})
 vim.api.nvim_create_user_command("ProfileStop", Profiler.stop, {})
+
+vim.cmd("colorscheme pastelstone")
