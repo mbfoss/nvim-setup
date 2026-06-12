@@ -17,7 +17,7 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
-vim.lsp.log.set_level("DEBUG")
+vim.lsp.log.set_level(vim.log.levels.ERROR)
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
