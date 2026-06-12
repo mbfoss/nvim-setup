@@ -6,7 +6,7 @@ require("easytasks").setup({
 })
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
-vim.keymap.set("n", "<leader>lR", ":Task restart<CR>", { desc = "Repeat last task", silent = true })
+vim.keymap.set("n", "<leader>lR", ":Task rerun<CR>", { desc = "Repeat last task", silent = true })
 -- status panel
 vim.keymap.set("n", "<leader>lt", ":Task panel<CR>", { desc = "Toggle status panel", silent = true })
 vim.keymap.set("n", "<leader>lp", ":Task panel pick<CR>", { desc = "Jump to task/tab", silent = true })

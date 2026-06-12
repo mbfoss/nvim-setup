@@ -11,7 +11,7 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP 
 vim.keymap.set("n", "<leader>fF", "<cmd>Pick document_symbols kind:Function,Constructor,Method<cr>", { desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix" })
-vim.keymap.set("n", "<leader>fe", "<cmd>Pick quickfix kind:E<cr>", { desc = "Quickfix errors" })
+vim.keymap.set("n", "<leader>fe", "<cmd>Pick quickfix type:E<cr>", { desc = "Quickfix errors" })
 vim.keymap.set("n", "<leader>fj", "<cmd>Pick jumplist<cr>", { desc = "Jumplist" })
 
 vim.keymap.set("n", "<leader>fd", "<cmd>Pick document_diagnostics<cr>", { desc = "Document diagnostics" })

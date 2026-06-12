@@ -9,3 +9,4 @@ lua/LuaPanda.lua
 
 /pack/plugins/start/osv.nvim
 *.el
+tasks.toml
