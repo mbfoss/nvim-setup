@@ -30,6 +30,7 @@ local modules = {
 	{ pack = "keystone.nvim",        module = "keystone.statusline" },
 	{ pack = "keystone.nvim",        module = "keystone.bookmarks" },
 	{ pack = "flash.nvim",           module = "flash" },
+	{ pack = "claudecode.nvim",      module = "claudecode" },
 	{ pack = "which-key.nvim",       module = "which-key" },
 }
 

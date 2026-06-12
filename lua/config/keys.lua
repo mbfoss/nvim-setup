@@ -101,7 +101,7 @@ map("n", "<leader>w|", "<cmd>wincmd |<cr>", { desc = "Maximize window width", no
 map("n", "<leader>wr", "<cmd>wincmd r<cr>", { desc = "Rotate windows", noremap = true, silent = true })
 map("n", "<leader>wR", "<cmd>wincmd R<cr>", { desc = "Rotate windows opposite", noremap = true, silent = true })
 map("n", "<leader>wx", "<cmd>wincmd x<cr>", { desc = "Swap current and next window", noremap = true, silent = true })
-map("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list" })
+map("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list", noremap = true, silent = true })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 
@@ -124,21 +124,7 @@ vim.keymap.set('n', '<leader>dO', function()
 end, { noremap = true, desc = "OSV listen" })
 
 
-map("n", "<leader>dv", function()
-	vim.cmd("vsplit")
-	vim.cmd("vertical resize " .. math.floor(vim.o.columns / 3))
-	vim.cmd("Loop open_page Variables")
-end)
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
-ShowBufInfo = function()
-	print(vim.inspect(vim.tbl_map(function(b)
-		return {
-			buf = b,
-			listed = vim.bo[b].buflisted,
-			name = vim.api.nvim_buf_get_name(b),
-			bufhidden = vim.bo[b].bufhidden,
-			marked_for_deletion = vim.bo[b].bufhidden == "delete",
-			loaded = vim.api.nvim_buf_is_loaded(b)
-		}
-	end, vim.api.nvim_list_bufs())))
-end
+vim.keymap.set("t", "<M-`>", function() vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x1b") end,
+	{ desc = "send Esc to terminal", noremap = true, silent = true })
