@@ -10,3 +10,6 @@ lua/LuaPanda.lua
 /pack/plugins/start/osv.nvim
 *.el
 tasks.toml
+.easytasks/lock
+/.easytasks
+.easytasks/easytasks-debug.breakpoints.json
