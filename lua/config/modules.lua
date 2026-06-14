@@ -17,7 +17,7 @@ local modules = {
 	-- { pack = "pastelstone.nvim",     module = "pastelstone" },
 	{ pack = "tomltools.nvim",       module = "tomltools" },
 	{ pack = "easytasks.nvim",       module = "easytasks" },
-	{ pack = "easytasks-debug.nvim", module = "easytasks-debug" },
+	{ pack = "easydap.nvim", module = "easydap" },
 
 	{ pack = "keystone.nvim",        module = "keystone.pick" },
 	{ pack = "keystone.nvim",        module = "keystone.filetree" },
