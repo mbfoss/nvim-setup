@@ -10,6 +10,7 @@ require("config.lsp")
 require("config.calltree")
 require("config.tools")
 
+vim.cmd("packadd nvim.difftool")
 
 -- Simple Lua Profiler for Neovim
 local Profiler = {

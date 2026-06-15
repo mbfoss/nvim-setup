@@ -1,8 +1,5 @@
 require("easytasks").setup({
-	log = {
-		enabled = true,
-		level = "debug",
-	}
+	-- debug_backend = "nvim-dap",
 })
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
