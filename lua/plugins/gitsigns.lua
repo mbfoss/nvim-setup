@@ -1,5 +1,6 @@
-
+local fillchars = vim.opt.fillchars
 require("gitsigns").setup({})
+vim.opt.fillchars = fillchars
 
 vim.keymap.set("n", "]h", function()
 	require("gitsigns").next_hunk()

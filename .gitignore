@@ -13,3 +13,4 @@ tasks.toml
 .easytasks/lock
 /.easytasks
 .easytasks/easytasks-debug.breakpoints.json
+easydap.json

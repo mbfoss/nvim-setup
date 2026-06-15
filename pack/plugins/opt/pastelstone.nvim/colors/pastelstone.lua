@@ -165,7 +165,7 @@ _hl('Todo',          { fg = _c.amber,   bg = _c.bg_alt, gui = 'bold' })
 
 -- ── Diff ──────────────────────────────────────────────────────────
 _hl('DiffAdd',       { bg = _c.bg_green })
-_hl('DiffDelete',    { bg = _c.bg_red })
+_hl('DiffDelete',    { fg = _c.muted })
 _hl('DiffChange',    { bg = _c.bg_amber })
 _hl('DiffText',      { bg = _c.bg_teal,  gui = 'bold' })
 _hl('DiffAdded',     { fg = _c.green,    bg = _c.bg })

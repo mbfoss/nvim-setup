@@ -78,7 +78,7 @@ vim.o.equalalways = false
 
 
 vim.opt.fillchars = {
-  diff = "⋅",
+  diff = "╱",
   vert = "▏",
   eob = " ",
 }
