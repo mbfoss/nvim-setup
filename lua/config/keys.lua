@@ -14,12 +14,13 @@ local function toggle_qflist()
 	end
 end
 
--- close quickfix menu after selecting choice
-vim.api.nvim_create_autocmd(
-	"FileType", {
-		pattern = { "qf" },
-		command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
-	})
+-- -- close quickfix menu after selecting choice
+-- vim.api.nvim_create_autocmd(
+-- 	"FileType", {
+-- 		pattern = { "qf" },
+-- 		command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
+-- 	})
+
 vim.keymap.set('x', 'p', '"_dP', { noremap = true, silent = true })
 
 -- Save with Ctrl+S
