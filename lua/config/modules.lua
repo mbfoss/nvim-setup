@@ -6,7 +6,7 @@ local modules = {
 
 	{ pack = "osv.nvim",        module = "osv" },
 	{ pack = "mason.nvim",      module = "mason" },
-	{ pack = "gitsigns.nvim",   module = "gitsigns" },
+	-- { pack = "gitsigns.nvim",   module = "gitsigns" },
 
 	-- { pack = "loop.nvim",            module = "loop" },
 	-- { pack = "loop-build.nvim",      module = "loop-build" },

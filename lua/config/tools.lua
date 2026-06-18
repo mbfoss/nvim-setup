@@ -1,11 +1,11 @@
-vim.api.nvim_create_user_command("AutocmdDump", function()
-    local ac = vim.api.nvim_get_autocmds({})
-    local lines = vim.split(vim.inspect(ac), "\n")
+vim.api.nvim_create_user_command("DiffSaved", function()
+  vim.cmd("vert new")
+  vim.bo.buftype = "nofile"
+  vim.cmd("read ++edit #")
+  vim.cmd("0delete _")
+  vim.cmd("diffthis")
+  vim.cmd("wincmd p")
+  vim.cmd("diffthis")
 
-    vim.cmd("new")
-    vim.bo.buftype = "nofile"
-    vim.bo.bufhidden = "wipe"
-    vim.bo.swapfile = false
-
-    vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+  vim.cmd("windo wincmd x") -- swap left/right buffers
 end, {})
