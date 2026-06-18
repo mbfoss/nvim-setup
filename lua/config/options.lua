@@ -2,19 +2,19 @@
 
 vim.o.shortmess = vim.o.shortmess .. "Ic"
 
-vim.o.termguicolors = true -- enable rgb colors
+vim.o.termguicolors = true  -- enable rgb colors
 
 vim.o.cursorline = true     -- enable cursor line
 
 vim.o.number = true         -- enable line number
 vim.o.relativenumber = true -- and relative line number
 
-vim.o.signcolumn = "yes:2"    -- always show sign column
+vim.o.signcolumn = "yes:2"  -- always show sign column
 vim.o.scrolloff = 8
 
-vim.o.list = true           -- use special characters to represent things like tabs or trailing spaces
+vim.o.list = true    -- use special characters to represent things like tabs or trailing spaces
 
-vim.o.confirm = true                   -- show dialog for unsaved file(s) before quit
+vim.o.confirm = true -- show dialog for unsaved file(s) before quit
 vim.o.updatetime = 3000
 
 vim.o.ignorecase = true  -- case-insensitive search
@@ -28,6 +28,9 @@ vim.o.tabstop = 4        -- tab width
 vim.o.undofile = true    -- enable persistent undo
 vim.o.undolevels = 10000 -- 10x more undo levels
 
+vim.o.pumheight = 15
+vim.o.complete = ".,w,b,u"
+vim.o.completeopt = "menu,menuone,noselect"
 
 -- define <leader> and <localleader> keys
 -- you should use `vim.keycode` to translate keycodes or pass raw keycode values like `" "` instead of just `"<space>"`
@@ -44,14 +47,14 @@ vim.g.netrw_list_style = 3
 vim.opt.clipboard = "unnamedplus"
 
 -- use treesitter for folds
-vim.o.foldenable = true   -- enable fold
-vim.o.foldlevel = 99      -- start editing with all folds opened
+vim.o.foldenable = true -- enable fold
+vim.o.foldlevel = 99    -- start editing with all folds opened
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.o.splitright = true
 
-vim.opt.listchars = {       -- NOTE: using `vim.opt` instead of `vim.o` to pass rich object
+vim.opt.listchars = { -- NOTE: using `vim.opt` instead of `vim.o` to pass rich object
 	tab = "  ",
 	trail = " ",
 	extends = "»",
@@ -76,9 +79,8 @@ vim.opt.spelllang = { "en" }
 
 vim.o.equalalways = false
 
-
 vim.opt.fillchars = {
-  diff = "╱",
-  vert = "▏",
-  eob = " ",
+	diff = "╱",
+	vert = "▏",
+	eob = " ",
 }

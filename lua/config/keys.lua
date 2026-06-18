@@ -80,7 +80,7 @@ map("n", "<leader>Bv", "<cmd>vsplit<cr>", { desc = "Split Buffer Vertically" })
 map("n", "<leader>Bf", "<cmd>file<cr>", { desc = "Show Buffer File Info" })
 map("n", "<leader>Bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight" })
 
-vim.keymap.set("n", "<leader>b+", function()
+vim.keymap.set("n", "<leader>+", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.setreg("+", path)
 	print("Copied path: " .. path)
