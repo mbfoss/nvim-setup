@@ -31,11 +31,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-local function toggle_virtual_text()
-	local current = vim.diagnostic.config().virtual_text
-	vim.diagnostic.config({ virtual_text = not current })
-end
-
 -- Jump to next/previous function using built-in LSP
 local function jump_func_lsp(next_func)
     local params = { textDocument = vim.lsp.util.make_text_document_params() }

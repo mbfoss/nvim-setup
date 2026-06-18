@@ -42,10 +42,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
-map('i', '<C-Space>', '<C-x><C-o>', { noremap = true })
-map('n', '<C-Space>', 'a<C-x><C-o>', { noremap = true })
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { noremap = true })
+vim.keymap.set('n', '<C-Space>', 'a<C-x><C-o>', { noremap = true })
 
-map({ "n", "v" }, "gx", "<cmd>!open <cfile><cr><cr>", { noremap = true, desc = "Open file under cursor" })
+vim.keymap.set({ "n", "v" }, "gx", "<cmd>!open <cfile><cr><cr>", { noremap = true, desc = "Open file under cursor" })
 
 -- Visual mode: move selection down/up
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true })
@@ -56,29 +56,29 @@ vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { silent = true })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { silent = true })
 
 
-map("n", "[c", "[c", { desc = "Previous diff" })
-map("n", "]c", "]c", { desc = "Next diff", })
+vim.keymap.set("n", "[c", "[c", { desc = "Previous diff" })
+vim.keymap.set("n", "]c", "]c", { desc = "Next diff" })
 
 -- git signs
-map("n", "<leader>gB", "<cmd>Gitsigns blame<cr>", { desc = "Git Blame" })
-map("n", "<leader>e", "<cmd>FileSelector<cr>", { desc = "File Selector" })
-map("n", "<leader>E", "<cmd>FileTree<cr>", { desc = "File Tree" })
+vim.keymap.set("n", "<leader>gB", "<cmd>Gitsigns blame<cr>", { desc = "Git Blame" })
+vim.keymap.set("n", "<leader>e", "<cmd>FileSelector<cr>", { desc = "File Selector" })
+vim.keymap.set("n", "<leader>E", "<cmd>FileTree<cr>", { desc = "File Tree" })
 
 -- Buffer
 
-map("n", "<leader>Bl", "<cmd>ls<cr>", { desc = "List Buffers" })
-map("n", "<leader>Bd", function() require("mini.bufremove").delete(0, false) end, { desc = "Delete Buffer" })
-map("n", "<leader>Bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-map("n", "<leader>Bp", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
-map("n", "<leader>Bw", "<cmd>w<cr>", { desc = "Save Buffer" })
-map("n", "<leader>Ba", "<cmd>bufdo bd<cr>", { desc = "Close All Buffers" })
-map("n", "<leader>Bo", "<cmd>%bd|e#|bd#<cr>", { desc = "Close Other Buffers" }) -- keep current, close others
-map("n", "<leader>Bb", "<cmd>e#<cr>", { desc = "Switch to Alternate Buffer" })
-map("n", "<leader>Br", "<cmd>edit!<cr>", { desc = "Revert Buffer" })
-map("n", "<leader>Bs", "<cmd>split<cr>", { desc = "Split Buffer Horizontally" })
-map("n", "<leader>Bv", "<cmd>vsplit<cr>", { desc = "Split Buffer Vertically" })
-map("n", "<leader>Bf", "<cmd>file<cr>", { desc = "Show Buffer File Info" })
-map("n", "<leader>Bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight" })
+vim.keymap.set("n", "<leader>Bl", "<cmd>ls<cr>", { desc = "List Buffers" })
+vim.keymap.set("n", "<leader>Bd", function() require("mini.bufremove").delete(0, false) end, { desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>Bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>Bp", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>Bw", "<cmd>w<cr>", { desc = "Save Buffer" })
+vim.keymap.set("n", "<leader>Ba", "<cmd>bufdo bd<cr>", { desc = "Close All Buffers" })
+vim.keymap.set("n", "<leader>Bo", "<cmd>%bd|e#|bd#<cr>", { desc = "Close Other Buffers" }) -- keep current, close others
+vim.keymap.set("n", "<leader>Bb", "<cmd>e#<cr>", { desc = "Switch to Alternate Buffer" })
+vim.keymap.set("n", "<leader>Br", "<cmd>edit!<cr>", { desc = "Revert Buffer" })
+vim.keymap.set("n", "<leader>Bs", "<cmd>split<cr>", { desc = "Split Buffer Horizontally" })
+vim.keymap.set("n", "<leader>Bv", "<cmd>vsplit<cr>", { desc = "Split Buffer Vertically" })
+vim.keymap.set("n", "<leader>Bf", "<cmd>file<cr>", { desc = "Show Buffer File Info" })
+vim.keymap.set("n", "<leader>Bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight" })
 
 vim.keymap.set("n", "<leader>+", function()
 	local path = vim.fn.expand("%:p")
@@ -88,21 +88,26 @@ end, { desc = "Copy current buffer path to clipboard" })
 
 -- windows
 
-map("n", "<leader>wh", "<cmd>wincmd h<cr>", { desc = "Move to left window", noremap = true, silent = true })
-map("n", "<leader>wj", "<cmd>wincmd j<cr>", { desc = "Move to below window", noremap = true, silent = true })
-map("n", "<leader>wk", "<cmd>wincmd k<cr>", { desc = "Move to above window", noremap = true, silent = true })
-map("n", "<leader>wl", "<cmd>wincmd l<cr>", { desc = "Move to right window", noremap = true, silent = true })
-map("n", "<leader>ws", "<cmd>wincmd s<cr>", { desc = "Split window horizontally", noremap = true, silent = true })
-map("n", "<leader>wv", "<cmd>wincmd v<cr>", { desc = "Split window vertically", noremap = true, silent = true })
-map("n", "<leader>wq", "<cmd>wincmd q<cr>", { desc = "Close current window", noremap = true, silent = true })
-map("n", "<leader>wo", "<cmd>wincmd o<cr>", { desc = "Close other windows", noremap = true, silent = true })
-map("n", "<leader>w=", "<cmd>wincmd =<cr>", { desc = "Make windows equal size", noremap = true, silent = true })
-map("n", "<leader>w_", "<cmd>wincmd _<cr>", { desc = "Maximize window height", noremap = true, silent = true })
-map("n", "<leader>w|", "<cmd>wincmd |<cr>", { desc = "Maximize window width", noremap = true, silent = true })
-map("n", "<leader>wr", "<cmd>wincmd r<cr>", { desc = "Rotate windows", noremap = true, silent = true })
-map("n", "<leader>wR", "<cmd>wincmd R<cr>", { desc = "Rotate windows opposite", noremap = true, silent = true })
-map("n", "<leader>wx", "<cmd>wincmd x<cr>", { desc = "Swap current and next window", noremap = true, silent = true })
-map("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>", { desc = "Move to left window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wj", "<cmd>wincmd j<cr>", { desc = "Move to below window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wk", "<cmd>wincmd k<cr>", { desc = "Move to above window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>", { desc = "Move to right window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ws", "<cmd>wincmd s<cr>",
+	{ desc = "Split window horizontally", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wv", "<cmd>wincmd v<cr>",
+	{ desc = "Split window vertically", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wq", "<cmd>wincmd q<cr>", { desc = "Close current window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wo", "<cmd>wincmd o<cr>", { desc = "Close other windows", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>w=", "<cmd>wincmd =<cr>",
+	{ desc = "Make windows equal size", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>w_", "<cmd>wincmd _<cr>", { desc = "Maximize window height", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>w|", "<cmd>wincmd |<cr>", { desc = "Maximize window width", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wr", "<cmd>wincmd r<cr>", { desc = "Rotate windows", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wR", "<cmd>wincmd R<cr>",
+	{ desc = "Rotate windows opposite", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wx", "<cmd>wincmd x<cr>",
+	{ desc = "Swap current and next window", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list", noremap = true, silent = true })
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 
@@ -129,3 +134,29 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
 vim.keymap.set("t", "<M-`>", function() vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x1b") end,
 	{ desc = "send Esc to terminal", noremap = true, silent = true })
+
+
+-- lsp keys
+vim.keymap.set({ "n", "v" }, "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "Code action" })
+vim.keymap.set("n", "<leader>cd", function() vim.lsp.buf.definition() end, { desc = "Go to definition" })
+vim.keymap.set("n", "<leader>cD", function() vim.lsp.buf.declaration() end, { desc = "Go to declaration" })
+vim.keymap.set("n", "<leader>ci", function() vim.lsp.buf.implementation() end, { desc = "Go to implementation" })
+vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.references() end, { desc = "Show references" })
+vim.keymap.set("n", "<leader>ch", function() vim.lsp.buf.hover() end, { desc = "Hover documentation" })
+vim.keymap.set("n", "<leader>cs", function() vim.lsp.buf.signature_help() end, { desc = "Signature help" })
+vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format { async = true } end, { desc = "Format code" })
+vim.keymap.set("n", "<leader>ct", function() vim.lsp.buf.type_definition() end, { desc = "Go to type definition" })
+vim.keymap.set("n", "<leader>cn", function() vim.lsp.buf.rename() end, { desc = "Rename symbol" })
+vim.keymap.set("n", "<leader>cH", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
+	{ desc = "Toggle inlay hints" })
+vim.keymap.set("n", "<leader>cd", function() vim.diagnostic.open_float() end,
+	{ desc = "Diagnostics: Show line diagnostics" })
+
+
+do
+	local function toggle_virtual_text()
+		local current = vim.diagnostic.config().virtual_text
+		vim.diagnostic.config({ virtual_text = not current })
+	end
+	vim.keymap.set("n", "<leader>ct", toggle_virtual_text, { desc = "Diagnostics: Toggle virtual text" })
+end
