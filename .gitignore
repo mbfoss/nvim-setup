@@ -14,3 +14,4 @@ tasks.toml
 /.easytasks
 .easytasks/easytasks-debug.breakpoints.json
 easydap.json
+/queries

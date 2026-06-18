@@ -29,6 +29,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.complete" },
 	{ pack = "keystone.nvim",   module = "keystone.statusline" },
 	{ pack = "keystone.nvim",   module = "keystone.bookmarks" },
+	{ pack = "keystone.nvim",   module = "keystone.tsconfig" },
 	{ pack = "keystone.nvim",   module = "keystone.lspconfig" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
