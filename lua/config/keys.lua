@@ -160,3 +160,68 @@ do
 	end
 	vim.keymap.set("n", "<leader>ct", toggle_virtual_text, { desc = "Diagnostics: Toggle virtual text" })
 end
+
+
+
+-- Jump to next/previous function using built-in LSP
+local function jump_func_lsp(next_func)
+    local params = { textDocument = vim.lsp.util.make_text_document_params() }
+
+    vim.lsp.buf_request(0, 'textDocument/documentSymbol', params, function(err, result, _)
+        if err or not result then return end
+
+        local function flatten_symbols(symbols, acc)
+            acc = acc or {}
+            for _, sym in ipairs(symbols) do
+                -- Check for Function, Method, or Constructor
+                if sym.kind == 12 or sym.kind == 6 or sym.kind == 9 then
+                    table.insert(acc, sym)
+                end
+                if sym.children then flatten_symbols(sym.children, acc) end
+            end
+            return acc
+        end
+
+        local symbols = flatten_symbols(result)
+        if #symbols == 0 then return end
+
+        local cur_line = vim.api.nvim_win_get_cursor(0)[1] - 1
+        
+        -- Ensure symbols are sorted by their starting position
+        table.sort(symbols, function(a, b)
+            return a.range.start.line < b.range.start.line
+        end)
+
+        local target = nil
+
+        if next_func then
+            for _, sym in ipairs(symbols) do
+                -- Jump to the next function that starts AFTER the current line
+                if sym.range.start.line > cur_line then
+                    target = sym
+                    break
+                end
+            end
+        else
+            -- Iterate backwards to find the closest function above
+            for i = #symbols, 1, -1 do
+                local sym = symbols[i]
+                -- If we are INSIDE a function, we want to jump to its start.
+                -- If we are already AT the start, we want the previous one.
+                if sym.range.start.line < cur_line then
+                    target = sym
+                    break
+                end
+            end
+        end
+
+        if target then
+            vim.api.nvim_win_set_cursor(0, { target.range.start.line + 1, target.range.start.character })
+        end
+    end)
+end
+
+
+-- Keymaps
+vim.keymap.set('n', ']]', function() jump_func_lsp(true) end, { desc = 'Next function (LSP)' })
+vim.keymap.set('n', '[[', function() jump_func_lsp(false) end, { desc = 'Previous function (LSP)' })
