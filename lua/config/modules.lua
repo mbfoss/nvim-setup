@@ -6,7 +6,7 @@ local modules = {
 
 	{ pack = "osv.nvim",        module = "osv" },
 	{ pack = "mason.nvim",      module = "mason" },
-	-- { pack = "gitsigns.nvim",   module = "gitsigns" },
+	{ pack = "gitsigns.nvim",   module = "gitsigns" },
 
 	-- { pack = "loop.nvim",            module = "loop" },
 	-- { pack = "loop-build.nvim",      module = "loop-build" },
@@ -21,6 +21,7 @@ local modules = {
 	{ pack = "nvim-dap",        module = "dap" },
 
 	{ pack = "keystone.nvim",   module = "keystone.pick" },
+	{ pack = "keystone.nvim",   module = "keystone.pick-extra" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.explore" },
 	{ pack = "keystone.nvim",   module = "keystone.lspwords" },
