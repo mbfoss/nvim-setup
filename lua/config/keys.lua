@@ -83,8 +83,7 @@ vim.keymap.set("n", "<leader>Bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search 
 vim.keymap.set("n", "<leader>+", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.setreg("+", path)
-	print("Copied path: " .. path)
-end, { desc = "Copy current buffer path to clipboard" })
+	print("Copied path: " .. path) end, { desc = "Copy path to clipboard" })
 
 -- windows
 
