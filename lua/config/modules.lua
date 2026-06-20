@@ -21,7 +21,6 @@ local modules = {
 	{ pack = "nvim-dap",        module = "dap" },
 
 	{ pack = "keystone.nvim",   module = "keystone.pick" },
-	{ pack = "keystone.nvim",   module = "keystone.pick-extra" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.explore" },
 	{ pack = "keystone.nvim",   module = "keystone.lspwords" },
