@@ -1,21 +1,10 @@
 local modules = {
 
-	-- { pack = "nvtoolkit.nvim",       module = "nvtoolkit" },
-	--  { pack = "lualine.nvim",    module = "lualine" },
-	-- { pack = "snacks.nvim",           module = "snacks" },
-
 	{ pack = "osv.nvim",        module = "osv" },
 	{ pack = "mason.nvim",      module = "mason" },
 	{ pack = "gitsigns.nvim",   module = "gitsigns" },
 
-	-- { pack = "loop.nvim",            module = "loop" },
-	-- { pack = "loop-build.nvim",      module = "loop-build" },
-	-- { pack = "loop-cmake.nvim",      module = "loop-cmake" },
-	-- { pack = "loop-debug.nvim",      module = "loop-debug" },
-	-- { pack = "loop-marks.nvim",      module = "loop-marks" },
-
-	-- { pack = "pastelstone.nvim",     module = "pastelstone" },
-	{ pack = "tomltools.nvim",  module = "tomltools" },
+	-- { pack = "tomltools.nvim",  module = "tomltools" },
 	{ pack = "easytasks.nvim",  module = "easytasks" },
 	{ pack = "easydap.nvim",    module = "easydap" },
 	{ pack = "nvim-dap",        module = "dap" },
