@@ -13,21 +13,6 @@
 [submodule "pack/plugins/opt/mason.nvim"]
 	path = pack/plugins/opt/mason.nvim
 	url = https://github.com/mason-org/mason.nvim.git
-[submodule "pack/plugins/opt/loop.nvim"]
-	path = pack/plugins/opt/loop.nvim
-	url = https://codeberg.org/loop-nvim/loop.nvim.git
-[submodule "pack/plugins/opt/loop-build.nvim"]
-	path = pack/plugins/opt/loop-build.nvim
-	url = https://codeberg.org/loop-nvim/loop-build.nvim.git
-[submodule "pack/plugins/opt/loop-cmake.nvim"]
-	path = pack/plugins/opt/loop-cmake.nvim
-	url = https://codeberg.org/loop-nvim/loop-cmake.nvim.git
-[submodule "pack/plugins/opt/loop-debug.nvim"]
-	path = pack/plugins/opt/loop-debug.nvim
-	url = https://codeberg.org/loop-nvim/loop-debug.nvim.git
-[submodule "pack/plugins/opt/loop-marks.nvim"]
-	path = pack/plugins/opt/loop-marks.nvim
-	url =https://codeberg.org/loop-nvim/loop-marks.nvim.git 
 [submodule "pack/plugins/opt/keystone.nvim"]
 	path = pack/plugins/opt/keystone.nvim
 	url = https://github.com/mbfoss/keystone.nvim.git
