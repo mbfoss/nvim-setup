@@ -18,7 +18,7 @@ vim.keymap.set("n", "<leader>bD", ":Debug breakpoint disable_all<CR>", { desc = 
 vim.keymap.set("n", "<leader>ds", ":Debug session<CR>",       { desc = "Select session",    silent = true })
 vim.keymap.set("n", "<leader>dt", ":Debug thread<CR>",        { desc = "Select thread",     silent = true })
 vim.keymap.set("n", "<leader>df", ":Debug frame<CR>",         { desc = "Select frame",      silent = true })
-vim.keymap.set("n", "<leader>di", ":Debug inspect<CR>",       { desc = "Inspect value",     silent = true })
+vim.keymap.set({"n", "x"}, "<leader>di", ":Debug inspect<CR>",       { desc = "Inspect value",     silent = true })
 vim.keymap.set("n", "<leader>dp", ":Debug pause<CR>",         { desc = "Pause",             silent = true })
 vim.keymap.set("n", "<leader>dl", ":Debug step_in<CR>",       { desc = "Step in",           silent = true })
 vim.keymap.set("n", "<leader>dh", ":Debug step_out<CR>",      { desc = "Step out",          silent = true })
