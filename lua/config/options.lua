@@ -46,12 +46,6 @@ vim.g.netrw_list_style = 3
 -- use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- use treesitter for folds
-vim.o.foldenable = true -- enable fold
-vim.o.foldlevel = 99    -- start editing with all folds opened
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-
 vim.o.splitright = true
 
 vim.opt.listchars = { -- NOTE: using `vim.opt` instead of `vim.o` to pass rich object
