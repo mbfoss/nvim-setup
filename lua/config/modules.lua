@@ -21,6 +21,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.lspconfig" },
 	{ pack = "keystone.nvim",   module = "keystone.clue" },
 	{ pack = "keystone.nvim",   module = "keystone.tweaks" },
+	{ pack = "keystone.nvim",   module = "keystone.unsaved" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
 	-- { pack = "which-key.nvim",  module = "which-key" },

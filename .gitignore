@@ -1,4 +1,5 @@
 .DS_Store
+
 /parser/*.so
 .luacheckrc
 tasks.toml
