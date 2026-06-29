@@ -83,7 +83,8 @@ vim.keymap.set("n", "<leader>Bh", "<cmd>nohlsearch<cr>", { desc = "Clear Search 
 vim.keymap.set("n", "<leader>+", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.setreg("+", path)
-	print("Copied path: " .. path) end, { desc = "Copy path to clipboard" })
+	print("Copied path: " .. path)
+end, { desc = "Copy path to clipboard" })
 
 -- windows
 
@@ -110,8 +111,19 @@ vim.keymap.set("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list"
 
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 
-vim.keymap.set("n", "<leader>s", [[:.,%s/\V<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Substitute word (literal)" })
-vim.keymap.set("v", "<leader>s", [[y:%s/\V<C-r>"//gc<Left><Left><Left>]], { desc = "Substitute selection" })
+vim.keymap.set(
+  "n",
+  "<leader>s",
+  [[:%s/\V<C-r>=escape(expand('<cword>'), '/\')<CR>//gc<Left><Left><Left>]],
+  { desc = "Substitute word (literal)" }
+)
+
+vim.keymap.set(
+  "v",
+  "<leader>s",
+  [[y:%s/\V<C-r>=escape(getreg('"'), '/\')<CR>//gc<Left><Left><Left>]],
+  { desc = "Substitute selection" }
+)
 
 vim.keymap.set('n', '<leader>dL', function()
 	vim.notify("starting luapanda listen")
@@ -164,60 +176,60 @@ end
 
 -- Jump to next/previous function using built-in LSP
 local function jump_func_lsp(next_func)
-    local params = { textDocument = vim.lsp.util.make_text_document_params() }
+	local params = { textDocument = vim.lsp.util.make_text_document_params() }
 
-    vim.lsp.buf_request(0, 'textDocument/documentSymbol', params, function(err, result, _)
-        if err or not result then return end
+	vim.lsp.buf_request(0, 'textDocument/documentSymbol', params, function(err, result, _)
+		if err or not result then return end
 
-        local function flatten_symbols(symbols, acc)
-            acc = acc or {}
-            for _, sym in ipairs(symbols) do
-                -- Check for Function, Method, or Constructor
-                if sym.kind == 12 or sym.kind == 6 or sym.kind == 9 then
-                    table.insert(acc, sym)
-                end
-                if sym.children then flatten_symbols(sym.children, acc) end
-            end
-            return acc
-        end
+		local function flatten_symbols(symbols, acc)
+			acc = acc or {}
+			for _, sym in ipairs(symbols) do
+				-- Check for Function, Method, or Constructor
+				if sym.kind == 12 or sym.kind == 6 or sym.kind == 9 then
+					table.insert(acc, sym)
+				end
+				if sym.children then flatten_symbols(sym.children, acc) end
+			end
+			return acc
+		end
 
-        local symbols = flatten_symbols(result)
-        if #symbols == 0 then return end
+		local symbols = flatten_symbols(result)
+		if #symbols == 0 then return end
 
-        local cur_line = vim.api.nvim_win_get_cursor(0)[1] - 1
-        
-        -- Ensure symbols are sorted by their starting position
-        table.sort(symbols, function(a, b)
-            return a.range.start.line < b.range.start.line
-        end)
+		local cur_line = vim.api.nvim_win_get_cursor(0)[1] - 1
 
-        local target = nil
+		-- Ensure symbols are sorted by their starting position
+		table.sort(symbols, function(a, b)
+			return a.range.start.line < b.range.start.line
+		end)
 
-        if next_func then
-            for _, sym in ipairs(symbols) do
-                -- Jump to the next function that starts AFTER the current line
-                if sym.range.start.line > cur_line then
-                    target = sym
-                    break
-                end
-            end
-        else
-            -- Iterate backwards to find the closest function above
-            for i = #symbols, 1, -1 do
-                local sym = symbols[i]
-                -- If we are INSIDE a function, we want to jump to its start.
-                -- If we are already AT the start, we want the previous one.
-                if sym.range.start.line < cur_line then
-                    target = sym
-                    break
-                end
-            end
-        end
+		local target = nil
 
-        if target then
-            vim.api.nvim_win_set_cursor(0, { target.range.start.line + 1, target.range.start.character })
-        end
-    end)
+		if next_func then
+			for _, sym in ipairs(symbols) do
+				-- Jump to the next function that starts AFTER the current line
+				if sym.range.start.line > cur_line then
+					target = sym
+					break
+				end
+			end
+		else
+			-- Iterate backwards to find the closest function above
+			for i = #symbols, 1, -1 do
+				local sym = symbols[i]
+				-- If we are INSIDE a function, we want to jump to its start.
+				-- If we are already AT the start, we want the previous one.
+				if sym.range.start.line < cur_line then
+					target = sym
+					break
+				end
+			end
+		end
+
+		if target then
+			vim.api.nvim_win_set_cursor(0, { target.range.start.line + 1, target.range.start.character })
+		end
+	end)
 end
 
 
