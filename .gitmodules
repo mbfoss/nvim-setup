@@ -49,3 +49,6 @@
 [submodule "pack/plugins/opt/nvim-dap"]
 	path = pack/plugins/opt/nvim-dap
 	url = https://github.com/mfussenegger/nvim-dap.git
+[submodule "pack/plugins/opt/gittools.nvim"]
+	path = pack/plugins/opt/gittools.nvim
+	url = https://github.com/mbfoss/gittools.nvim.git
