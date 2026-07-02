@@ -236,3 +236,6 @@ end
 -- Keymaps
 vim.keymap.set('n', ']]', function() jump_func_lsp(true) end, { desc = 'Next function (LSP)' })
 vim.keymap.set('n', '[[', function() jump_func_lsp(false) end, { desc = 'Previous function (LSP)' })
+
+vim.keymap.set('n', ']w', ":lnext<CR>", { desc = 'Next loclist item', silent = true })
+vim.keymap.set('n', '[w', ":lprev<CR>", { desc = 'Previous loclist item', silent = true })
