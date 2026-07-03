@@ -40,9 +40,6 @@
 [submodule "pack/plugins/opt/snacks.nvim"]
 	path = pack/plugins/opt/snacks.nvim
 	url = https://github.com/mbfoss/snacks.nvim.git
-[submodule "pack/plugins/opt/claudecode.nvim"]
-	path = pack/plugins/opt/claudecode.nvim
-	url = https://github.com/coder/claudecode.nvim.git
 [submodule "pack/plugins/opt/easydap.nvim"]
 	path = pack/plugins/opt/easydap.nvim
 	url = https://github.com/mbfoss/easydap.nvim.git
@@ -52,3 +49,6 @@
 [submodule "pack/plugins/opt/gittools.nvim"]
 	path = pack/plugins/opt/gittools.nvim
 	url = https://github.com/mbfoss/gittools.nvim.git
+[submodule "pack/plugins/opt/claudecode.nvim"]
+	path = pack/plugins/opt/claudecode.nvim
+	url = https://github.com/mbfoss/claudecode.nvim.git

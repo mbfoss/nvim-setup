@@ -9,6 +9,7 @@ local modules = {
 	{ pack = "easydap.nvim",    module = "easydap" },
 	{ pack = "nvim-dap",        module = "dap" },
 
+	-- { pack = "snacks.nvim",     module = "snacks" },
 	{ pack = "keystone.nvim",   module = "keystone.pick" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.explore" },
