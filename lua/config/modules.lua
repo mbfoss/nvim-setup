@@ -15,6 +15,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.notify" },
 	{ pack = "keystone.nvim",   module = "keystone.animate" },
 	{ pack = "keystone.nvim",   module = "keystone.complete" },
+	-- { pack = "mini.nvim",   module = "mini.completion" },
 	{ pack = "keystone.nvim",   module = "keystone.statusline" },
 	{ pack = "keystone.nvim",   module = "keystone.bookmarks" },
 	{ pack = "keystone.nvim",   module = "keystone.tsconfig" },
