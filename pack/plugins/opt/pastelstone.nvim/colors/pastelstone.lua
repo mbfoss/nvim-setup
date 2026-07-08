@@ -37,12 +37,12 @@ local _c = {
     indigo    = '#7e97d8',
     mauve     = '#be94c8',
 
-    bg_red    = '#3b2d2d',
-    bg_amber  = '#3E3A33',
-    bg_green  = '#2d3830',
-    bg_teal   = '#2b3836',
-    bg_blue   = '#2d3140',
-    bg_purple = '#35303e',
+    bg_red    = '#6C4343',
+    bg_amber  = '#4B4336',
+    bg_green  = '#324637',
+    bg_teal   = '#304944',
+    bg_blue   = '#333E52',
+    bg_purple = '#41384D',
 }
 
 local function _hl(group, opts)
