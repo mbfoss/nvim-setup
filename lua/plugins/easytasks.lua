@@ -14,4 +14,4 @@ vim.keymap.set("n", "<leader>ld", ":Task panel remove<CR>", { desc = "Remove one
 vim.keymap.set("n", "<leader>lk", ":Task stop<CR>", { desc = "Stop a task", silent = true })
 vim.keymap.set("n", "<leader>lK", ":Task stop_all<CR>", { desc = "Stop all tasks", silent = true })
 
-require("easytasks").register_expression("add", function(_, a, b) vim.notify()  return tonumber(a) + tonumber(b) end, {desc = "add 2 numbers"})
+require("easytasks").register_expression("add", function(_, a, b) return tonumber(a) + tonumber(b) end, {desc = "add 2 numbers"})
