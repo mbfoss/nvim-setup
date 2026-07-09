@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>bd", ":Debug breakpoint remove<CR>", { desc = "Dele
 vim.keymap.set("n", "<leader>bc", ":Debug breakpoint condition<CR>",
 	{ desc = "Conditional breakpoint", silent = true })
 vim.keymap.set("n", "<leader>bL", ":Debug breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
+vim.keymap.set("n", "<leader>bt", ":Debug breakpoint toggle_enabled<CR>", { desc = "Toggle breakpoint enabled/disabled", silent = true })
 vim.keymap.set("n", "<leader>bE", ":Debug breakpoint enable_all<CR>",
 	{ desc = "Enable all breakpoints", silent = true })
 vim.keymap.set("n", "<leader>bD", ":Debug breakpoint disable_all<CR>",
