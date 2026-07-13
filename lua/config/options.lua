@@ -30,7 +30,7 @@ vim.o.undolevels = 10000 -- 10x more undo levels
 
 vim.o.pumheight = 15
 vim.o.complete = ".,w,b,u"
-vim.o.completeopt = "menu,menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect,popup"
 
 -- define <leader> and <localleader> keys
 -- you should use `vim.keycode` to translate keycodes or pass raw keycode values like `" "` instead of just `"<space>"`

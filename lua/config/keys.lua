@@ -42,9 +42,9 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
-vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { noremap = true })
-vim.keymap.set('n', '<C-Space>', 'a<C-x><C-o>', { noremap = true })
-
+-- vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { noremap = true })
+-- vim.keymap.set('n', '<C-Space>', 'a<C-x><C-o>', { noremap = true })
+--
 vim.keymap.set({ "n", "v" }, "gx", "<cmd>!open <cfile><cr><cr>", { noremap = true, desc = "Open file under cursor" })
 
 -- Visual mode: move selection down/up
