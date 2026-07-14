@@ -1,4 +1,5 @@
 require("easytasks").setup({
+	lsp_debug_commands = true,
 })
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
