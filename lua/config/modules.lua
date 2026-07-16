@@ -29,6 +29,7 @@ local modules = {
 	{ pack = "gittools.nvim",   module = "gittools" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
+	{ pack = "cmake.nvim",      module = "cmake" },
 	-- { pack = "which-key.nvim",  module = "which-key" },
 }
 
