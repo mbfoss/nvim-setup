@@ -78,3 +78,5 @@ vim.opt.fillchars = {
 	vert = "▏",
 	eob = " ",
 }
+
+vim.o.winborder = 'rounded'
