@@ -5,3 +5,4 @@
 tasks.toml
 lua/LuaPanda.lua
 .easydap.json
+/pack/plugins/opt/panelwin.nvim
