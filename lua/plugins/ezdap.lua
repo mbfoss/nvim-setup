@@ -1,4 +1,4 @@
-require("easydap").setup({
+require("ezdap").setup({
 	persistence_dir = vim.fn.getcwd() .. '/.easytasks'
 })
 

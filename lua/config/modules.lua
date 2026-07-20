@@ -5,9 +5,9 @@ local modules = {
 	{ pack = "gitsigns.nvim",   module = "gitsigns" },
 
 	-- { pack = "tomltools.nvim",  module = "tomltools" },
-	{ pack = "easytasks.nvim",  module = "easytasks" },
-	{ pack = "easydap.nvim",    module = "easydap" },
-	{ pack = "nvim-dap",        module = "dap" },
+	{ pack = "tomltasks.nvim",  module = "tomltasks" },
+	{ pack = "ezdap.nvim",    module = "ezdap" },
+	-- { pack = "nvim-dap",        module = "dap" },
 
 	-- { pack = "snacks.nvim",     module = "snacks" },
 	{ pack = "keystone.nvim",   module = "keystone.pick" },
