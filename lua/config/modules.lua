@@ -27,7 +27,6 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.tweaks" },
 	{ pack = "keystone.nvim",   module = "keystone.unsaved" },
 	{ pack = "keystone.nvim",   module = "keystone.largefile" },
-	{ pack = "keystone.nvim",   module = "keystone.breadcrumbs" },
 	{ pack = "gittools.nvim",   module = "gittools" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
