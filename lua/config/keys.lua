@@ -163,6 +163,7 @@ vim.keymap.set("n", "<leader>cH", function() vim.lsp.inlay_hint.enable(not vim.l
 vim.keymap.set("n", "<leader>cd", function() vim.diagnostic.open_float() end,
 	{ desc = "Diagnostics: Show line diagnostics" })
 
+vim.keymap.set("n", "<leader>cc", ":CallTree<CR>", { desc = "Show call tree" })
 
 do
 	local function toggle_virtual_text()

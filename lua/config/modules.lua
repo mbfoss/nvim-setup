@@ -13,6 +13,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.pick" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.symboltree" },
+	{ pack = "keystone.nvim",   module = "keystone.calltree" },
 	{ pack = "keystone.nvim",   module = "keystone.explore" },
 	{ pack = "keystone.nvim",   module = "keystone.notify" },
 	{ pack = "keystone.nvim",   module = "keystone.animate" },
