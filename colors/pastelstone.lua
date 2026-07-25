@@ -161,7 +161,7 @@ _hl('SpecialChar',   { fg = _c.cyan })
 _hl('Tag',           { fg = _c.amber })
 _hl('Label',         { fg = _c.yellow })
 _hl('Delimiter',     { fg = _c.pink })
-_hl('Todo',          { fg = _c.amber,   bg = _c.bg_alt, gui = 'bold' })
+_hl('Todo',          { fg = _c.amber, gui = 'bold' })
 
 -- ── Diff ──────────────────────────────────────────────────────────
 _hl('DiffAdd',       { bg = _c.bg_green })
