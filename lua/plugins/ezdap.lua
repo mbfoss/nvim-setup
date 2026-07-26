@@ -32,6 +32,8 @@ vim.keymap.set("n", "<leader>dJ", ":Debug jump_to_cursor<CR>", { desc = "Jump to
 vim.keymap.set("n", "<leader>dc", ":Debug continue<CR>", { desc = "Continue", silent = true })
 vim.keymap.set("n", "<leader>dC", ":Debug continue_all<CR>", { desc = "Continue all", silent = true })
 vim.keymap.set("n", "<leader>dK", ":Debug terminate_all<CR>", { desc = "Terminate all", silent = true })
+vim.keymap.set("n", "<leader>dv", ":Debug view<CR>", { desc = "Debug view", silent = true })
+vim.keymap.set("n", "<leader>du", ":Debug view<CR>", { desc = "Debug view", silent = true })
 
 -- Alt keys
 vim.keymap.set("n", "<A-l>", ":Debug step_in<CR>", { silent = true })
