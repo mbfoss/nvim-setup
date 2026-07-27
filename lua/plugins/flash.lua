@@ -107,7 +107,7 @@ require("flash").setup({
   },
   highlight = {
     -- show a backdrop with hl FlashBackdrop
-    backdrop = true,
+    backdrop = false,
     -- Highlight the search matches
     matches = true,
     -- extmark priority

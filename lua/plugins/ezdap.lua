@@ -1,7 +1,6 @@
 require("ezdap").setup({
-	persistence_dir = vim.fn.getcwd() .. '/.easytasks',
 	raw_messages = true,
-	external_terminal = {"/Users/Dev/Applications/iTerm.app/Contents/MacOS/iTerm2"},
+	external_terminal = "tmux split-window",
 })
 
 
