@@ -1,5 +1,21 @@
 require("ezdap").setup({
-	persistence_dir = vim.fn.getcwd() .. '/.easytasks'
+	persistence_dir = vim.fn.getcwd() .. '/.easytasks',
+
+	-- External terminal (an adapter's `console = externalTerminal`). No macOS
+	-- terminal takes a command argv, so iTerm is driven through AppleScript:
+	-- ezdap appends the debuggee's command line, which arrives as `argv`.
+	external_terminal = {
+		"osascript", "-e", [[on run argv
+			set cmd to ""
+			repeat with a in argv
+				set cmd to cmd & quoted form of (a as text) & " "
+			end repeat
+			tell application "iTerm"
+				create window with default profile command cmd
+				activate
+			end tell
+		end run]],
+	},
 })
 
 
