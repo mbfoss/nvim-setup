@@ -1,21 +1,7 @@
 require("ezdap").setup({
 	persistence_dir = vim.fn.getcwd() .. '/.easytasks',
-
-	-- External terminal (an adapter's `console = externalTerminal`). No macOS
-	-- terminal takes a command argv, so iTerm is driven through AppleScript:
-	-- ezdap appends the debuggee's command line, which arrives as `argv`.
-	external_terminal = {
-		"osascript", "-e", [[on run argv
-			set cmd to ""
-			repeat with a in argv
-				set cmd to cmd & quoted form of (a as text) & " "
-			end repeat
-			tell application "iTerm"
-				create window with default profile command cmd
-				activate
-			end tell
-		end run]],
-	},
+	raw_messages = true,
+	external_terminal = {"/Users/Dev/Applications/iTerm.app/Contents/MacOS/iTerm2"},
 })
 
 
@@ -28,7 +14,8 @@ vim.keymap.set("n", "<leader>bd", ":Debug breakpoint remove<CR>", { desc = "Dele
 vim.keymap.set("n", "<leader>bc", ":Debug breakpoint condition<CR>",
 	{ desc = "Conditional breakpoint", silent = true })
 vim.keymap.set("n", "<leader>bL", ":Debug breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
-vim.keymap.set("n", "<leader>bt", ":Debug breakpoint toggle_enabled<CR>", { desc = "Toggle breakpoint enabled/disabled", silent = true })
+vim.keymap.set("n", "<leader>bt", ":Debug breakpoint toggle_enabled<CR>",
+	{ desc = "Toggle breakpoint enabled/disabled", silent = true })
 vim.keymap.set("n", "<leader>bE", ":Debug breakpoint enable_all<CR>",
 	{ desc = "Enable all breakpoints", silent = true })
 vim.keymap.set("n", "<leader>bD", ":Debug breakpoint disable_all<CR>",
