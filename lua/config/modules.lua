@@ -9,6 +9,7 @@ local modules = {
 	{ pack = "ezdap.nvim",      module = "ezdap" },
 	-- { pack = "nvim-dap",        module = "dap" },
 
+	{ pack = "dock.nvim",     module = "dock" },
 	-- { pack = "snacks.nvim",     module = "snacks" },
 	-- { pack = "keystone.nvim",   module = "keystone.pick" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },

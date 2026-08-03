@@ -31,3 +31,6 @@
 [submodule "pack/plugins/opt/ezpick.nvim"]
 	path = pack/plugins/opt/ezpick.nvim
 	url = https://github.com/mbfoss/ezpick.nvim.git
+[submodule "pack/plugins/opt/dock.nvim"]
+	path = pack/plugins/opt/dock.nvim
+	url = https://github.com/mbfoss/dock.nvim.git
