@@ -6,7 +6,7 @@
 return {
     command = "bash-debug-adapter",
     profiles       = {
-        -- `quick_run bash-debug-adapter bash_script script=./run.sh`.
+        -- `:Debug run bash-debug-adapter bash_script script=./run.sh`.
         bash_script = {
             description = "debug a bash script",
             request = "launch",
