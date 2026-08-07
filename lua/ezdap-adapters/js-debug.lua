@@ -19,7 +19,7 @@ local _source_inputs = {
 ---Fields both Node profiles accept on top of the source ones.
 ---@type table<string, ezdap.Input>
 local _node_inputs = {
-    cwd                         = { type = "string", format = "cwd", description = "working directory" },
+    cwd                         = { type = "string", format = "dir", description = "working directory" },
     env                         = { type = "table", format = "map", description = "environment variables" },
     env_file                    = { type = "string", format = "file", description = "file of environment variable definitions" },
     restart                     = { type = "boolean", description = "try to reconnect when the connection is lost" },
@@ -108,7 +108,7 @@ local _profiles = {
         description = "attach to a remote Node.js process over host/port",
         request = "attach",
         inputs = _inputs(_node_inputs, {
-            host                     = { type = "string", format = "host", description = "remote Node.js host" },
+            host                     = { type = "string", description = "remote Node.js host" },
             port                     = { type = "integer", format = "port", description = "remote Node.js debug port (default 9229)" },
             local_root               = { type = "string", format = "dir", description = "local directory containing the program" },
             remote_root              = { type = "string", description = "remote directory containing the program" },

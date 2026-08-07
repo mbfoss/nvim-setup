@@ -105,7 +105,7 @@ end
 ---Launch-only attributes shared by the `program`, `module` and `code` profiles.
 ---@type table<string, ezdap.Input>
 local _launch_inputs = {
-    cwd           = { type = "string", format = "cwd", description = "working directory" },
+    cwd           = { type = "string", format = "dir", description = "working directory" },
     env           = { type = "table", format = "map", description = "environment variables" },
     python        = { type = "table", format = "list", description = "python executable and interpreter arguments" },
     console       = { type = "string", choices = { "internalConsole", "integratedTerminal", "externalTerminal" }, description = "where the debuggee's stdio goes" },
@@ -188,7 +188,7 @@ return {
             description = "attach to a remote debugpy process over host/port",
             request = "attach",
             inputs = _inputs {
-                host = { type = "string", format = "host", required = true, description = "remote debugpy host" },
+                host = { type = "string", required = true, description = "remote debugpy host" },
                 port = { type = "integer", format = "port", required = true, description = "remote debugpy port" },
             },
             build = function(params, _, inputs)
@@ -202,7 +202,7 @@ return {
             description = "wait for a debugpy process to connect back on host/port",
             request = "attach",
             inputs = _inputs {
-                host = { type = "string", format = "host", description = "host to listen on" },
+                host = { type = "string", description = "host to listen on" },
                 port = { type = "integer", format = "port", required = true, description = "port to listen on" },
             },
             build = function(params, _, inputs)
