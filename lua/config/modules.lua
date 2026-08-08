@@ -31,6 +31,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.largefile" },
 	{ pack = "keystone.nvim",   module = "keystone.select" },
 	{ pack = "keystone.nvim",   module = "keystone.bufdelete" },
+	{ pack = "keystone.nvim",   module = "keystone.marksigns" },
 	{ pack = "gittools.nvim",   module = "gittools" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
