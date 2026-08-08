@@ -11,7 +11,6 @@ local modules = {
 
 	{ pack = "dock.nvim",     module = "dock" },
 	-- { pack = "snacks.nvim",     module = "snacks" },
-	-- { pack = "keystone.nvim",   module = "keystone.pick" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.symboltree" },
 	{ pack = "keystone.nvim",   module = "keystone.calltree" },
@@ -29,7 +28,7 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.tweaks" },
 	{ pack = "keystone.nvim",   module = "keystone.unsaved" },
 	{ pack = "keystone.nvim",   module = "keystone.largefile" },
-	{ pack = "keystone.nvim",   module = "keystone.select" },
+	-- { pack = "keystone.nvim",   module = "keystone.select" },
 	{ pack = "keystone.nvim",   module = "keystone.bufdelete" },
 	{ pack = "ezpick.nvim",     module = "ezpick" },
 	{ pack = "gittools.nvim",   module = "gittools" },

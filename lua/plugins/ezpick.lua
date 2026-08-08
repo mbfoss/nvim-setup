@@ -1,5 +1,8 @@
 local pick = require("ezpick")
-pick.setup()
+pick.setup({
+	override_ui_select = true,
+	layout = "vertical",
+})
 
 vim.keymap.set("n", "<leader>fa", "<cmd>Pick resume<cr>", { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Pick files<cr>", { desc = "Find Files" })
@@ -8,7 +11,8 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Pick live_grep<cr>", { desc = "Recent Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Pick config_files<cr>", { desc = "Config Files" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP References" })
-vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols is:Function is:Constructor is:Method<cr>", { desc = "Document functions" })
+vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols is:Function is:Constructor is:Method<cr>",
+	{ desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix" })
 vim.keymap.set("n", "<leader>fe", "<cmd>Pick quickfix --errors<cr>", { desc = "Quickfix errors" })
