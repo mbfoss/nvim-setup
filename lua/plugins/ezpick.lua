@@ -1,7 +1,9 @@
 local pick = require("ezpick")
 pick.setup({
-	override_ui_select = true,
-	layout = "vertical",
+	-- override_ui_select = true,
+	with_preview = {
+		layout = "vertical",
+	}
 })
 
 vim.keymap.set("n", "<leader>fa", "<cmd>Pick resume<cr>", { desc = "Resume last search" })
