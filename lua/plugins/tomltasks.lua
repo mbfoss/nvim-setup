@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>lt", ":Task panel<CR>", { desc = "Toggle status pan
 vim.keymap.set("n", "<leader>lp", function()
 	vim.cmd("Task panel jump " .. vim.v.count1)
 end, { desc = "Jump to task tab N (count)", silent = true })
-vim.keymap.set("n", "<leader>lc", ":Task clear<CR>", { desc = "Clear finished tasks", silent = true })
+vim.keymap.set("n", "<leader>lc", ":Task clean<CR>", { desc = "Clear finished tasks", silent = true })
 vim.keymap.set("n", "<leader>ld", ":Task panel remove<CR>", { desc = "Remove one finishted task", silent = true })
 -- task control
 vim.keymap.set("n", "<leader>lk", ":Task stop<CR>", { desc = "Stop a task", silent = true })
