@@ -4,6 +4,7 @@ local _c = {
     bg_panel  = '#34353a',
     bg_alt    = '#3a3b40',
     bg_cursor = '#3e3f46',
+    bg_line   = '#333438',
     bg_float  = '#46474f',
     surface   = '#505157',
     line      = '#585963',
@@ -77,8 +78,8 @@ _hl('Underlined',    { fg = _c.sky,     gui = 'underline' })
 _hl('Cursor',        { fg = _c.bg,      bg = _c.fg })
 _hl('TermCursor',    { fg = _c.bg,      bg = _c.fg })
 _hl('TermCursorNC',  { fg = _c.bg,      bg = _c.muted })
-_hl('Visual',        { bg = _c.surface })
-_hl('VisualNOS',     { bg = _c.surface })
+_hl('Visual',        { bg = _c.bg_blue })
+_hl('VisualNOS',     { bg = _c.bg_blue })
 _hl('MatchParen',    { bg = _c.overlay, gui = 'bold' })
 _hl('SnippetTabstop',{ bg = _c.bg_alt,  sp = _c.teal, gui = 'undercurl' })
 
@@ -103,8 +104,8 @@ _hl('Directory',     { fg = _c.cyan })
 
 _hl('ColorColumn',   { bg = _c.bg_cursor })
 _hl('CursorColumn',  { bg = _c.bg_cursor })
-_hl('CursorLine',    { bg = _c.bg_cursor })
-_hl('CursorLineNr',  { fg = _c.subtle,  bg = _c.bg_cursor })
+_hl('CursorLine',    { bg = _c.bg_line })
+_hl('CursorLineNr',  { fg = _c.subtle,  bg = _c.bg_line })
 _hl('LineNr',        { fg = _c.muted,   bg = _c.bg })
 _hl('SignColumn',    { fg = _c.muted,   bg = _c.bg })
 _hl('FoldColumn',    { fg = _c.overlay, bg = _c.bg })
