@@ -319,14 +319,6 @@ _hl('@markup.math',           { fg = _c.cyan })
 
 _hl('NvimInternalError',      { fg = _c.bg, bg = _c.flame })
 
--- ── Which-key ─────────────────────────────────────────────────────
-_hl('WhichKey',          { fg = _c.cyan })
-_hl('WhichKeyDesc',      { fg = _c.fg })
-_hl('WhichKeyFloat',     { fg = _c.fg,    bg = _c.bg_float })
-_hl('WhichKeyGroup',     { fg = _c.indigo })
-_hl('WhichKeySeparator', { fg = _c.lime })
-_hl('WhichKeyValue',     { fg = _c.muted })
-
 -- ── Terminal colors ───────────────────────────────────────────────
 vim.g.terminal_color_0  = _c.bg
 vim.g.terminal_color_1  = _c.red
