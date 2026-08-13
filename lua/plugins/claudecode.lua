@@ -1,8 +1,12 @@
-require("claudecode").setup()
+require("claudecode").setup {
+	terminal = {
+		show_native_term_exit_tip = false
+	}
+}
 
 local map = vim.keymap.set
 
-map("n", "<leader>ac", "<cmd>ClaudeCode<cr>", { desc = "Toggle Claude" })
+map({ "n", "v" }, "<leader>ac", "<cmd>ClaudeCodeOpen<cr>", { desc = "Open Claude" })
 map("n", "<leader>af", "<cmd>ClaudeCodeFocus<cr>", { desc = "Focus Claude" })
 map("n", "<leader>ar", "<cmd>ClaudeCode --resume<cr>", { desc = "Resume Claude" })
 map("n", "<leader>aC", "<cmd>ClaudeCode --continue<cr>", { desc = "Continue Claude" })
