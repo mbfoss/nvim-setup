@@ -24,6 +24,7 @@ vim.keymap.set("n", "<leader>fj", "<cmd>Pick jumplist<cr>", { desc = "Jumplist" 
 vim.keymap.set("n", "<leader>fd", "<cmd>Pick document_diagnostics<cr>", { desc = "Document diagnostics" })
 vim.keymap.set("n", "<leader>fD", "<cmd>Pick workspace_diagnostics<cr>", { desc = "Workspace diagnostics" })
 vim.keymap.set("n", "<leader>gd", "<cmd>Pick git_diff<cr>", { desc = "Git diff" })
+vim.keymap.set("n", "<leader>fn", "<cmd>Pick notes<cr>", { desc = "Pick a note" })
 
 
 -- vim.keymap.set("n", "<leader>f?", show_search_root, { desc = "Search dir (for Find/Grep)" })
