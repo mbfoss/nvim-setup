@@ -10,6 +10,7 @@ vim.o.number = true         -- enable line number
 vim.o.relativenumber = true -- and relative line number
 
 vim.o.signcolumn = "yes:2"  -- always show sign column
+vim.o.scroll = math.min(10, vim.api.nvim_win_get_height(0))
 vim.o.scrolloff = 8
 
 vim.o.list = true    -- use special characters to represent things like tabs or trailing spaces
