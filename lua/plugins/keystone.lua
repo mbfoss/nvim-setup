@@ -39,6 +39,6 @@ require("keystone.clue").add({
 	{ "<leader>pr", group = "+Run",      mode = { "n" } },
 })
 
-vim.keymap.set("n", "<leader>nn", "<cmd>Note <cr>", { desc = "add" })
-vim.keymap.set("n", "<leader>nd", "<cmd>Note delete<cr>", { desc = "Note" })
-vim.keymap.set("n", "<leader>nl", "<cmd>Note list<cr>", { desc = "Note list" })
+vim.keymap.set("n", "<leader>nn", "<cmd>Notes add<cr>", { desc = "add" })
+vim.keymap.set("n", "<leader>nd", "<cmd>Notes delete<cr>", { desc = "Note" })
+vim.keymap.set("n", "<leader>nl", "<cmd>Notes list<cr>", { desc = "Note list" })
