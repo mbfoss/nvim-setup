@@ -1,23 +1,6 @@
 local modules = {
 	{ pack = "ezpick.nvim",     module = "ezpick" },
-	{ pack = "keystone.nvim",   module = "keystone.filetree" },
-	{ pack = "keystone.nvim",   module = "keystone.symboltree" },
-	{ pack = "keystone.nvim",   module = "keystone.calltree" },
-	{ pack = "keystone.nvim",   module = "keystone.explore" },
-	{ pack = "keystone.nvim",   module = "keystone.notify" },
-	{ pack = "keystone.nvim",   module = "keystone.animate" },
-	{ pack = "keystone.nvim",   module = "keystone.completion" },
-	{ pack = "keystone.nvim",   module = "keystone.statusline" },
-	{ pack = "keystone.nvim",   module = "keystone.notes" },
-	{ pack = "keystone.nvim",   module = "keystone.tsconfig" },
-	{ pack = "keystone.nvim",   module = "keystone.lspconfig" },
-	{ pack = "keystone.nvim",   module = "keystone.clue" },
-	{ pack = "keystone.nvim",   module = "keystone.tweaks" },
-	{ pack = "keystone.nvim",   module = "keystone.unsaved" },
-	{ pack = "keystone.nvim",   module = "keystone.largefile" },
-	{ pack = "keystone.nvim",   module = "keystone.select" },
-	{ pack = "keystone.nvim",   module = "keystone.bufdelete" },
-	{ pack = "keystone.nvim",   module = "keystone.marksigns" },
+	{ pack = "keystone.nvim",   module = "keystone" },
 	{ pack = "gittools.nvim",   module = "gittools" },
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
@@ -27,7 +10,7 @@ local modules = {
 	{ pack = "gitsigns.nvim",   module = "gitsigns" },
 	{ pack = "tomltasks.nvim",  module = "tomltasks" },
 	{ pack = "ezdap.nvim",      module = "ezdap" },
-	{ pack = "dock.nvim",     module = "dock" },
+	{ pack = "dock.nvim",       module = "dock" },
 }
 
 local pack_loaded = {}
