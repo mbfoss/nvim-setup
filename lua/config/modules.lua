@@ -1,16 +1,4 @@
 local modules = {
-
-	{ pack = "osv.nvim",        module = "osv" },
-	{ pack = "mason.nvim",      module = "mason" },
-	{ pack = "gitsigns.nvim",   module = "gitsigns" },
-
-	-- { pack = "tomltools.nvim",  module = "tomltools" },
-	{ pack = "tomltasks.nvim",  module = "tomltasks" },
-	{ pack = "ezdap.nvim",      module = "ezdap" },
-	-- { pack = "nvim-dap",        module = "dap" },
-
-	{ pack = "dock.nvim",     module = "dock" },
-	-- { pack = "snacks.nvim",     module = "snacks" },
 	{ pack = "ezpick.nvim",     module = "ezpick" },
 	{ pack = "keystone.nvim",   module = "keystone.filetree" },
 	{ pack = "keystone.nvim",   module = "keystone.symboltree" },
@@ -19,8 +7,6 @@ local modules = {
 	{ pack = "keystone.nvim",   module = "keystone.notify" },
 	{ pack = "keystone.nvim",   module = "keystone.animate" },
 	{ pack = "keystone.nvim",   module = "keystone.completion" },
-	-- { pack = "keystone.nvim",   module = "keystone.lspcomp" },
-	-- { pack = "mini.nvim",   module = "mini.completion" },
 	{ pack = "keystone.nvim",   module = "keystone.statusline" },
 	{ pack = "keystone.nvim",   module = "keystone.notes" },
 	{ pack = "keystone.nvim",   module = "keystone.tsconfig" },
@@ -36,7 +22,12 @@ local modules = {
 	{ pack = "flash.nvim",      module = "flash" },
 	{ pack = "claudecode.nvim", module = "claudecode" },
 	{ pack = "cmake.nvim",      module = "cmake" },
-	-- { pack = "which-key.nvim",  module = "which-key" },
+	{ pack = "osv.nvim",        module = "osv" },
+	{ pack = "mason.nvim",      module = "mason" },
+	{ pack = "gitsigns.nvim",   module = "gitsigns" },
+	{ pack = "tomltasks.nvim",  module = "tomltasks" },
+	{ pack = "ezdap.nvim",      module = "ezdap" },
+	{ pack = "dock.nvim",     module = "dock" },
 }
 
 local pack_loaded = {}
