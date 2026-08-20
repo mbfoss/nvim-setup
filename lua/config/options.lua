@@ -8,6 +8,7 @@ vim.o.cursorline = true     -- enable cursor line
 
 vim.o.number = true         -- enable line number
 vim.o.relativenumber = true -- and relative line number
+vim.o.wrap = true
 
 vim.o.signcolumn = "yes:2"  -- always show sign column
 vim.o.scroll = math.min(10, vim.api.nvim_win_get_height(0))
@@ -66,8 +67,6 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 
-vim.opt.diffopt:append("linematch:60") -- second stage diff to align lines
-
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
@@ -81,3 +80,6 @@ vim.opt.fillchars = {
 }
 
 vim.o.winborder = 'rounded'
+
+vim.opt.diffopt:append("linematch:60") -- second stage diff to align lines
+vim.opt.diffopt:append("followwrap")
