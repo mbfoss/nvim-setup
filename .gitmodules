@@ -34,3 +34,6 @@
 [submodule "pack/plugins/opt/dock.nvim"]
 	path = pack/plugins/opt/dock.nvim
 	url = https://github.com/mbfoss/dock.nvim.git
+[submodule "pack/plugins/opt/greplace.nvim"]
+	path = pack/plugins/opt/greplace.nvim
+	url = https://github.com/mbfoss/greplace.nvim.git
