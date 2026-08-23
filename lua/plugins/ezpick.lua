@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Pick live_grep<cr>", { desc = "Recent Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Pick config_files<cr>", { desc = "Config Files" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP References" })
-vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols is:Function is:Constructor is:Method<cr>",
+vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols -f Function -f Constructor -f Method<cr>",
 	{ desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix" })
