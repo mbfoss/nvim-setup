@@ -1,17 +1,18 @@
 local modules = {
-	{ pack = "ezpick.nvim",     module = "ezpick" },
-	{ pack = "greplace.nvim",   module = "greplace" },
-	{ pack = "keystone.nvim",   module = "keystone" },
-	{ pack = "gittools.nvim",   module = "gittools" },
-	{ pack = "flash.nvim",      module = "flash" },
-	{ pack = "claudecode.nvim", module = "claudecode" },
-	{ pack = "cmake.nvim",      module = "cmake" },
-	{ pack = "osv.nvim",        module = "osv" },
-	{ pack = "mason.nvim",      module = "mason" },
-	{ pack = "gitsigns.nvim",   module = "gitsigns" },
-	{ pack = "tomltasks.nvim",  module = "tomltasks" },
-	{ pack = "ezdap.nvim",      module = "ezdap" },
-	{ pack = "dock.nvim",       module = "dock" },
+	{ pack = "ezpick.nvim",        module = "ezpick" },
+	{ pack = "greplace.nvim",      module = "greplace" },
+	{ pack = "keystone.nvim",      module = "keystone" },
+	{ pack = "gittools.nvim",      module = "gittools" },
+	{ pack = "flash.nvim",         module = "flash" },
+	{ pack = "claudecode.nvim",    module = "claudecode" },
+	{ pack = "cmake.nvim",         module = "cmake" },
+	{ pack = "osv.nvim",           module = "osv" },
+	{ pack = "mason.nvim",         module = "mason" },
+	{ pack = "gitsigns.nvim",      module = "gitsigns" },
+	{ pack = "tomltasks.nvim",     module = "tomltasks" },
+	{ pack = "ezdap.nvim",         module = "ezdap" },
+	{ pack = "ezdap-adapters.nvim" },
+	{ pack = "dock.nvim",          module = "dock" },
 }
 
 local pack_loaded = {}
@@ -23,14 +24,16 @@ for _, entry in ipairs(modules) do
 end
 
 for _, entry in ipairs(modules) do
-	local mod = require(entry.module)
-	local config_file = vim.fn.stdpath("config")
-		.. "/lua/plugins/"
-		.. entry.module:gsub("%.", "/")
-		.. ".lua"
-	if vim.uv.fs_stat(config_file) then
-		require("plugins." .. entry.module)
-	elseif type(mod.setup) == "function" then
-		mod.setup({})
+	if entry.module then
+		local mod = require(entry.module)
+		local config_file = vim.fn.stdpath("config")
+			.. "/lua/plugins/"
+			.. entry.module:gsub("%.", "/")
+			.. ".lua"
+		if vim.uv.fs_stat(config_file) then
+			require("plugins." .. entry.module)
+		elseif type(mod.setup) == "function" then
+			mod.setup({})
+		end
 	end
 end

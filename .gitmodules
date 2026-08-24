@@ -37,6 +37,6 @@
 [submodule "pack/plugins/opt/greplace.nvim"]
 	path = pack/plugins/opt/greplace.nvim
 	url = https://github.com/mbfoss/greplace.nvim.git
-[submodule "pack/plugins/opt/ezdap-adapters"]
-	path = pack/plugins/opt/ezdap-adapters
-	url = https://github.com/mbfoss/ezdap-adapters.git
+[submodule "pack/plugins/opt/ezdap-adapters.nvim"]
+	path = pack/plugins/opt/ezdap-adapters.nvim
+	url = https://github.com/mbfoss/ezdap-adapters.nvim.git
