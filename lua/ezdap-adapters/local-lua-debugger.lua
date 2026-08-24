@@ -56,7 +56,7 @@ local function _inputs(...)
     return out
 end
 
----Assigns everything outside `program`, which each profile fills in itself.
+---Assigns everything outside `program`, which each mode fills in itself.
 ---@param params table
 ---@param inputs table<string, any>
 local function _common_build(params, inputs)
@@ -73,11 +73,11 @@ local function _common_build(params, inputs)
     params.verbose           = inputs.verbose
 end
 
----@type table<string, ezdap.Profile>
-local _profiles = {
+---@type table<string, ezdap.Mode>
+local _modes = {
     -- One `command` input carries the whole command line; `build` splits it into
     -- the script (`program.file`) and `args` (the rest).
-    launch_program = {
+    script = {
         description = "debug a Lua script",
         request = "launch",
         inputs = _inputs {
@@ -99,7 +99,7 @@ local _profiles = {
     },
     -- The custom-command shape: an executable that embeds Lua drives the session
     -- itself, so there is no interpreter or entry file to name.
-    launch_command = {
+    executable = {
         description = "debug a custom executable that embeds Lua",
         request = "launch",
         inputs = _inputs {
@@ -145,5 +145,5 @@ return {
         config.env = vim.tbl_extend("force", config.env or {}, { LUA_PATH = _lua_path(dir) })
         callback()
     end,
-    profiles = _profiles,
+    modes = _modes,
 }

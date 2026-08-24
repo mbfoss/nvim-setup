@@ -6,7 +6,7 @@
 local codelldb_bin = "codelldb"
 
 ---Attributes codelldb accepts on both a launch and an attach. Declared once and
----merged into every profile, so a field is described in one place.
+---merged into every mode, so a field is described in one place.
 ---@type table<string, ezdap.Input>
 local _common_inputs = {
     source_map             = { type = "map", item_format = "dir", description = "source path remappings, from=to" },
@@ -28,7 +28,7 @@ local _common_inputs = {
 ---@return string
 local function _quoted(path) return '"' .. path .. '"' end
 
----A profile's own inputs on top of the common set.
+---A mode's own inputs on top of the common set.
 ---@param extra table<string, ezdap.Input>
 ---@return table<string, ezdap.Input>
 local function _inputs(extra)
@@ -57,10 +57,10 @@ end
 ---@type ezdap.AdapterDef
 return {
     command = codelldb_bin,
-    profiles       = {
+    modes = {
         -- One `command` input carries the whole command line; `build` splits it into
         -- `program` (the first word) and `args` (the rest).
-        launch_program = {
+        binary = {
             description = "debug an executable",
             request = "launch",
             inputs = _inputs {
@@ -83,7 +83,7 @@ return {
                 params.stopOnEntry = inputs.stop_on_entry
             end,
         },
-        attach_process = {
+        attach = {
             description = "attach to a running process by pid",
             request = "attach",
             inputs = _inputs {
@@ -100,7 +100,7 @@ return {
                 params.stopOnEntry = inputs.stop_on_entry
             end,
         },
-        attach_by_name = {
+        process_name = {
             description = "attach to a process by executable, optionally waiting for it to launch",
             request = "attach",
             inputs = _inputs {

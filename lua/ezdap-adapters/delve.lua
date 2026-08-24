@@ -122,7 +122,7 @@ local _build_inputs = {
     goroutine_filters      = { type = "string", description = "filter expression limiting the goroutines listed" },
 }
 
----A profile's inputs: the always-accepted set plus whichever groups apply.
+---A mode's inputs: the always-accepted set plus whichever groups apply.
 ---@param ... table<string, ezdap.Input>
 ---@return table<string, ezdap.Input>
 local function _inputs(...)
@@ -181,9 +181,9 @@ return {
     command  = vim.list_extend({ delve_bin or delve_bins[1] }, delve_args),
     setup    = _setup,
     teardown = function(_, ctx) if ctx and ctx.handle then ctx.handle.stop() end end,
-    profiles = {
+    modes = {
         -- `build` splits the one `command` input into `program` and `args`.
-        launch_program = {
+        package = {
             description = "build and debug a Go package/binary",
             request = "launch",
             inputs = _inputs(_process_inputs, _build_inputs),
@@ -192,7 +192,7 @@ return {
                 _build_build(params, inputs)
             end,
         },
-        launch_test = {
+        test = {
             description = "build and debug a Go test package",
             request = "launch",
             inputs = _inputs(_process_inputs, _build_inputs),
@@ -201,7 +201,7 @@ return {
                 _build_build(params, inputs)
             end,
         },
-        launch_exec = {
+        binary = {
             description = "debug a pre-built Go binary",
             request = "launch",
             inputs = _inputs(_process_inputs),
@@ -243,7 +243,7 @@ return {
         -- Only `dlv dap`-served attach mode is "local" (attach to a process the
         -- server can see); "remote" attach is served by `dlv --headless` and
         -- configured at the connection level, not through this launched-server body.
-        attach_process = {
+        attach = {
             description = "attach to a running process by pid",
             request = "attach",
             inputs = {

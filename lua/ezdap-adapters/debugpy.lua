@@ -96,7 +96,7 @@ local function _debugpy_setup(config, ctx, callback)
 end
 
 ---Attributes debugpy accepts on both a launch and an attach. Declared once and
----merged into every profile, so a field is described in one place.
+---merged into every mode, so a field is described in one place.
 ---@type table<string, ezdap.Input>
 local _common_inputs = {
     just_my_code      = { type = "boolean", description = "debug only user-written code (default false)" },
@@ -112,7 +112,7 @@ local _common_inputs = {
     log_to_file       = { type = "boolean", description = "log debugger events to a file" },
 }
 
----A profile's own inputs on top of the common set.
+---A mode's own inputs on top of the common set.
 ---@param extra table<string, ezdap.Input>
 ---@return table<string, ezdap.Input>
 local function _inputs(extra)
@@ -144,7 +144,7 @@ local function _common_build(params, inputs)
     end
 end
 
----Launch-only attributes shared by the `program`, `module` and `code` profiles.
+---Launch-only attributes shared by the `script`, `module` and `code` modes.
 ---@type table<string, ezdap.Input>
 local _launch_inputs = {
     cwd           = { type = "string", format = "dir", description = "working directory" },
@@ -173,10 +173,10 @@ return {
     command  = "python3",
     setup    = _debugpy_setup,
     teardown = function(_, ctx) if ctx then ctx.handle.stop() end end,
-    profiles = {
+    modes = {
         -- One `command` input carries the whole command line; `build` splits it into
         -- `program` (the first word) and `args` (the rest).
-        launch_program = {
+        script = {
             description = "debug a Python file",
             request = "launch",
             inputs = _inputs(vim.tbl_extend("error", vim.deepcopy(_launch_inputs), {
@@ -187,7 +187,7 @@ return {
                 params.program, params.args = require("ezdap.shared").split_command(inputs.command)
             end,
         },
-        launch_module = {
+        module = {
             description = "debug a module, as `python -m`",
             request = "launch",
             inputs = _inputs(vim.tbl_extend("error", vim.deepcopy(_launch_inputs), {
@@ -200,7 +200,7 @@ return {
                 params.args   = inputs.args
             end,
         },
-        launch_code = {
+        code = {
             description = "debug a snippet of Python source, as `python -c`",
             request = "launch",
             inputs = _inputs(vim.tbl_extend("error", vim.deepcopy(_launch_inputs), {
@@ -213,7 +213,7 @@ return {
                 params.args = inputs.args
             end,
         },
-        attach_process = {
+        attach = {
             description = "attach to a running process by pid",
             request = "attach",
             inputs = _inputs {
