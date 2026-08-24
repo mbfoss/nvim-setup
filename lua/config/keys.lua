@@ -21,8 +21,6 @@ end
 -- 		command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
 -- 	})
 
-vim.keymap.set('x', 'p', '"_dP', { noremap = true, silent = true })
-
 -- Save with Ctrl+S
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', function()
 	-- If in insert mode, save and return to insert
