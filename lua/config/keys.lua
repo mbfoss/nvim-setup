@@ -21,6 +21,12 @@ end
 -- 		command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
 -- 	})
 
+vim.keymap.set('x', 'p', function()
+	local reg = vim.v.register
+	vim.cmd('normal! "_d')
+	vim.cmd('normal! "' .. reg .. 'P')
+end, { noremap = true, silent = true })
+
 -- Save with Ctrl+S
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', function()
 	-- If in insert mode, save and return to insert
@@ -110,17 +116,17 @@ vim.keymap.set("n", "<leader>wf", toggle_qflist, { desc = "Toggle quickfix list"
 vim.keymap.set('n', 'ga', '<C-^>', { noremap = true, silent = true, desc = 'Go to alternate buffer' })
 
 vim.keymap.set(
-  "n",
-  "<leader>s",
-  [[:%s/\V<C-r>=escape(expand('<cword>'), '/\')<CR>//gc<Left><Left><Left>]],
-  { desc = "Substitute word (literal)" }
+	"n",
+	"<leader>s",
+	[[:%s/\V<C-r>=escape(expand('<cword>'), '/\')<CR>//gc<Left><Left><Left>]],
+	{ desc = "Substitute word (literal)" }
 )
 
 vim.keymap.set(
-  "v",
-  "<leader>s",
-  [[y:%s/\V<C-r>=escape(getreg('"'), '/\')<CR>//gc<Left><Left><Left>]],
-  { desc = "Substitute selection" }
+	"v",
+	"<leader>s",
+	[[y:%s/\V<C-r>=escape(getreg('"'), '/\')<CR>//gc<Left><Left><Left>]],
+	{ desc = "Substitute selection" }
 )
 
 vim.keymap.set('n', '<leader>dL', function()
