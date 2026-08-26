@@ -21,7 +21,6 @@ require("keystone").setup({
 	explore    = true,
 	symboltree = true,
 	calltree   = true,
-	notes      = true,
 	unsaved    = true,
 	bufdelete  = true,
 })
@@ -38,7 +37,3 @@ require("keystone.clue").add({
 	{ "<leader>pb", group = "+Build",    mode = { "n" } },
 	{ "<leader>pr", group = "+Run",      mode = { "n" } },
 })
-
-vim.keymap.set("n", "<leader>nn", "<cmd>Notes add<cr>", { desc = "add" })
-vim.keymap.set("n", "<leader>nd", "<cmd>Notes delete<cr>", { desc = "Note" })
-vim.keymap.set("n", "<leader>nl", "<cmd>Notes list<cr>", { desc = "Note list" })
