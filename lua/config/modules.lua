@@ -13,6 +13,7 @@ local modules = {
 	{ pack = "ezdap.nvim",         module = "ezdap" },
 	{ pack = "ezdap-adapters.nvim" },
 	{ pack = "dock.nvim",          module = "dock" },
+	{ pack = "annotate.nvim",      module = "annotate" },
 }
 
 local pack_loaded = {}

@@ -40,3 +40,6 @@
 [submodule "pack/plugins/opt/ezdap-adapters.nvim"]
 	path = pack/plugins/opt/ezdap-adapters.nvim
 	url = https://github.com/mbfoss/ezdap-adapters.nvim.git
+[submodule "pack/plugins/opt/annotate.nvim"]
+	path = pack/plugins/opt/annotate.nvim
+	url = https://github.com/mbfoss/annotate.nvim
