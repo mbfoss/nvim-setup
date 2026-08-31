@@ -1,5 +1,6 @@
 require("tomltasks").setup({
 	lsp_debug_commands = true,
+	debug_adapters = {"codelldb", "gdb"}
 })
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })

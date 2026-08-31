@@ -71,7 +71,7 @@ vim.keymap.set("n", "<leader>E", "<cmd>FileTree<cr>", { desc = "File Tree" })
 -- Buffer
 
 vim.keymap.set("n", "<leader>Bl", "<cmd>ls<cr>", { desc = "List Buffers" })
-vim.keymap.set("n", "<leader>Bd", function() require("mini.bufremove").delete(0, false) end, { desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>Bd", "<cmd>Bdelete<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>Bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>Bp", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
 vim.keymap.set("n", "<leader>Bw", "<cmd>w<cr>", { desc = "Save Buffer" })
