@@ -6,6 +6,7 @@ pick.setup({
 	-- }
 })
 
+
 vim.keymap.set("n", "<leader>fa", "<cmd>Pick resume<cr>", { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Pick files<cr>", { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fp", "<cmd>Pick recent_files<cr>", { desc = "Recent Files" })
