@@ -1,5 +1,6 @@
 local pick = require("ezpick")
 pick.setup({
+	command_alias = "Pick",
 	-- override_ui_select = true,
 	-- with_preview = {
 	-- 	layout = "vertical",

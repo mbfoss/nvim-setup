@@ -1,5 +1,6 @@
 require("ezdap").setup({
 	raw_messages = true,
+	command_alias = "Debug",
 	external_terminal = "tmux split-window",
 })
 
