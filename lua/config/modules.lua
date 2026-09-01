@@ -5,7 +5,6 @@ local modules = {
 	{ pack = "gittools.nvim",      module = "gittools" },
 	{ pack = "flash.nvim",         module = "flash" },
 	{ pack = "claudecode.nvim",    module = "claudecode" },
-	{ pack = "cmake.nvim",         module = "cmake" },
 	{ pack = "osv.nvim",           module = "osv" },
 	{ pack = "mason.nvim",         module = "mason" },
 	{ pack = "gitsigns.nvim",      module = "gitsigns" },

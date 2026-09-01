@@ -22,9 +22,6 @@
 [submodule "pack/plugins/opt/claudecode.nvim"]
 	path = pack/plugins/opt/claudecode.nvim
 	url = https://github.com/mbfoss/claudecode.nvim.git
-[submodule "pack/plugins/opt/cmake.nvim"]
-	path = pack/plugins/opt/cmake.nvim
-	url = https://github.com/mbfoss/cmake.nvim.git
 [submodule "pack/plugins/opt/ezdap.nvim"]
 	path = pack/plugins/opt/ezdap.nvim
 	url = https://github.com/mbfoss/ezdap.nvim.git
