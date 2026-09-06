@@ -11,7 +11,7 @@ local modules = {
 	{ pack = "tomltasks.nvim",     module = "tomltasks" },
 	{ pack = "ezdap.nvim",         module = "ezdap" },
 	{ pack = "ezdap-adapters.nvim" },
-	-- { pack = "dock.nvim",          module = "dock" },
+	{ pack = "dock.nvim",          module = "dock" },
 	{ pack = "annotate.nvim",      module = "annotate" },
 }
 
