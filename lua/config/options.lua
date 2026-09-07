@@ -83,3 +83,6 @@ vim.o.winborder = 'rounded'
 
 vim.opt.diffopt:append("linematch:60") -- second stage diff to align lines
 vim.opt.diffopt:append("followwrap")
+
+vim.o.showmode = false
+
