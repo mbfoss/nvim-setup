@@ -8,7 +8,7 @@ local modules = {
 	{ pack = "osv.nvim",           module = "osv" },
 	{ pack = "mason.nvim",         module = "mason" },
 	{ pack = "gitsigns.nvim",      module = "gitsigns" },
-	{ pack = "tomltasks.nvim",     module = "tomltasks" },
+	{ pack = "neotasks.nvim",      module = "neotasks" },
 	{ pack = "ezdap.nvim",         module = "ezdap" },
 	{ pack = "ezdap-adapters.nvim" },
 	-- { pack = "dock.nvim",          module = "dock" },
