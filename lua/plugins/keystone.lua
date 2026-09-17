@@ -14,7 +14,14 @@ require("keystone").setup({
 	statusline = true,
 	select     = true,
 	notify     = true,
-	clue       = true,
+	clue       = {
+		delay = 350,         -- ms before the popup appears
+		border = "rounded",
+		max_desc_width = 120, -- crop long descriptions with …
+		preset = true,       -- register built-in g/z/window descriptions
+		builtin = { marks = true, registers = true },
+		-- triggers = { ... } -- override the default trigger list
+	},
 
 	-- Adds a command, does nothing until you run it
 	filetree   = true,
