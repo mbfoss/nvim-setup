@@ -70,9 +70,6 @@ vim.diagnostic.config({
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
-
-vim.o.equalalways = false
-
 vim.opt.fillchars = {
 	diff = "╱",
 	vert = "▏",
