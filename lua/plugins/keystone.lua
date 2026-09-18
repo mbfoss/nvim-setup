@@ -11,7 +11,11 @@ require("keystone").setup({
 	animate    = true,
 
 	-- Replaces something built in
-	statusline = true,
+	statusline = {
+		sections = {
+			left = { "mode", "git", "filename", "symbol_path" },
+		},
+	},
 	select     = true,
 	notify     = true,
 	clue       = {
