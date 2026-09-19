@@ -4,8 +4,19 @@ require("keystone").setup({
 	tsconfig   = true,
 	completion = true,
 
+	scope      = {
+		scope = true, -- guide along the scope under the cursor
+		guides = true, -- guide on every indent level
+	},
 	-- Editor behaviour
-	tweaks     = true,
+	tweaks     = {
+		auto_nohlsearch = true,
+        auto_nohlsearch_triggers = {
+          on_insert     = true,  -- when entering insert mode
+          on_win_change = true, -- when changing window
+          delay         = 1000,     -- ms after the cursor last moved (0 = off)
+        },
+	},
 	largefile  = true,
 	marksigns  = true,
 	animate    = true,
@@ -19,10 +30,10 @@ require("keystone").setup({
 	select     = true,
 	notify     = true,
 	clue       = {
-		delay = 350,         -- ms before the popup appears
+		delay = 350,    -- ms before the popup appears
 		border = "rounded",
 		max_desc_width = 120, -- crop long descriptions with …
-		preset = true,       -- register built-in g/z/window descriptions
+		preset = true,  -- register built-in g/z/window descriptions
 		builtin = { marks = true, registers = true },
 		-- triggers = { ... } -- override the default trigger list
 	},
