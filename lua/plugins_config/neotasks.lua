@@ -1,7 +1,7 @@
 require("neotasks").setup({
 	command = "Tasks",
 	lsp_debug_commands = true,
-	-- debug_adapters = {"codelldb", "lldb", "gdb", "debugpy"}
+	debug_adapters = {"codelldb", "lldb", "gdb", "debugpy"}
 })
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
