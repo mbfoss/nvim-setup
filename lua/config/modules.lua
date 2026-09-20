@@ -27,11 +27,11 @@ for _, entry in ipairs(modules) do
 	if entry.module then
 		local mod = require(entry.module)
 		local config_file = vim.fn.stdpath("config")
-			.. "/lua/plugins/"
+			.. "/lua/plugins_config/"
 			.. entry.module:gsub("%.", "/")
 			.. ".lua"
 		if vim.uv.fs_stat(config_file) then
-			require("plugins." .. entry.module)
+			require("plugins_config." .. entry.module)
 		elseif type(mod.setup) == "function" then
 			mod.setup({})
 		end
