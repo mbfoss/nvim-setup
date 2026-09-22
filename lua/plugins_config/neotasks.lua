@@ -1,8 +1,11 @@
 require("neotasks").setup({
-	command = "Tasks",
 	lsp_debug_commands = true,
-	debug_adapters = {"codelldb", "lldb", "gdb", "debugpy"}
+	debug_adapters = { "codelldb", "lldb", "gdb", "debugpy" }
 })
+
+vim.api.nvim_create_user_command("Tasks", function(o) vim.cmd { cmd = "Neotasks", args = o.fargs } end,
+	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Neotasks", 1)), "cmdline") end })
+
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
 vim.keymap.set("n", "<leader>lR", ":Task rerun<CR>", { desc = "Repeat last task", silent = true })
@@ -17,5 +20,5 @@ vim.keymap.set("n", "<leader>ld", ":Task panel remove<CR>", { desc = "Remove one
 vim.keymap.set("n", "<leader>lk", ":Task stop<CR>", { desc = "Stop a task", silent = true })
 vim.keymap.set("n", "<leader>lK", ":Task stop_all<CR>", { desc = "Stop all tasks", silent = true })
 
-require("neotasks").register_expression("add", function(_, a, b) return tonumber(a) + tonumber(b) end, {desc = "add 2 numbers"})
-
+require("neotasks").register_expression("add", function(_, a, b) return tonumber(a) + tonumber(b) end,
+	{ desc = "add 2 numbers" })

@@ -1,12 +1,14 @@
 local pick = require("ezpick")
 pick.setup({
-	command_alias = "Pick",
 	-- override_ui_select = true,
 	-- with_preview = {
 	-- 	layout = "vertical",
 	-- }
+      rg_path             = "norg", -- ripgrep executable for `live_grep` (unset: "rg" off the `PATH`)
 })
 
+vim.api.nvim_create_user_command("Pick", function(o) vim.cmd { cmd = "Ezpick", args = o.fargs } end,
+	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion(l:gsub("^Pick", "Ezpick", 1), "cmdline") end })
 
 vim.keymap.set("n", "<leader>fa", "<cmd>Pick resume<cr>", { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Pick files<cr>", { desc = "Find Files" })
