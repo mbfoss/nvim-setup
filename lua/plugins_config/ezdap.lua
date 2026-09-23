@@ -4,9 +4,8 @@ require("ezdap").setup({
 	external_terminal = "tmux split-window",
 })
 
-
 vim.api.nvim_create_user_command("Debug", function(o) vim.cmd { cmd = "Ezdap", args = o.fargs } end,
-	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion(l:gsub("^Debug", "Ezdap", 1), "cmdline") end })
+	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Ezdap", 1)), "cmdline") end })
 
 vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true })
 

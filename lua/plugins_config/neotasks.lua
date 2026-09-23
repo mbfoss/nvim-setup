@@ -3,7 +3,7 @@ require("neotasks").setup({
 	debug_adapters = { "codelldb", "lldb", "gdb", "debugpy" }
 })
 
-vim.api.nvim_create_user_command("Tasks", function(o) vim.cmd { cmd = "Neotasks", args = o.fargs } end,
+vim.api.nvim_create_user_command("Tasks", function(o) vim.cmd("Neotasks " .. o.args) end,
 	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Neotasks", 1)), "cmdline") end })
 
 -- run / restart
