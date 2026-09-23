@@ -9,14 +9,7 @@ require("keystone").setup({
 		guides = true, -- guide on every indent level
 	},
 	-- Editor behaviour
-	tweaks     = {
-		auto_nohlsearch = true,
-        auto_nohlsearch_triggers = {
-          on_insert     = true,  -- when entering insert mode
-          on_win_change = true, -- when changing window
-          delay         = 1000,     -- ms after the cursor last moved (0 = off)
-        },
-	},
+	tweaks     = true,
 	largefile  = true,
 	marksigns  = true,
 	animate    = true,
@@ -29,15 +22,7 @@ require("keystone").setup({
 	},
 	select     = true,
 	notify     = true,
-	clue       = {
-		delay = 350,    -- ms before the popup appears
-		border = "rounded",
-		max_desc_width = 120, -- crop long descriptions with …
-		preset = true,  -- register built-in g/z/window descriptions
-		builtin = { marks = true, registers = true },
-		-- triggers = { ... } -- override the default trigger list
-	},
-
+	clue       = true,
 	-- Adds a command, does nothing until you run it
 	filetree   = true,
 	explore    = true,
