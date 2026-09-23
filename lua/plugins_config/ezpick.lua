@@ -4,7 +4,7 @@ pick.setup({
 	-- with_preview = {
 	-- 	layout = "vertical",
 	-- }
-      rg_path             = "norg", -- ripgrep executable for `live_grep` (unset: "rg" off the `PATH`)
+     rg_path = nil, -- ripgrep executable for `live_grep` (unset: "rg" off the `PATH`)
 })
 
 vim.api.nvim_create_user_command("Pick", function(o) vim.cmd { cmd = "Ezpick", args = o.fargs } end,
