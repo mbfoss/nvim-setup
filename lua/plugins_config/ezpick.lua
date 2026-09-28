@@ -17,11 +17,11 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Pick live_grep<cr>", { desc = "Recent Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Pick config_files<cr>", { desc = "Config Files" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Pick lsp_references<cr>", { desc = "LSP References" })
-vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols -f Function -f Constructor -f Method<cr>",
+vim.keymap.set("n", "<leader>fF", "<cmd>Pick lsp_document_symbols --flags function constructor method<cr>",
 	{ desc = "Document functions" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick spell_suggest<cr>", { desc = "Spell suggestions" })
 vim.keymap.set("n", "<leader>fq", "<cmd>Pick quickfix<cr>", { desc = "Quickfix" })
-vim.keymap.set("n", "<leader>fe", "<cmd>Pick quickfix -f errors<cr>", { desc = "Quickfix errors" })
+vim.keymap.set("n", "<leader>fe", "<cmd>Pick quickfix --flags errors<cr>", { desc = "Quickfix errors" })
 vim.keymap.set("n", "<leader>fl", "<cmd>Pick loclist<cr>", { desc = "loclist" })
 vim.keymap.set("n", "<leader>fj", "<cmd>Pick jumplist<cr>", { desc = "Jumplist" })
 
