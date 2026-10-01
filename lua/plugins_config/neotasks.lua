@@ -6,6 +6,7 @@ require("neotasks").setup({
 vim.api.nvim_create_user_command("Tasks", function(o) vim.cmd("Neotasks " .. o.args) end,
 	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Neotasks", 1)), "cmdline") end })
 
+
 -- run / restart
 vim.keymap.set("n", "<leader>lr", ":Task run<CR>", { desc = "Run task", silent = true })
 vim.keymap.set("n", "<leader>lR", ":Task rerun<CR>", { desc = "Repeat last task", silent = true })
@@ -13,7 +14,7 @@ vim.keymap.set("n", "<leader>lR", ":Task rerun<CR>", { desc = "Repeat last task"
 vim.keymap.set("n", "<leader>lt", ":Task panel<CR>", { desc = "Toggle status panel", silent = true })
 vim.keymap.set("n", "<leader>lc", ":Task clean<CR>", { desc = "Clear finished tasks", silent = true })
 vim.keymap.set("n", "<leader>ld", ":Task panel remove<CR>", { desc = "Remove one finishted task", silent = true })
--- task control
+vim.keymap.set("n", "<leader>lp", function() vim.cmd("Task panel jump " .. vim.v.count1) end, { desc = "Jump to dock tab N (count)", silent = true }) -- task control
 vim.keymap.set("n", "<leader>lk", ":Task stop<CR>", { desc = "Stop a task", silent = true })
 vim.keymap.set("n", "<leader>lK", ":Task stop_all<CR>", { desc = "Stop all tasks", silent = true })
 
