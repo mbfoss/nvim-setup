@@ -7,8 +7,7 @@ pick.setup({
      rg_path = nil, -- ripgrep executable for `live_grep` (unset: "rg" off the `PATH`)
 })
 
-vim.api.nvim_create_user_command("Pick", function(o) vim.cmd("Ezpick " .. o.args) end,
-  { nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Ezpick", 1)), "cmdline") end })
+pick.create_cmd_alias("Pick")
 
 vim.keymap.set("n", "<leader>fa", "<cmd>Pick resume<cr>", { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Pick files<cr>", { desc = "Find Files" })

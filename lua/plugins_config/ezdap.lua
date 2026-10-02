@@ -1,11 +1,11 @@
 require("ezdap").setup({
 	raw_messages = true,
-	command_alias = "Debug",
 	external_terminal = "tmux split-window",
 })
 
-vim.api.nvim_create_user_command("Debug", function(o) vim.cmd { cmd = "Ezdap", args = o.fargs } end,
-	{ nargs = "*", complete = function(_, l) return vim.fn.getcompletion((l:gsub("^[%s:]*%a+", "Ezdap", 1)), "cmdline") end })
+-- Forwards the line as typed (escaped spaces survive) and the range, so
+-- :'<,'>Debug inspect reads the selection.
+require("ezdap").create_cmd_alias("Debug")
 
 vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true })
 
