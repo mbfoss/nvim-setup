@@ -1,4 +1,4 @@
-local pick = require("ezpick")
+local pick = require("locate")
 pick.setup({
 	-- override_ui_select = true,
 	-- with_preview = {

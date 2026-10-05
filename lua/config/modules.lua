@@ -1,5 +1,5 @@
 local modules = {
-	{ pack = "ezpick.nvim",        module = "ezpick" },
+	{ pack = "locate.nvim",        module = "locate" },
 	{ pack = "greplace.nvim",      module = "greplace" },
 	{ pack = "keystone.nvim",      module = "keystone" },
 	{ pack = "gittools.nvim",      module = "gittools" },

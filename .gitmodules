@@ -25,9 +25,9 @@
 [submodule "pack/plugins/opt/ndebug.nvim"]
 	path = pack/plugins/opt/ndebug.nvim
 	url = https://github.com/mbfoss/ndebug.nvim.git
-[submodule "pack/plugins/opt/ezpick.nvim"]
-	path = pack/plugins/opt/ezpick.nvim
-	url = https://github.com/mbfoss/ezpick.nvim.git
+[submodule "pack/plugins/opt/locate.nvim"]
+	path = pack/plugins/opt/locate.nvim
+	url = https://github.com/mbfoss/locate.nvim.git
 [submodule "pack/plugins/opt/greplace.nvim"]
 	path = pack/plugins/opt/greplace.nvim
 	url = https://github.com/mbfoss/greplace.nvim.git
