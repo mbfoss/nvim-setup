@@ -22,18 +22,18 @@
 [submodule "pack/plugins/opt/claudecode.nvim"]
 	path = pack/plugins/opt/claudecode.nvim
 	url = https://github.com/mbfoss/claudecode.nvim.git
-[submodule "pack/plugins/opt/ezdap.nvim"]
-	path = pack/plugins/opt/ezdap.nvim
-	url = https://github.com/mbfoss/ezdap.nvim.git
+[submodule "pack/plugins/opt/ndebug.nvim"]
+	path = pack/plugins/opt/ndebug.nvim
+	url = https://github.com/mbfoss/ndebug.nvim.git
 [submodule "pack/plugins/opt/ezpick.nvim"]
 	path = pack/plugins/opt/ezpick.nvim
 	url = https://github.com/mbfoss/ezpick.nvim.git
 [submodule "pack/plugins/opt/greplace.nvim"]
 	path = pack/plugins/opt/greplace.nvim
 	url = https://github.com/mbfoss/greplace.nvim.git
-[submodule "pack/plugins/opt/ezdap-adapters.nvim"]
-	path = pack/plugins/opt/ezdap-adapters.nvim
-	url = https://github.com/mbfoss/ezdap-adapters.nvim.git
+[submodule "pack/plugins/opt/ndebug-adapters.nvim"]
+	path = pack/plugins/opt/ndebug-adapters.nvim
+	url = https://github.com/mbfoss/ndebug-adapters.nvim.git
 [submodule "pack/plugins/opt/annotate.nvim"]
 	path = pack/plugins/opt/annotate.nvim
 	url = https://github.com/mbfoss/annotate.nvim

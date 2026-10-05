@@ -9,8 +9,8 @@ local modules = {
 	{ pack = "mason.nvim",         module = "mason" },
 	{ pack = "gitsigns.nvim",      module = "gitsigns" },
 	{ pack = "neotasks.nvim",      module = "neotasks" },
-	{ pack = "ezdap.nvim",         module = "ezdap" },
-	{ pack = "ezdap-adapters.nvim" },
+	{ pack = "ndebug.nvim",        module = "ndebug" },
+	{ pack = "ndebug-adapters.nvim" },
 	-- { pack = "dock.nvim",          module = "dock" },
 	{ pack = "annotate.nvim",      module = "annotate" },
 }

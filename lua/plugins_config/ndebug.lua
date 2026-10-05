@@ -1,11 +1,11 @@
-require("ezdap").setup({
+require("ndebug").setup({
 	-- raw_messages = true,
 	external_terminal = "tmux split-window",
 })
 
 -- Forwards the line as typed (escaped spaces survive) and the range, so
 -- :'<,'>Debug inspect reads the selection.
-require("ezdap").create_cmd_alias("Debug")
+require("ndebug").create_cmd_alias("Debug")
 
 vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true })
 
