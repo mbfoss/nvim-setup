@@ -3,11 +3,7 @@ require("keystone").setup({
 	lspconfig  = true,
 	tsconfig   = true,
 	completion = true,
-
-	scope      = {
-		scope = true, -- guide along the scope under the cursor
-		guides = true, -- guide on every indent level
-	},
+	scope      = true,
 	-- Editor behaviour
 	tweaks     = true,
 	largefile  = true,
