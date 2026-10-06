@@ -1,6 +1,8 @@
 require("keystone").setup({
 	-- Language support
-	lspconfig  = true,
+	lspsetup   = {
+		servers = { "clangd", "lua", "pp", "taplo", "test" },
+	},
 	tsconfig   = true,
 	completion = true,
 	scope      = true,
