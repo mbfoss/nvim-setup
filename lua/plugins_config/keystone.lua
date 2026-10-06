@@ -1,33 +1,33 @@
 require("keystone").setup({
 	-- Language support
-	lspsetup   = {
+	lspsetup    = {
 		servers = { "clangd", "lua", "pp", "taplo", "test" },
 	},
-	tsconfig   = true,
-	completion = true,
-	scope      = true,
+	tsconfig    = true,
+	completion  = true,
+	scope       = true,
 	-- Editor behaviour
-	tweaks     = true,
-	largefile  = true,
-	marksigns  = true,
-	animate    = true,
+	tweaks      = true,
+	largefile   = true,
+	marksigns   = true,
+	animate     = true,
 
 	-- Replaces something built in
-	statusline = {
+	statusline  = {
 		sections = {
 			left = { "mode", "git", "filename", "symbol_path" },
 		},
 	},
-	select     = true,
-	notify     = true,
-	clue       = true,
+	select      = true,
+	notify      = true,
+	clue        = true,
 	-- Adds a command, does nothing until you run it
-	filetree   = true,
-	explore    = true,
-	symboltree = true,
-	calltree   = true,
-	unsaved    = true,
-	bufdelete  = true,
+	filetree    = true,
+	explore     = true,
+	symboltree  = true,
+	calltree    = true,
+	diffunsaved = true,
+	bufdelete   = true,
 })
 
 require("keystone.clue").add({
