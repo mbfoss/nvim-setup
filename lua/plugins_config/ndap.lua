@@ -1,11 +1,11 @@
-require("ndebug").setup({
+require("ndap").setup({
 	-- raw_messages = true,
 	external_terminal = "tmux split-window",
 })
 
 -- Forwards the line as typed (escaped spaces survive) and the range, so
 -- :'<,'>Debug inspect reads the selection.
-require("ndebug").create_cmd_alias("Debug")
+require("ndap").create_cmd_alias("Debug")
 
 vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true })
 
