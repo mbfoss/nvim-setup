@@ -1,49 +1,79 @@
-require("ndap").setup({
+local ndap = require("ndap")
+
+ndap.setup({
 	-- raw_messages = true,
 	external_terminal = "tmux split-window",
 })
 
 -- Forwards the line as typed (escaped spaces survive) and the range, so
 -- :'<,'>Debug inspect reads the selection.
-require("ndap").create_cmd_alias("Debug")
+ndap.create_cmd_alias("Debug")
 
-vim.keymap.set("n", "<leader>d", "<Nop>", { noremap = true })
+---Bind `lhs` to `:Debug <sub>`. `<Cmd>` leaves the cmdline untouched, unlike `:`,
+---and `vim.keymap.set` is non-recursive, so no `noremap` is needed.
+---@param lhs   string
+---@param sub   string  the `:Debug` subcommand, arguments included
+---@param desc  string  shown by which-key, prefixed with "Debug: "
+---@param modes? string|string[]  default "n"
+local function dmap(lhs, sub, desc, modes)
+	vim.keymap.set(modes or "n", lhs, ("<Cmd>Debug %s<CR>"):format(sub),
+		{ desc = "Debug: " .. desc, silent = true })
+end
 
--- Breakpoints
-vim.keymap.set("n", "<leader>bl", ":Debug breakpoint list<CR>", { desc = "List breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bb", ":Debug breakpoint toggle<CR>", { desc = "Toggle breakpoint", silent = true })
-vim.keymap.set("n", "<leader>bd", ":Debug breakpoint remove<CR>", { desc = "Delete breakpoint", silent = true })
-vim.keymap.set("n", "<leader>bc", ":Debug breakpoint condition<CR>",
-	{ desc = "Conditional breakpoint", silent = true })
-vim.keymap.set("n", "<leader>bL", ":Debug breakpoint logpoint<CR>", { desc = "Set logpoint", silent = true })
-vim.keymap.set("n", "<leader>bt", ":Debug breakpoint toggle_enabled<CR>",
-	{ desc = "Toggle breakpoint enabled/disabled", silent = true })
-vim.keymap.set("n", "<leader>bE", ":Debug breakpoint enable_all<CR>",
-	{ desc = "Enable all breakpoints", silent = true })
-vim.keymap.set("n", "<leader>bD", ":Debug breakpoint disable_all<CR>",
-	{ desc = "Disable all breakpoints", silent = true })
+-- `<leader>d` is a prefix, not a command of its own.
+vim.keymap.set("n", "<leader>d", "<Nop>", { desc = "Debug" })
 
--- Debug controls
-vim.keymap.set("n", "<leader>ds", ":Debug session<CR>", { desc = "Select session", silent = true })
-vim.keymap.set("n", "<leader>dt", ":Debug thread<CR>", { desc = "Select thread", silent = true })
-vim.keymap.set("n", "<leader>df", ":Debug frame<CR>", { desc = "Select frame", silent = true })
-vim.keymap.set({ "n", "x" }, "<leader>di", ":Debug inspect<CR>", { desc = "Inspect value", silent = true })
-vim.keymap.set("n", "<leader>dp", ":Debug pause<CR>", { desc = "Pause", silent = true })
-vim.keymap.set("n", "<leader>dl", ":Debug step_in<CR>", { desc = "Step in", silent = true })
-vim.keymap.set("n", "<leader>dh", ":Debug step_out<CR>", { desc = "Step out", silent = true })
-vim.keymap.set("n", "<leader>dj", ":Debug step_over<CR>", { desc = "Step over", silent = true })
-vim.keymap.set("n", "<leader>dk", ":Debug step_back<CR>", { desc = "Step back", silent = true })
-vim.keymap.set("n", "<leader>dJ", ":Debug jump_to_cursor<CR>", { desc = "Jump to cursor", silent = true })
-vim.keymap.set("n", "<leader>dc", ":Debug continue<CR>", { desc = "Continue", silent = true })
-vim.keymap.set("n", "<leader>dC", ":Debug continue_all<CR>", { desc = "Continue all", silent = true })
-vim.keymap.set("n", "<leader>dK", ":Debug stop_all<CR>", { desc = "Stop all debug sessions", silent = true })
-vim.keymap.set("n", "<leader>dv", ":Debug view<CR>", { desc = "Debug view", silent = true })
-vim.keymap.set("n", "<leader>du", ":Debug view<CR>", { desc = "Debug view", silent = true })
+for _, m in ipairs({
+	-- Breakpoints (b*)
+	{ "<leader>bl", "breakpoint list",           "list breakpoints" },
+	{ "<leader>bb", "breakpoint toggle",         "toggle breakpoint" },
+	{ "<leader>bd", "breakpoint remove",         "delete breakpoint" },
+	{ "<leader>bc", "breakpoint condition",      "conditional breakpoint" },
+	-- Column breakpoints need a position on the line, so toggle one, then move the
+	-- cursor and invoke this to relocate it there.
+	{ "<leader>bC", "breakpoint column",         "column breakpoint" },
+	{ "<leader>bL", "breakpoint logpoint",       "set logpoint" },
+	{ "<leader>bt", "breakpoint toggle_enabled", "toggle enabled/disabled" },
+	{ "<leader>bE", "breakpoint enable_all",     "enable all breakpoints" },
+	{ "<leader>bD", "breakpoint disable_all",    "disable all breakpoints" },
+	-- Watchpoints / data breakpoints
+	{ "<leader>bw", "breakpoint data",           "toggle data breakpoint" },
+	{ "<leader>bW", "breakpoint data_list",      "list data breakpoints" },
+	{ "<leader>bX", "breakpoint data_clear",     "clear data breakpoints" },
 
--- Alt keys
-vim.keymap.set("n", "<A-l>", ":Debug step_in<CR>", { silent = true })
-vim.keymap.set("n", "<A-h>", ":Debug step_out<CR>", { silent = true })
-vim.keymap.set("n", "<A-j>", ":Debug step_over<CR>", { silent = true })
-vim.keymap.set("n", "<A-k>", ":Debug step_back<CR>", { silent = true })
-vim.keymap.set("n", "<A-;>", ":Debug continue<CR>", { silent = true })
-vim.keymap.set("n", "<A-b>", ":Debug breakpoint toggle<CR>", { silent = true })
+	-- Execution (d*)
+	{ "<leader>ds", "session",          "select session" },
+	{ "<leader>dt", "thread",           "select thread" },
+	{ "<leader>df", "frame",            "select frame" },
+	{ "<leader>dp", "pause",            "pause" },
+	{ "<leader>dl", "step_in",          "step in" },
+	{ "<leader>dh", "step_out",         "step out" },
+	{ "<leader>dj", "step_over",        "step over" },
+	{ "<leader>dk", "step_back",        "step back" },
+	{ "<leader>dJ", "jump_to_cursor",   "jump to cursor" },
+	{ "<leader>dc", "continue",         "continue" },
+	{ "<leader>dC", "continue_all",     "continue all" },
+	{ "<leader>dX", "reverse_continue", "reverse continue" },
+	{ "<leader>dT", "terminate_thread", "terminate thread" },
+	{ "<leader>de", "exception_info",   "exception info" },
+	{ "<leader>dR", "restart",          "restart session" },
+	{ "<leader>dA", "disassemble",      "disassemble" },
+	{ "<leader>dK", "stop_all",         "stop all sessions" },
+	{ "<leader>dP", "panel",            "toggle panel" },
+	{ "<leader>dv", "view",             "debug view" },
+
+	-- Alt keys mirror the step/continue maps for one-handed use.
+	{ "<A-l>", "step_in",           "step in" },
+	{ "<A-h>", "step_out",          "step out" },
+	{ "<A-j>", "step_over",         "step over" },
+	{ "<A-k>", "step_back",         "step back" },
+	{ "<A-;>", "continue",          "continue" },
+	{ "<A-b>", "breakpoint toggle", "toggle breakpoint" },
+}) do
+	dmap(m[1], m[2], m[3], m[4])
+end
+
+-- The one map that needs the command *range*: in visual mode `:` inserts `'<,'>`,
+-- which `opts.range` turns into "read the selection"; `<Cmd>` cannot supply it.
+vim.keymap.set({ "n", "x" }, "<leader>di", ":Debug inspect<CR>",
+	{ desc = "Debug: inspect value", silent = true })
