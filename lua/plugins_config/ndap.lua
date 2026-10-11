@@ -56,7 +56,7 @@ for _, m in ipairs({
 	{ "<leader>dX", "reverse_continue", "reverse continue" },
 	{ "<leader>dT", "terminate_thread", "terminate thread" },
 	{ "<leader>de", "exception_info",   "exception info" },
-	{ "<leader>dR", "restart",          "restart session" },
+	{ "<leader>dR", "rerun",            "re-run" },
 	{ "<leader>dA", "disassemble",      "disassemble" },
 	{ "<leader>dK", "stop_all",         "stop all sessions" },
 	{ "<leader>dP", "panel",            "toggle panel" },
