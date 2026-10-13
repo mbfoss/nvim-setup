@@ -49,7 +49,7 @@ for _, m in ipairs({
 	{ "<leader>dl", "step_in",          "step in" },
 	{ "<leader>dh", "step_out",         "step out" },
 	{ "<leader>dj", "step_over",        "step over" },
-	{ "<leader>dk", "step_back",        "step back" },
+	{ "<leader>dk", "stop",             "stop session" },
 	{ "<leader>dJ", "jump_to_cursor",   "jump to cursor" },
 	{ "<leader>dc", "continue",         "continue" },
 	{ "<leader>dC", "continue_all",     "continue all" },
