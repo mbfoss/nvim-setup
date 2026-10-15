@@ -160,7 +160,7 @@ vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.references() end, { des
 vim.keymap.set("n", "<leader>ch", function() vim.lsp.buf.hover() end, { desc = "Hover documentation" })
 vim.keymap.set("n", "<leader>cs", function() vim.lsp.buf.signature_help() end, { desc = "Signature help" })
 vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format { async = true } end, { desc = "Format code" })
-vim.keymap.set("n", "<leader>ct", function() vim.lsp.buf.type_definition() end, { desc = "Go to type definition" })
+vim.keymap.set("n", "<leader>ct", "<cmd>CallTree<cr>", { desc = "Go to type definition" })
 vim.keymap.set("n", "<leader>cn", function() vim.lsp.buf.rename() end, { desc = "Rename symbol" })
 vim.keymap.set("n", "<leader>cH", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
 	{ desc = "Toggle inlay hints" })
@@ -169,14 +169,9 @@ vim.keymap.set("n", "<leader>cd", function() vim.diagnostic.open_float() end,
 
 vim.keymap.set("n", "<leader>cc", ":CallTree<CR>", { desc = "Show call tree" })
 
-do
-	local function toggle_virtual_text()
-		local current = vim.diagnostic.config().virtual_text
-		vim.diagnostic.config({ virtual_text = not current })
-	end
-	vim.keymap.set("n", "<leader>ct", toggle_virtual_text, { desc = "Diagnostics: Toggle virtual text" })
-end
-
+vim.keymap.set("n", "<leader>cv",
+	function() vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text }) end,
+	{ desc = "Diagnostics: Toggle virtual text" })
 
 
 -- Jump to next/previous function using built-in LSP
