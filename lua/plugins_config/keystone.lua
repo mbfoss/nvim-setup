@@ -3,6 +3,7 @@ require("keystone").setup({
 	lspsetup     = {
 		servers = { "clangd", "lua", "pp", "taplo", "test" },
 	},
+	lspnav       = true,
 	tsconfig     = true,
 	completion   = true,
 	scope        = true,
