@@ -37,3 +37,6 @@
 [submodule "pack/plugins/opt/annotate.nvim"]
 	path = pack/plugins/opt/annotate.nvim
 	url = https://github.com/mbfoss/annotate.nvim
+[submodule "pack/plugins/opt/lspnav.nvim"]
+	path = pack/plugins/opt/lspnav.nvim
+	url = https://github.com/mbfoss/lspnav.nvim
