@@ -29,6 +29,7 @@ require("keystone").setup({
 	calltree     = true,
 	diffunsaved  = true,
 	bufdelete    = true,
+	references   = true,
 })
 
 require("keystone.clue").add({

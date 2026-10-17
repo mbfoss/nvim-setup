@@ -1,5 +1,5 @@
 local modules = {
-	{ pack = "locate.nvim",        module = "locate" },
+	{ pack = "locate.nvim",       module = "locate" },
 	{ pack = "greplace.nvim",     module = "greplace" },
 	{ pack = "keystone.nvim",     module = "keystone" },
 	{ pack = "gittools.nvim",     module = "gittools" },
@@ -13,6 +13,7 @@ local modules = {
 	{ pack = "ndap-adapters.nvim" },
 	-- { pack = "dock.nvim",          module = "dock" },
 	{ pack = "annotate.nvim",     module = "annotate" },
+	{ pack = "lspnav.nvim",       module = "lspnav" },
 }
 
 local pack_loaded = {}

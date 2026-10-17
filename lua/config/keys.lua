@@ -156,31 +156,19 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", function() vim.lsp.buf.code_action() 
 vim.keymap.set("n", "<leader>cd", function() vim.lsp.buf.definition() end, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>cD", function() vim.lsp.buf.declaration() end, { desc = "Go to declaration" })
 vim.keymap.set("n", "<leader>ci", function() vim.lsp.buf.implementation() end, { desc = "Go to implementation" })
-vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.references() end, { desc = "Show references" })
+vim.keymap.set("n", "<leader>cR", function() vim.lsp.buf.references() end, { desc = "Show references" })
 vim.keymap.set("n", "<leader>ch", function() vim.lsp.buf.hover() end, { desc = "Hover documentation" })
 vim.keymap.set("n", "<leader>cs", function() vim.lsp.buf.signature_help() end, { desc = "Signature help" })
 vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format { async = true } end, { desc = "Format code" })
-vim.keymap.set("n", "<leader>ct", "<cmd>CallTree<cr>", { desc = "Go to type definition" })
 vim.keymap.set("n", "<leader>cn", function() vim.lsp.buf.rename() end, { desc = "Rename symbol" })
 vim.keymap.set("n", "<leader>cH", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
 	{ desc = "Toggle inlay hints" })
 vim.keymap.set("n", "<leader>cd", function() vim.diagnostic.open_float() end,
 	{ desc = "Diagnostics: Show line diagnostics" })
 
-vim.keymap.set("n", "<leader>cc", ":CallTree<CR>", { desc = "Show call tree" })
-
 vim.keymap.set("n", "<leader>cv",
 	function() vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text }) end,
 	{ desc = "Diagnostics: Toggle virtual text" })
-
-
--- Jump between functions and types over the LSP symbol tree (keystone.lspnav). The
--- actions read `v:count1`, so `3]]` skips two. Required on demand: this file runs
--- before `packadd!` puts the plugin on the runtimepath.
-vim.keymap.set('n', ']]', function() require("keystone.lspnav").next_function() end, { desc = 'Next function (LSP)' })
-vim.keymap.set('n', '[[', function() require("keystone.lspnav").prev_function() end, { desc = 'Previous function (LSP)' })
-vim.keymap.set('n', ']t', function() require("keystone.lspnav").next_type() end, { desc = 'Next type (LSP)' })
-vim.keymap.set('n', '[t', function() require("keystone.lspnav").prev_type() end, { desc = 'Previous type (LSP)' })
 
 vim.keymap.set('n', ']w', ":lnext<CR>", { desc = 'Next loclist item', silent = true })
 vim.keymap.set('n', '[w', ":lprev<CR>", { desc = 'Previous loclist item', silent = true })
