@@ -1,0 +1,19 @@
+local gen_loader = require('mini.snippets').gen_loader
+require('mini.snippets').setup({
+  snippets = {
+    -- Load custom file with global snippets first (adjust for Windows)
+    gen_loader.from_file('~/.config/nvim/snippets/global.json'),
+
+    -- Load snippets based on current language by reading files from
+    -- "snippets/" subdirectories from 'runtimepath' directories.
+    gen_loader.from_lang(),
+  },
+  -- Key mappings internal to mini.snippets
+  mappings = {
+    -- 1. Jump forward (Tab)
+    -- 2. Jump backward (S-Tab)
+    -- 3. STOP session (Esc) - This is what you were missing!
+    stop = '<Esc>',     -- Immediately kills the snippet session on Esc
+  },
+})
+

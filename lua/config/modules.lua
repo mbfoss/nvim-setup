@@ -1,0 +1,40 @@
+local modules = {
+	{ pack = "locator.nvim",      module = "locator" },
+	{ pack = "greplace.nvim",     module = "greplace" },
+	{ pack = "keystone.nvim",     module = "keystone" },
+	{ pack = "gittools.nvim",     module = "gittools" },
+	{ pack = "flash.nvim",        module = "flash" },
+	{ pack = "claudecode.nvim",   module = "claudecode" },
+	{ pack = "osv.nvim",          module = "osv" },
+	{ pack = "mason.nvim",        module = "mason" },
+	{ pack = "gitsigns.nvim",     module = "gitsigns" },
+	{ pack = "neotasks.nvim",     module = "neotasks" },
+	{ pack = "ndap.nvim",         module = "ndap" },
+	{ pack = "ndap-adapters.nvim" },
+	-- { pack = "dock.nvim",          module = "dock" },
+	{ pack = "annotate.nvim",     module = "annotate" },
+	{ pack = "lspnav.nvim",       module = "lspnav" },
+}
+
+local pack_loaded = {}
+for _, entry in ipairs(modules) do
+	if pack_loaded[entry.pack] == nil then
+		pack_loaded[entry.pack] = true
+		vim.cmd('packadd! ' .. entry.pack)
+	end
+end
+
+for _, entry in ipairs(modules) do
+	if entry.module then
+		local mod = require(entry.module)
+		local config_file = vim.fn.stdpath("config")
+			.. "/lua/plugins_config/"
+			.. entry.module:gsub("%.", "/")
+			.. ".lua"
+		if vim.uv.fs_stat(config_file) then
+			require("plugins_config." .. entry.module)
+		elseif type(mod.setup) == "function" then
+			mod.setup({})
+		end
+	end
+end

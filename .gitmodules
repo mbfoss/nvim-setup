@@ -1,0 +1,42 @@
+[submodule "pack/plugins/opt/gitsigns.nvim"]
+	path = pack/plugins/opt/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
+[submodule "pack/plugins/opt/mason.nvim"]
+	path = pack/plugins/opt/mason.nvim
+	url = https://github.com/mason-org/mason.nvim.git
+[submodule "pack/plugins/opt/keystone.nvim"]
+	path = pack/plugins/opt/keystone.nvim
+	url = https://github.com/mbfoss/keystone.nvim.git
+[submodule "pack/plugins/opt/flash.nvim"]
+	path = pack/plugins/opt/flash.nvim
+	url = https://github.com/folke/flash.nvim.git
+[submodule "pack/plugins/opt/osv.nvim"]
+	path = pack/plugins/opt/osv.nvim
+	url = https://github.com/jbyuki/one-small-step-for-vimkind.git
+[submodule "pack/plugins/opt/neotasks.nvim"]
+	path = pack/plugins/opt/neotasks.nvim
+	url = https://github.com/mbfoss/neotasks.nvim.git
+[submodule "pack/plugins/opt/gittools.nvim"]
+	path = pack/plugins/opt/gittools.nvim
+	url = https://github.com/mbfoss/gittools.nvim.git
+[submodule "pack/plugins/opt/claudecode.nvim"]
+	path = pack/plugins/opt/claudecode.nvim
+	url = https://github.com/mbfoss/claudecode.nvim.git
+[submodule "pack/plugins/opt/ndap.nvim"]
+	path = pack/plugins/opt/ndap.nvim
+	url = https://github.com/mbfoss/ndap.nvim.git
+[submodule "pack/plugins/opt/locator.nvim"]
+	path = pack/plugins/opt/locator.nvim
+	url = https://github.com/mbfoss/locator.nvim.git
+[submodule "pack/plugins/opt/greplace.nvim"]
+	path = pack/plugins/opt/greplace.nvim
+	url = https://github.com/mbfoss/greplace.nvim.git
+[submodule "pack/plugins/opt/ndap-adapters.nvim"]
+	path = pack/plugins/opt/ndap-adapters.nvim
+	url = https://github.com/mbfoss/ndap-adapters.nvim.git
+[submodule "pack/plugins/opt/annotate.nvim"]
+	path = pack/plugins/opt/annotate.nvim
+	url = https://github.com/mbfoss/annotate.nvim
+[submodule "pack/plugins/opt/lspnav.nvim"]
+	path = pack/plugins/opt/lspnav.nvim
+	url = https://github.com/mbfoss/lspnav.nvim
